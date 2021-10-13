@@ -89,7 +89,7 @@ class FeedController: UICollectionViewController {
     func configureUI(){
         collectionView.backgroundColor = .white
 
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
 //        if post == nil {
 //            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
@@ -112,8 +112,8 @@ extension FeedController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)// as! FeedCell
-        cell.backgroundColor = .purple
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
+       // cell.backgroundColor = .purple
 //        cell.delegate = self
 //        if let post = post {
 //            cell.viewModel = PostViewModel(post: post)

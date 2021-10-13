@@ -23,6 +23,8 @@
 		CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1FA2716A52D00D3C097 /* ProfileController.swift */; };
 		CFE0C2042716A6DB00D3C097 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = CFE0C2032716A6DB00D3C097 /* YPImagePicker */; };
 		CFE0C2062716ADEB00D3C097 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2052716ADEB00D3C097 /* FeedCell.swift */; };
+		CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2072716B7EC00D3C097 /* Extensions.swift */; };
+		CFE0C20B2716B85300D3C097 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CFE0C20A2716B85300D3C097 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,7 @@
 		CFE0C1F92716A52D00D3C097 /* CommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		CFE0C1FA2716A52D00D3C097 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		CFE0C2052716ADEB00D3C097 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		CFE0C2072716B7EC00D3C097 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE0C20B2716B85300D3C097 /* JGProgressHUD in Frameworks */,
 				CFE0C2042716A6DB00D3C097 /* YPImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +108,7 @@
 		CFE0C1EA2716A20A00D3C097 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CFE0C2072716B7EC00D3C097 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			name = InstagramAppWithFireBase;
 			packageProductDependencies = (
 				CFE0C2032716A6DB00D3C097 /* YPImagePicker */,
+				CFE0C20A2716B85300D3C097 /* JGProgressHUD */,
 			);
 			productName = InstagramAppWithFireBase;
 			productReference = CFE0C1D22716A11400D3C097 /* InstagramAppWithFireBase.app */;
@@ -193,6 +199,7 @@
 			mainGroup = CFE0C1C92716A11400D3C097;
 			packageReferences = (
 				CFE0C2022716A6DB00D3C097 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = CFE0C1D32716A11400D3C097 /* Products */;
 			projectDirPath = "";
@@ -229,6 +236,7 @@
 				CFE0C2062716ADEB00D3C097 /* FeedCell.swift in Sources */,
 				CFE0C1FB2716A52D00D3C097 /* UploadPostController.swift in Sources */,
 				CFE0C1F12716A3A000D3C097 /* MainTabController.swift in Sources */,
+				CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */,
 				CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */,
 				CFE0C1D82716A11400D3C097 /* SceneDelegate.swift in Sources */,
 				CFE0C1FF2716A52D00D3C097 /* SearchController.swift in Sources */,
@@ -462,6 +470,14 @@
 				kind = branch;
 			};
 		};
+		CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -469,6 +485,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CFE0C2022716A6DB00D3C097 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
 			productName = YPImagePicker;
+		};
+		CFE0C20A2716B85300D3C097 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
