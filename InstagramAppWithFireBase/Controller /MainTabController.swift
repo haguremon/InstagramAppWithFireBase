@@ -6,81 +6,94 @@
 //
 
 import UIKit
-//import Firebase
+import Firebase
 import YPImagePicker
 
 class MainTabController: UITabBarController{
-//
-//    // MARK: - Lifecycle
-//
-//     var user: User?{
-//        didSet{
-//            guard let user = user else { return }
-//            configureViewControllers(withUser: user)
-//        }
-//    }
-//
+    //
+    //    // MARK: - Lifecycle
+    //
+    //     var user: User?{
+    //        didSet{
+    //            guard let user = user else { return }
+    //            configureViewControllers(withUser: user)
+    //        }
+    //    }
+    //
+    //    //viewDidAppearでやると重たくなるらしい
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        super.viewDidAppear(animated)
+    //
+    //        checkIfUserIsLoggedIn()
+    //        //logout()
+    //
+    //    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewControllers()
         view.backgroundColor = .white
-        //   checkIfUserIsLoggedIn()
-//        fetchUser()
-       // logout()
-     
+           checkIfUserIsLoggedIn()
+        //        fetchUser()
+        // logout()
+        
     }
-//
-//    // MARK: - API
-//    func checkIfUserIsLoggedIn(){
-//      if Auth.auth().currentUser == nil {
-//            DispatchQueue.main.async {
-//                let controller = LoginController()
-//                controller.delegate = self
-//                let nav = UINavigationController(rootViewController: controller)
-//                nav.modalPresentationStyle = .fullScreen
-//                self.present(nav, animated: true, completion: nil)
-//            }
-//
-//        }
-//    }
-//
-//    func fetchUser(){
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        UserService.fetchUser(whithUid: uid){ user in
-//            self.user = user
-//        }
-//    }
-//
-//    func logout(){
-//        do{
-//            try Auth.auth().signOut()
-//        }catch{
-//            print("DEBUG: Failed to sign out")
-//        }
-//    }
-//    // MARK: - Helpers Tabの設定
+    
+    //
+    //    // MARK: - API
+    //ホームでログイン中か判断する
+    func checkIfUserIsLoggedIn(){
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                
+            let controller = LoginController()
+            //                controller.delegate = self
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: false, completion: nil)
+            
+            }
+            
+        }
+    }
+    //
+    //    func fetchUser(){
+    //        guard let uid = Auth.auth().currentUser?.uid else { return }
+    //        UserService.fetchUser(whithUid: uid){ user in
+    //            self.user = user
+    //        }
+    //    }
+    //
+    func logout(){
+        do{
+            try Auth.auth().signOut()
+        }catch{
+            print("DEBUG: Failed to sign out")
+        }
+    }
+    //    // MARK: - Helpers Tabの設定
     func configureViewControllers(){
         
         //self.delegate = self
         
         let layout = UICollectionViewFlowLayout()
         let feed = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))
-
+        
         let search = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "search_selected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController())
-
+        
         let imageSelector = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "plus_unselected"), rootViewController: ImageSelectorController())
-
+        
         let notification = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "like_unselected"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
-
+        
         // Set Profile user
         let profileController = ProfileController()
         let profile = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: profileController)
-
+        
         viewControllers = [feed, search, imageSelector, notification, profile]
-
+        
         tabBar.tintColor = .black
     }
-
+    
     func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController{
         //NavigationControllerの設定
         let nav = UINavigationController(rootViewController: rootViewController)
@@ -92,25 +105,25 @@ class MainTabController: UITabBarController{
         nav.navigationBar.tintColor = .black
         return nav
     }
-
+    
     func didFinishPickingMedia(_ picker: YPImagePicker){
         picker.didFinishPicking { (items, _) in
             picker.dismiss(animated: false){
                 guard let selectedImage = items.singlePhoto?.image else { return }
                 let controller = UploadPostController()
                 controller.selectedImage = selectedImage
-//                controller.delegate = self
-//                controller.currentUser = self.user
+                //                controller.delegate = self
+                //                controller.currentUser = self.user
                 let nav = UINavigationController(rootViewController: controller)
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: false, completion: nil)
             }
         }
-
-
+        
+        
     }
-
-
+    
+    
 }
 
 // MARK: - AuthenticationDelegate

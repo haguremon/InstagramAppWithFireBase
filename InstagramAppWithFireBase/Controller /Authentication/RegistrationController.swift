@@ -120,6 +120,8 @@ class RegisterationController: UIViewController{
                 return
             }
             print("成功")
+            //前の画面に戻るので
+            self.dismiss(animated: true)
             //self.delegate?.authenticationDidComplete()
         }
     }

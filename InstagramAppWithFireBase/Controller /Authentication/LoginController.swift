@@ -90,16 +90,17 @@ class LoginController: UIViewController{
     @objc func handleLogin(){
         print("LOG IN")
         guard let email = emailTextField.text, !email.isEmpty else { return }
-        guard let password = passwordTextField.text, password.count > 8 else { return }
+        guard let password = passwordTextField.text else { return }
         print("\(email)\n\(password)")
-//        AuthService.logUserIn(withEmail: email, password: password) { (result, error) in
-//            if let error = error {
-//                print("DEBUG: Failed to login user\(error.localizedDescription)")
-//                return
-//            }
-//
+        AuthService.logUserIn(withEmail: email, password: password) { [weak self] (result, error) in
+            if let error = error {
+                print("DEBUG: Failed to login user\(error.localizedDescription)")
+                return
+            }
+            self?.dismiss(animated: true)
+
 //            self.delegate?.authenticationDidComplete()
-//        }
+        }
     }
     
     @objc func handleShowSignUp() {
@@ -111,7 +112,6 @@ class LoginController: UIViewController{
     }
     
     @objc func textDidChange(sender: UITextField) {
-        print("Did Change")
         //LOG IN VC　の値をviewModelのプロパティに伝える
     
         if sender == emailTextField {
