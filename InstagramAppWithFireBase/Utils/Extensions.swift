@@ -2,7 +2,7 @@
 //  Extensions.swift
 //  InstagramClone
 //
-//  Created by James Tang on 2021-02-08.
+//  Created by IwasakIYuta on 2021/10/13.
 //
 
 import UIKit
@@ -39,9 +39,13 @@ extension UIViewController{
 
 extension UIButton{
     func attributedTitle(firstPart: String, secoundPart: String){
+        //最初の筆の種類など
         let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: 16)]
+        //配列型の文字みたいな感じ？
         let attributedTitle = NSMutableAttributedString(string: "\(firstPart) ", attributes: atts)
+        //筆の種類など
         let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.87), .font: UIFont.boldSystemFont(ofSize: 16)]
+        
         attributedTitle.append(NSAttributedString(string: secoundPart, attributes: boldAtts))
         
         setAttributedTitle(attributedTitle, for: .normal)
