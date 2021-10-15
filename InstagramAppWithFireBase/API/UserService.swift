@@ -11,7 +11,7 @@ typealias FirestoreCompletion = (Error?) -> Void
 
 // MARK: - getDocuments User ユーザーの情報を取得する
 struct UserService {
-    static func fetchUser(whithUid uid: String ,completion: @escaping(User) -> Void) {
+    static func fetchUser(whithUid uid: String ,completion: @escaping (User) -> Void) {
         COLLECTION_USERS.document(uid).getDocument{snapshot, error in
             guard let dictonary = snapshot?.data() else { return }
             
@@ -19,7 +19,7 @@ struct UserService {
             completion(user)
         }
     }
-    static func fetchUsertest(completion: @escaping(User) -> Void) {
+    static func fetchUsertest(completion: @escaping (User) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
             guard let dictonary = snapshot?.data() else { return }
@@ -29,7 +29,7 @@ struct UserService {
 
     }
 //
-    static func fetchUsers(completion: @escaping([User]) -> Void){
+    static func fetchUsers(completion: @escaping ([User]) -> Void) {
         COLLECTION_USERS.getDocuments { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             
@@ -38,7 +38,7 @@ struct UserService {
         }
     }
     
-    static func follow(uid: String, completion: @escaping(FirestoreCompletion)){
+    static func follow(uid: String, completion: @escaping (FirestoreCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
 
         COLLETION_FOLLOWING.document(currentUid).collection("user-following").document(uid).setData([:]) { (error) in
@@ -46,14 +46,14 @@ struct UserService {
         }
     }
     
-    static func unfollow(uid: String, completion: @escaping(FirestoreCompletion)){
+    static func unfollow(uid: String, completion: @escaping (FirestoreCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         COLLETION_FOLLOWING.document(currentUid).collection("user-following").document(uid).delete { (error) in
             COLLETION_FOLLOWERS.document(uid).collection("user-followers").document(currentUid).delete(completion: completion)
         }
     }
     
-    static func checkIfUserIsFolloed(uid: String, completion: @escaping(Bool) -> Void){
+    static func checkIfUserIsFolloed(uid: String, completion: @escaping (Bool) -> Void) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         COLLETION_FOLLOWING.document(currentUid).collection("user-following").document(uid).getDocument { (snapshot, error) in
             guard let isFollowed = snapshot?.exists else { return }
@@ -61,7 +61,7 @@ struct UserService {
         }
     }
         
-    static func fetchUserStats(uid: String, completion: @escaping(UserStats) -> Void){
+    static func fetchUserStats(uid: String, completion: @escaping (UserStats) -> Void) {
         COLLETION_FOLLOWERS.document(uid).collection("user-followers").getDocuments { (snapshot, _) in
             let followers = snapshot?.documents.count ?? 0
             COLLETION_FOLLOWING.document(uid).collection("user-following").getDocuments { (snapshot, _) in

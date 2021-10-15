@@ -15,8 +15,12 @@ class ProfileController: UICollectionViewController {
 //    
 //    // MARK: - Properties
 //    
-     private var user: User? { //userに値が入った時にdidSetされる？
-        didSet { navigationItem.title = user?.username }
+     private var user: User? { //userに値が入った時reloadDataするようにする？
+         didSet {
+             
+             collectionView.reloadData()
+        
+         }
     }
 //    private var posts = [Post]()
 //    
@@ -50,10 +54,12 @@ class ProfileController: UICollectionViewController {
 //            self.collectionView.reloadData()
 //        }
 //    }
+    //firebaseから取得する
     func fetchUserStatsTest(){
-        
+        //コールバックを使ってProfileControllerのプロパティに代入する
         UserService.fetchUsertest { user in
             self.user = user
+            self.navigationItem.title = self.user?.fullname
         }
         
     }
@@ -101,7 +107,10 @@ extension ProfileController{
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: haderIdentifier, for: indexPath) as! ProfileHeader
     
 //        header.delegate = self
-//        header.viewModel = ProfileViewModel(user: user)
+        if let user = self.user {
+            //ProfileHeaderでのviewModelプロパティが初期化せれた時にuserの情報を持っている関数がdidsetされる全てheader
+            header.viewModel = ProfileViewModel(user: user)
+        }
         //header.backgroundColor = .purple
         
         return header

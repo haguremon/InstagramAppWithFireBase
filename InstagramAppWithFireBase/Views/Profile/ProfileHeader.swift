@@ -15,17 +15,17 @@ import SDWebImage
 class ProfileHeader: UICollectionViewCell {
     
     // MARK: - Properties
-//    var viewModel: ProfileViewModel?{
-//        didSet{ configure() }
-//    }
-    var viewModel =  ProfileViewModel()
+    var viewModel: ProfileViewModel?{ //viewModelが呼ばれた時にconfigure()が発動する
+        didSet{ configure() }
+    }
+   // var viewModel =  ProfileViewModel()
     //weak var delegate: ProfileHeaderelegate?
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.image = #imageLiteral(resourceName: "venom-7")
+        //iv.image = #imageLiteral(resourceName: "venom-7")
         iv.backgroundColor = .lightGray
         return iv
     }()
@@ -144,12 +144,13 @@ class ProfileHeader: UICollectionViewCell {
 //    }
 
     // MARK: - Helpers
-   func configure(){
-//       // guard let viewModel = viewModel else { return }
-//
-//      nameLabel.text = "viewModel.fullname"
-//        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
-//
+    //ProfileHeaderのviewModelが値が入った時にdidsetされる
+   func configure() {
+        guard let viewModel = viewModel else { return }
+
+      nameLabel.text = "viewModel.fullname"
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+
 //        editProfileFollowButton.setTitle(viewModel.followButtonText, for: .normal)
 //        editProfileFollowButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
 //        editProfileFollowButton.backgroundColor = viewModel.followButtonBackgroundColor
@@ -157,9 +158,15 @@ class ProfileHeader: UICollectionViewCell {
        postLabel.attributedText = viewModel.attributedStatText(value: 0, label: "posts")
        followersLabel.attributedText = viewModel.attributedStatText(value: 0, label: "followers")
        followingLabel.attributedText = viewModel.attributedStatText(value: 0, label: "following")
+   
    }
-//
-    
+ 
+
+    func attributedStatText(value: Int, label: String) -> NSAttributedString{
+        let attributedText = NSMutableAttributedString(string: "\(value)\n", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
+        attributedText.append(NSAttributedString(string: label, attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.lightGray]))
+        return attributedText
+    }
     
     
 }
