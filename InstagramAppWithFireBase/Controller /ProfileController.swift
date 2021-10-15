@@ -15,7 +15,9 @@ class ProfileController: UICollectionViewController {
 //    
 //    // MARK: - Properties
 //    
-//    private var user: User
+     private var user: User? { //userに値が入った時にdidSetされる？
+        didSet { navigationItem.title = user?.username }
+    }
 //    private var posts = [Post]()
 //    
 //    // MARK: - Lifecycle
@@ -36,6 +38,7 @@ class ProfileController: UICollectionViewController {
         configureCollectionView()
 //        fetchUserStats()
 //        fetchPosts()
+        fetchUserStatsTest()
         view.backgroundColor = .blue
     }
 //
@@ -47,6 +50,13 @@ class ProfileController: UICollectionViewController {
 //            self.collectionView.reloadData()
 //        }
 //    }
+    func fetchUserStatsTest(){
+        
+        UserService.fetchUsertest { user in
+            self.user = user
+        }
+        
+    }
 //    
 //    func fetchUserStats(){
 //        UserService.fetchUserStats(uid: user.uid){stats in

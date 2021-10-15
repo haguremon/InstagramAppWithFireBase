@@ -19,7 +19,16 @@ struct UserService {
             completion(user)
         }
     }
-    
+    static func fetchUsertest(completion: @escaping(User) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
+            guard let dictonary = snapshot?.data() else { return }
+            let user = User(dictonary: dictonary)
+            completion(user)
+        }
+
+    }
+//
     static func fetchUsers(completion: @escaping([User]) -> Void){
         COLLECTION_USERS.getDocuments { (snapshot, error) in
             guard let snapshot = snapshot else { return }
