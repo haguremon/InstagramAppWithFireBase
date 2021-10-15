@@ -6,16 +6,22 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserCell: UITableViewCell{
     
     // MARK: - Properties
-//    var viewModel: UserCellViewModel? {
-//        didSet{
-//          configure()
+    var viewModel: UserCellViewModel? {
+        didSet{
+          configure()
+        }
+    }
+//    var user: User? {
+//        didSet {
+//            configure()
 //        }
 //    }
-    
+//
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -71,11 +77,11 @@ class UserCell: UITableViewCell{
     
     // MARK: - Helpers
     
-//    func configure(){
-//        guard let viewModel = viewModel else { return }
-//
-//        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
-//        usernameLabel.text = viewModel.username
-//        fullnameLabel.text = viewModel.fullname
-//    }
+    func configure(){
+        guard let viewModel = viewModel else { return }
+
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        usernameLabel.text = viewModel.username
+        fullnameLabel.text = viewModel.fullname
+    }
 }

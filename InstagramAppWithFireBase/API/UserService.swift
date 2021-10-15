@@ -21,6 +21,7 @@ struct UserService {
     }
     static func fetchUsertest(completion: @escaping (User) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
+        // DocumentSnapshotで単体のDocumentを取得
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
             guard let dictonary = snapshot?.data() else { return }
             let user = User(dictonary: dictonary)
@@ -28,8 +29,9 @@ struct UserService {
         }
 
     }
-//
+//COLLECTION_USERSの情報を全て取ってくる　コールバックで[User]を返す
     static func fetchUsers(completion: @escaping ([User]) -> Void) {
+      // QuerySnapshotで配列の型を取得
         COLLECTION_USERS.getDocuments { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             
