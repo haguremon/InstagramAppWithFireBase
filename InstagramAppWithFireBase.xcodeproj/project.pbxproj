@@ -40,6 +40,7 @@
 		CFE0C2292718032800D3C097 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2282718032800D3C097 /* UserService.swift */; };
 		CFE0C22B2718038600D3C097 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C22A2718038600D3C097 /* Constants.swift */; };
 		CFE0C22D271803D100D3C097 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C22C271803D100D3C097 /* User.swift */; };
+		CFE0C22F2719534F00D3C097 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C22E2719534F00D3C097 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		CFE0C2282718032800D3C097 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CFE0C22A2718038600D3C097 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFE0C22C271803D100D3C097 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CFE0C22E2719534F00D3C097 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F504216FBD1AF8D2475BAA00 /* Pods-InstagramAppWithFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAppWithFireBase.release.xcconfig"; path = "Target Support Files/Pods-InstagramAppWithFireBase/Pods-InstagramAppWithFireBase.release.xcconfig"; sourceTree = "<group>"; };
 		FB619E08042138D72FC471F5 /* Pods_InstagramAppWithFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramAppWithFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,7 +197,7 @@
 		CFE0C1EE2716A28F00D3C097 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CFE0C2052716ADEB00D3C097 /* FeedCell.swift */,
+				CFE0C22E2719534F00D3C097 /* UserCell.swift */,
 				CFE0C2102716CF3100D3C097 /* CustomTextField.swift */,
 				CFE0C21E2717ED3500D3C097 /* Profile */,
 			);
@@ -224,6 +226,7 @@
 		CFE0C21E2717ED3500D3C097 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CFE0C2052716ADEB00D3C097 /* FeedCell.swift */,
 				CFE0C21F2717ED3500D3C097 /* ProfileCell.swift */,
 				CFE0C2202717ED3500D3C097 /* ProfileHeader.swift */,
 			);
@@ -370,6 +373,7 @@
 				CFE0C2212717ED3500D3C097 /* ProfileCell.swift in Sources */,
 				CFE0C1FB2716A52D00D3C097 /* UploadPostController.swift in Sources */,
 				CFE0C1F12716A3A000D3C097 /* MainTabController.swift in Sources */,
+				CFE0C22F2719534F00D3C097 /* UserCell.swift in Sources */,
 				CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */,
 				CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */,
 				CFE0C2222717ED3500D3C097 /* ProfileHeader.swift in Sources */,
