@@ -14,27 +14,27 @@ private let haderIdentifier = "ProfileHeader"
 class ProfileController: UICollectionViewController {
 //    
 //    // MARK: - Properties
-//    
-     private var user: User? { //userに値が入った時reloadDataするようにする？
-         didSet {
-             
-             collectionView.reloadData()
-        
-         }
-    }
+////
+    private var user: User //{ //userに値が入った時reloadDataするようにする？
+//         didSet {
+//
+//             collectionView.reloadData()
+//
+//         }
+//    }
 //    private var posts = [Post]()
 //    
 //    // MARK: - Lifecycle
 //    
-//    init(user: User){
-//        self.user = user
-//        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("Init error")
-//    }
-//    
+    init(user: User){
+        self.user = user
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Init error")
+    }
+    
 //
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,6 @@ class ProfileController: UICollectionViewController {
         configureCollectionView()
 //        fetchUserStats()
 //        fetchPosts()
-        fetchUserStatsTest()
         view.backgroundColor = .blue
     }
 //
@@ -55,14 +54,7 @@ class ProfileController: UICollectionViewController {
 //        }
 //    }
     //firebaseから取得する
-    func fetchUserStatsTest(){
-        //コールバックを使ってProfileControllerのプロパティに代入する
-        UserService.fetchUsertest { user in
-            self.user = user
-            self.navigationItem.title = self.user?.fullname
-        }
-        
-    }
+
 //    
 //    func fetchUserStats(){
 //        UserService.fetchUserStats(uid: user.uid){stats in
@@ -81,7 +73,7 @@ class ProfileController: UICollectionViewController {
 //    
 //    // MARK: - Helpers
     func configureCollectionView(){
-        //navigationItem.title = user.username
+        navigationItem.title = user.username
         collectionView.backgroundColor = .white
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: cellIdentifer)
         collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: haderIdentifier)
@@ -107,10 +99,10 @@ extension ProfileController{
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: haderIdentifier, for: indexPath) as! ProfileHeader
     
 //        header.delegate = self
-        if let user = self.user {
+//        if let user = self.user {
             //ProfileHeaderでのviewModelプロパティが初期化せれた時にuserの情報を持っている関数がdidsetされる全てheader
             header.viewModel = ProfileViewModel(user: user)
-        }
+        // }
         //header.backgroundColor = .purple
         
         return header

@@ -13,12 +13,14 @@ class MainTabController: UITabBarController{
     //
     //    // MARK: - Lifecycle
     //
-    //     var user: User?{
-    //        didSet{
-    //            guard let user = user else { return }
-    //            configureViewControllers(withUser: user)
-    //        }
-    //    }
+    //######2 ここに情報が入ったら
+        var user: User? {
+          didSet{
+                guard let user = user else { return }
+    //######3 ProfileControllerを初期化
+              configureViewControllers(with: user)
+        }
+        }
     //
     //    //viewDidAppearでやると重たくなるらしい
     //    override func viewDidAppear(_ animated: Bool) {
@@ -29,11 +31,21 @@ class MainTabController: UITabBarController{
     //
     //    }
     
+    //######## 1 ユーザーの情報をMainTabControllerのプロパティに入れる
+        func fetchUserStatsTest(){
+            //コールバックを使ってProfileControllerのプロパティに代入する
+            UserService.fetchUsertest { user in
+                self.user = user
+        
+            }
+    
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewControllers()
         view.backgroundColor = .white
            checkIfUserIsLoggedIn()
+        fetchUserStatsTest()
         //        fetchUser()
         // logout()
         
@@ -41,13 +53,14 @@ class MainTabController: UITabBarController{
     
     //
     //    // MARK: - API
+    
     //ホームでログイン中か判断する
     func checkIfUserIsLoggedIn(){
         if Auth.auth().currentUser == nil {
+            //ログイン中じゃない場合はLoginControllerに移動する
             DispatchQueue.main.async {
-                
             let controller = LoginController()
-            //                controller.delegate = self
+            controller.delegate = self
             let nav = UINavigationController(rootViewController: controller)
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: false, completion: nil)
@@ -57,22 +70,15 @@ class MainTabController: UITabBarController{
         }
     }
     //
-    //    func fetchUser(){
-    //        guard let uid = Auth.auth().currentUser?.uid else { return }
-    //        UserService.fetchUser(whithUid: uid){ user in
-    //            self.user = user
-    //        }
-    //    }
-    //
-    func logout(){
-        do{
-            try Auth.auth().signOut()
-        }catch{
-            print("DEBUG: Failed to sign out")
+        func fetchUser(){
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            UserService.fetchUser(whithUid: uid){ user in
+                //self.user = user
+            }
         }
-    }
+    
     //    // MARK: - Helpers Tabの設定
-    func configureViewControllers(){
+    func configureViewControllers(with user: User){
         
         //self.delegate = self
         
@@ -86,9 +92,10 @@ class MainTabController: UITabBarController{
         let notification = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "like_unselected"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
         
         // Set Profile user
-        
-        let profilelayout = UICollectionViewFlowLayout()
-        let profile = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: ProfileController(collectionViewLayout: profilelayout))
+        //######3ProfileControllerのデータを更新する
+        let profileController = ProfileController(user: user)
+
+        let profile = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: profileController)
         
         viewControllers = [feed, search, imageSelector, notification, profile]
         
@@ -128,13 +135,16 @@ class MainTabController: UITabBarController{
 }
 
 // MARK: - AuthenticationDelegate
-//extension MainTabController: AuthenticationDelegate{
-//    func authenticationDidComplete(){
+//ユーザー情報を更新して移動するメソッド
+extension MainTabController: AuthenticationDelegate{
+    func authenticationDidComplete(){
+        print("ここが呼ばれるはず")
 //        fetchUser()
-//        self.dismiss(animated: true, completion: nil)
-//
-//    }
-//}
+        fetchUserStatsTest()
+        self.dismiss(animated: true, completion: nil)
+
+    }
+}
 //
 //
 //// MARK: - UITabBarControllerDelegate

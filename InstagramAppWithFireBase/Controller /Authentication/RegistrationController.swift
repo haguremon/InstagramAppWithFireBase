@@ -13,6 +13,7 @@ class RegisterationController: UIViewController{
     
     private var viewModel = RegistrationViewModel()
     private var profileImage: UIImage?
+    
     weak var delegate: AuthenticationDelegate?
     
     private let plushPhotoButton: UIButton = {
@@ -77,7 +78,8 @@ class RegisterationController: UIViewController{
     
     // MARK: - Actions
     @objc func handleShowLogin(){
-        print("Show Log in")
+       // print("Show Log in")
+        self.delegate?.authenticationDidComplete()
         navigationController?.popViewController(animated: true)
     }
     
@@ -104,6 +106,7 @@ class RegisterationController: UIViewController{
         present(picker, animated: true, completion: nil)
     }
     
+    //SignUpできたらユーザーの認証をdelegate?.authenticationDidComplete()で行う
     @objc func handleSignUp(){
         print("Sign Up")
         guard let email = emailTextField.text else { return }
@@ -121,8 +124,8 @@ class RegisterationController: UIViewController{
             }
             print("成功")
             //前の画面に戻るので
-            self.dismiss(animated: true)
-            //self.delegate?.authenticationDidComplete()
+            //self.dismiss(animated: true)
+            self.delegate?.authenticationDidComplete()
         }
     }
     

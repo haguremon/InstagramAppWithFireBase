@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//正しくログアウトされた時にするプロトコル
 protocol  AuthenticationDelegate: AnyObject {
     func authenticationDidComplete()
 }
@@ -88,25 +88,26 @@ class LoginController: UIViewController{
     }
     
     @objc func handleLogin(){
-        print("LOG IN")
+        
         guard let email = emailTextField.text, !email.isEmpty else { return }
         guard let password = passwordTextField.text else { return }
-        print("\(email)\n\(password)")
+       
         AuthService.logUserIn(withEmail: email, password: password) { [weak self] (result, error) in
             if let error = error {
                 print("DEBUG: Failed to login user\(error.localizedDescription)")
                 return
             }
-            self?.dismiss(animated: true)
-
-//            self.delegate?.authenticationDidComplete()
+            print("LOG IN")
+        //ログインできることができたら呼ばれる
+            self?.delegate?.authenticationDidComplete()
+        
         }
     }
     
     @objc func handleShowSignUp() {
         print("Show Sign Up")
        let controller = RegisterationController()
-//        controller.delegate = delegate
+        controller.delegate = delegate
        // present(controller, animated: true, completion: nil)
         navigationController?.pushViewController(controller, animated: true)
     }
