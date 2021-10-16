@@ -151,9 +151,11 @@ class ProfileHeader: UICollectionViewCell {
        nameLabel.text = viewModel.fullname
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
 
-//        editProfileFollowButton.setTitle(viewModel.followButtonText, for: .normal)
-//        editProfileFollowButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
-//        editProfileFollowButton.backgroundColor = viewModel.followButtonBackgroundColor
+       //現在のユーザーか他の人でfollowButtonTextが変わるそしてフォローしてるかどうかも判断する
+       editProfileFollowButton.setTitle(viewModel.followButtonText, for: .normal)
+        
+       editProfileFollowButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
+        editProfileFollowButton.backgroundColor = viewModel.followButtonBackgroundColor
 
        postLabel.attributedText = viewModel.attributedStatText(value: 0, label: "posts")
        followersLabel.attributedText = viewModel.attributedStatText(value: 0, label: "followers")

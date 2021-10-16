@@ -14,9 +14,9 @@ struct User {
     let profileImageUrl: String
     let username: String
     let uid: String
-    
+    //フォローされてるかどうか
     var isFollwed = false
-    
+    //これによって表示を変える
     var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == uid}
     
     var stats: UserStats!
@@ -27,7 +27,7 @@ struct User {
         self.profileImageUrl = dictonary["profileImageUrl"] as? String ?? ""
         self.username = dictonary["username"] as? String ?? ""
         self.uid = dictonary["uid"] as? String ?? ""
-        //self.stats = UserStats(followers: 0, following: 0, posts: 0)
+//        self.stats = UserStats(followers: 0, following: 0, posts: 0)
 
     }
 }
