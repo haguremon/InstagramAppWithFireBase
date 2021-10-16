@@ -6,15 +6,18 @@
 //
 
 import UIKit
-import YPImagePicker
 import PryntTrimmerView
+import Photos
 
 class ImageSelectorController: UIViewController {
+ 
+    var trimmerView = TrimmerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .green
-    
+        
+
     }
     
     

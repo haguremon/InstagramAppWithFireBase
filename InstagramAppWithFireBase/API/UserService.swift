@@ -69,17 +69,21 @@ struct UserService {
         
     static func fetchUserStats(uid: String, completion: @escaping (UserStats) -> Void) {
         COLLETION_FOLLOWERS.document(uid).collection("user-followers").getDocuments { (snapshot, _) in
+            //let snapshot: QuerySnapshot? <- 配列
+            //followersのDocumentが何個あるか判断する
             let followers = snapshot?.documents.count ?? 0
+            //フォローしてるDocument（ユーザーの数を判断する
             COLLETION_FOLLOWING.document(uid).collection("user-following").getDocuments { (snapshot, _) in
                 let following = snapshot?.documents.count ?? 0
+                completion(UserStats(followers: followers, following: following))
                 
-                COLLETION_POSTS.whereField("ownerUid", isEqualTo:  uid).getDocuments { (snapshot, _) in
-                    let posts = snapshot?.documents.count ?? 0
-                    completion(UserStats(followers: followers, following: following, posts: posts))
+//                COLLETION_POSTS.whereField("ownerUid", isEqualTo:  uid).getDocuments { (snapshot, _) in
+//                    let posts = snapshot?.documents.count ?? 0
+//                    completion(UserStats(followers: followers, following: following, posts: posts))
 
                 }
             }
         }
     }
     
-}
+

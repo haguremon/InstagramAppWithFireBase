@@ -33,7 +33,7 @@ class RegisterationController: UIViewController{
     private let passwordTextField: UITextField = {
         let tf = CustomTextField(placeholder: "Password")
         tf.isSecureTextEntry = true
-        //tf.textContentType = .newPassword
+        tf.textContentType = .newPassword
         return tf
     }()
     
@@ -74,6 +74,10 @@ class RegisterationController: UIViewController{
         passwordTextField.textContentType = .newPassword
         configureUI()
         configureNotificationObservers()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     // MARK: - Actions

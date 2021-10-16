@@ -59,6 +59,7 @@ class ProfileHeader: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
+        
         return label
     }()
     
@@ -156,10 +157,10 @@ class ProfileHeader: UICollectionViewCell {
         
        editProfileFollowButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
         editProfileFollowButton.backgroundColor = viewModel.followButtonBackgroundColor
-
-       postLabel.attributedText = viewModel.attributedStatText(value: 0, label: "posts")
-       followersLabel.attributedText = viewModel.attributedStatText(value: 0, label: "followers")
-       followingLabel.attributedText = viewModel.attributedStatText(value: 0, label: "following")
+//
+       postLabel.attributedText = viewModel.numberOfPosts
+       followersLabel.attributedText = viewModel.numberOfFollowers
+       followingLabel.attributedText = viewModel.numberOfFollowing
    
    }
  

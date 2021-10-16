@@ -42,7 +42,7 @@ struct ProfileViewModel {
     }
 
     var numberOfPosts: NSAttributedString{
-        return attributedStatText(value: user.stats.posts, label: "posts")
+        return attributedStatText(value: 0, label: "posts")
     }
     
     init(user: User){

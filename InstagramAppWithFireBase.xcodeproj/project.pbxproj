@@ -22,7 +22,6 @@
 		CFE0C1FF2716A52D00D3C097 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1F82716A52C00D3C097 /* SearchController.swift */; };
 		CFE0C2002716A52D00D3C097 /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1F92716A52D00D3C097 /* CommentController.swift */; };
 		CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1FA2716A52D00D3C097 /* ProfileController.swift */; };
-		CFE0C2042716A6DB00D3C097 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = CFE0C2032716A6DB00D3C097 /* YPImagePicker */; };
 		CFE0C2062716ADEB00D3C097 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2052716ADEB00D3C097 /* FeedCell.swift */; };
 		CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2072716B7EC00D3C097 /* Extensions.swift */; };
 		CFE0C20B2716B85300D3C097 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CFE0C20A2716B85300D3C097 /* JGProgressHUD */; };
@@ -47,7 +46,7 @@
 /* Begin PBXFileReference section */
 		700EAE11FAB0A0FA528F8B8F /* Pods-InstagramAppWithFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAppWithFireBase.release.xcconfig"; path = "Target Support Files/Pods-InstagramAppWithFireBase/Pods-InstagramAppWithFireBase.release.xcconfig"; sourceTree = "<group>"; };
 		8A02CC320DCBD6DE8E3B771C /* Pods_InstagramAppWithFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramAppWithFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFE0C1D22716A11400D3C097 /* InstagramAppWithFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InstagramAppWithFireBase.app; path = "/Users/iwasakiyuuta/Desktop/InstagramApp/InstagramAppWithFireBase/build/Debug-iphoneos/InstagramAppWithFireBase.app"; sourceTree = "<absolute>"; };
+		CF41E9BC271A97F60049AA0B /* InstagramAppWithFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramAppWithFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE0C1D52716A11400D3C097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE0C1D72716A11400D3C097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFE0C1D92716A11400D3C097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE0C20B2716B85300D3C097 /* JGProgressHUD in Frameworks */,
-				CFE0C2042716A6DB00D3C097 /* YPImagePicker in Frameworks */,
 				CFE0C2252717ED8C00D3C097 /* SDWebImage in Frameworks */,
 				1AE12C1D2B48DD5F8FE57F41 /* Pods_InstagramAppWithFireBase.framework in Frameworks */,
 			);
@@ -112,7 +110,6 @@
 				F0C03329ED2B088EF2E5E149 /* Pods-InstagramAppWithFireBase.debug.xcconfig */,
 				700EAE11FAB0A0FA528F8B8F /* Pods-InstagramAppWithFireBase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,6 +119,7 @@
 				CFE0C1D42716A11400D3C097 /* InstagramAppWithFireBase */,
 				CFAD7AD0F88190F96CF63CAD /* Pods */,
 				33F7D6DE45D3E849884A5C79 /* Frameworks */,
+				CF41E9BC271A97F60049AA0B /* InstagramAppWithFireBase.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,12 +245,11 @@
 			);
 			name = InstagramAppWithFireBase;
 			packageProductDependencies = (
-				CFE0C2032716A6DB00D3C097 /* YPImagePicker */,
 				CFE0C20A2716B85300D3C097 /* JGProgressHUD */,
 				CFE0C2242717ED8C00D3C097 /* SDWebImage */,
 			);
 			productName = InstagramAppWithFireBase;
-			productReference = CFE0C1D22716A11400D3C097 /* InstagramAppWithFireBase.app */;
+			productReference = CF41E9BC271A97F60049AA0B /* InstagramAppWithFireBase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -277,10 +274,36 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				ar,
+				"zh-Hans",
+				ja,
+				fa,
+				nb,
+				es,
+				da,
+				it,
+				bg,
+				sv,
+				cs,
+				km,
+				ko,
+				"zh-Hant",
+				"km-KH",
+				tr,
+				pl,
+				"pt-BR",
+				vi,
+				ru,
+				fr,
+				id,
+				nl,
+				th,
+				"pt-PT",
+				ro,
 			);
 			mainGroup = CFE0C1C92716A11400D3C097;
 			packageReferences = (
-				CFE0C2022716A6DB00D3C097 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				CFE0C2232717ED8C00D3C097 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
@@ -538,6 +561,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +571,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -567,6 +591,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,7 +601,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -604,14 +629,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CFE0C2022716A6DB00D3C097 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
@@ -631,11 +648,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CFE0C2032716A6DB00D3C097 /* YPImagePicker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CFE0C2022716A6DB00D3C097 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
-			productName = YPImagePicker;
-		};
 		CFE0C20A2716B85300D3C097 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
