@@ -8,9 +8,9 @@
 import UIKit
 import SDWebImage
 
-//protocol ProfileHeaderelegate: AnyObject {
-//    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User)
-//}
+protocol ProfileHeaderelegate: AnyObject {
+    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User)
+}
 
 class ProfileHeader: UICollectionViewCell {
     
@@ -18,8 +18,8 @@ class ProfileHeader: UICollectionViewCell {
     var viewModel: ProfileViewModel?{ //viewModelが呼ばれた時にconfigure()が発動する
         didSet{ configure() }
     }
-   // var viewModel =  ProfileViewModel()
-    //weak var delegate: ProfileHeaderelegate?
+    //var viewModel =  ProfileViewModel(user: <#User#>)
+    weak var delegate: ProfileHeaderelegate?
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -38,13 +38,13 @@ class ProfileHeader: UICollectionViewCell {
     
     private lazy var editProfileFollowButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Edit Profile", for: .normal)
+        button.setTitle("loading...", for: .normal)
         button.layer.cornerRadius = 3
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 0.5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.black, for: .normal)
-//        button.addTarget(self, action: #selector(handleEditProfileFollowTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleEditProfileFollowTapped), for: .touchUpInside)
         return button
     }()
     
@@ -138,10 +138,10 @@ class ProfileHeader: UICollectionViewCell {
     
     // MARK: - Actions
     
-//    @objc func handleEditProfileFollowTapped(){
-//        guard let viewModel = viewModel else { return }
-//        delegate?.header(self, didTapActionButtonFor: viewModel.user)
-//    }
+    @objc func handleEditProfileFollowTapped(){
+        guard let viewModel = viewModel else { return }
+        delegate?.header(self, didTapActionButtonFor: viewModel.user)
+    }
 
     // MARK: - Helpers
     //ProfileHeaderのviewModelが値が入った時にdidsetされる
@@ -150,7 +150,7 @@ class ProfileHeader: UICollectionViewCell {
 
        nameLabel.text = viewModel.fullname
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
-
+       print("リロードされたら呼ばれるはず")
        //現在のユーザーか他の人でfollowButtonTextが変わるそしてフォローしてるかどうかも判断する
        editProfileFollowButton.setTitle(viewModel.followButtonText, for: .normal)
         

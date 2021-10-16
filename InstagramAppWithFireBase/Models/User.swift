@@ -16,8 +16,12 @@ struct User {
     let uid: String
     //フォローされてるかどうか
     var isFollwed = false
-    //これによって表示を変える
-    var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == uid}
+    //これによって
+    var isCurrentUser: Bool {
+        //現在ログインしてるユーザーとUser.uidが同じ場合 true
+        return Auth.auth().currentUser?.uid == uid
+        
+    }
     
     var stats: UserStats!
     //辞書型で値が返ってくるので
@@ -27,7 +31,7 @@ struct User {
         self.profileImageUrl = dictonary["profileImageUrl"] as? String ?? ""
         self.username = dictonary["username"] as? String ?? ""
         self.uid = dictonary["uid"] as? String ?? ""
-//        self.stats = UserStats(followers: 0, following: 0, posts: 0)
+        self.stats = UserStats(followers: 0, following: 0, posts: 0)
 
     }
 }

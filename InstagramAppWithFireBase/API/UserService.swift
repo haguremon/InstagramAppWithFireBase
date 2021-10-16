@@ -39,25 +39,29 @@ struct UserService {
             completion(users)
         }
     }
-    
     static func follow(uid: String, completion: @escaping (FirestoreCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-
+        //自分自身のフォロワーなのでcurrentUidが必要
+        //collection("following")のdocument(自分自身のuidドキュメントで).collection("user-following")にフォローしたユーザーのuidをセットする
         COLLETION_FOLLOWING.document(currentUid).collection("user-following").document(uid).setData([:]) { (error) in
+            //上が終わったらcollection("followers")のdocument(フォローしたuidドキュメントに).collection("user-followers").上と逆のことをしてる
             COLLETION_FOLLOWERS.document(uid).collection("user-followers").document(currentUid).setData([:], completion: completion)
         }
     }
     
     static func unfollow(uid: String, completion: @escaping (FirestoreCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        //collection("following")のdocument(自分自身のuidドキュメントで.collection("user-following")にフォローしたユーザーのuidを削除する
         COLLETION_FOLLOWING.document(currentUid).collection("user-following").document(uid).delete { (error) in
+            //相手のフォロワーからも自分のuidを削除する
             COLLETION_FOLLOWERS.document(uid).collection("user-followers").document(currentUid).delete(completion: completion)
         }
     }
-    
+    //ユーザーをフォローしてる判断する処理
     static func checkIfUserIsFolloed(uid: String, completion: @escaping (Bool) -> Void) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         COLLETION_FOLLOWING.document(currentUid).collection("user-following").document(uid).getDocument { (snapshot, error) in
+            //exists関数でsnapshotがあるか判断することができる
             guard let isFollowed = snapshot?.exists else { return }
             completion(isFollowed)
         }

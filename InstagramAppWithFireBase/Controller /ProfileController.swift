@@ -38,7 +38,7 @@ class ProfileController: UICollectionViewController {
 //
     override func viewDidLoad() {
         super.viewDidLoad()
-//        checkIfUserIsFolloed()
+        checkIfUserIsFolloed()
         configureCollectionView()
 //        fetchUserStats()
 //        fetchPosts()
@@ -47,12 +47,14 @@ class ProfileController: UICollectionViewController {
 //
 //    // MARK: - API
 //    
-//    func checkIfUserIsFolloed(){
-//        UserService.checkIfUserIsFolloed(uid: user.uid) { (isFollowed) in
-//            self.user.isFollwed = isFollowed
-//            self.collectionView.reloadData()
-//        }
-//    }
+    //
+    func checkIfUserIsFolloed() {
+        UserService.checkIfUserIsFolloed(uid: user.uid) { (isFollowed) in
+           //真だったらフォロイングになる
+            self.user.isFollwed = isFollowed
+            self.collectionView.reloadData()
+        }
+    }
     //firebaseから取得する
 
 //    
@@ -98,7 +100,7 @@ extension ProfileController{
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: haderIdentifier, for: indexPath) as! ProfileHeader
     
-//        header.delegate = self
+        header.delegate = self
 //        if let user = self.user {
             //ProfileHeaderでのviewModelプロパティが初期化せれた時にuserの情報を持っている関数がdidsetされる全てheader
             header.viewModel = ProfileViewModel(user: user)
@@ -142,29 +144,32 @@ extension ProfileController: UICollectionViewDelegateFlowLayout{
 //
 //// MARK: - ProfileHeaderDelegate
 //
-//extension ProfileController: ProfileHeaderelegate{
-//    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
-//        
+extension ProfileController: ProfileHeaderelegate {
+    //editProfileFollowButtonが押された時に発動する
+    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
 //        guard let tab = tabBarController as? MainTabController else { return }
 //        guard let currentUser = tab.user else { return }
-//        if user.isCurrentUser{
-//            print("DEBUG: Show edit profile here....")
-//        }else if user.isFollwed{
-//            UserService.unfollow(uid: user.uid) { (error) in
-//                self.user.isFollwed = false
-//                self.collectionView.reloadData()
+        if user.isCurrentUser {
+            print("DEBUG: Show edit profile here....")
+      } else if user.isFollwed {
+           //フォロ＝されてる場合フォローを削除する
+          UserService.unfollow(uid: user.uid) { (error) in
+                self.user.isFollwed = false
+                self.collectionView.reloadData()
 //                PostService.updateUserFeedAfterFollowing(user: user, didFollow: false)
-//                
-//            }
-//            
-//        }else{
-//            UserService.follow(uid: user.uid) { (error) in
-//                self.user.isFollwed = true
-//                self.collectionView.reloadData()
-//                
+            }
+            
+      } else {
+           //user.isFollwedがデフォルトのままでフォローされてない場合は押された時にフォローするようにする
+            UserService.follow(uid: user.uid) { (error) in
+                print("フォローされましたーUI変更")
+                
+                self.user.isFollwed = true
+                self.collectionView.reloadData()
+
 //                NotificationService.uploadNotification(toUid: user.uid, fromUser: currentUser, type: .follow)
 //                PostService.updateUserFeedAfterFollowing(user: user, didFollow: true)
-//            }
-//        }
-//    }
-//}
+            }
+        }
+    }
+}
