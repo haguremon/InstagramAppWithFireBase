@@ -6,16 +6,14 @@
 //
 
 import UIKit
-import PryntTrimmerView
 import Photos
-
+//この画面でimageピッカーが発動するここで選択したら Upload画面に移動する
 class ImageSelectorController: UIViewController {
  
-    var trimmerView = TrimmerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .green
+        view.backgroundColor = .white
         
 
     }

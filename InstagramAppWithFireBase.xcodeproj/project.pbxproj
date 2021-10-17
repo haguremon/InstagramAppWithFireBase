@@ -7,93 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AE12C1D2B48DD5F8FE57F41 /* Pods_InstagramAppWithFireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A02CC320DCBD6DE8E3B771C /* Pods_InstagramAppWithFireBase.framework */; };
-		CFC7E5B7271B21CE0013B3EA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CFC7E542271B21CE0013B3EA /* LICENSE */; };
-		CFC7E5B8271B21CE0013B3EA /* YPImagePickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFC7E544271B21CE0013B3EA /* YPImagePickerLocalizable.strings */; };
-		CFC7E5B9271B21CE0013B3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC7E54D271B21CE0013B3EA /* Assets.xcassets */; };
-		CFC7E5BA271B21CE0013B3EA /* YPVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E559271B21CE0013B3EA /* YPVideoView.swift */; };
-		CFC7E5BB271B21CE0013B3EA /* YPVideoFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E55A271B21CE0013B3EA /* YPVideoFiltersVC.swift */; };
-		CFC7E5BC271B21CE0013B3EA /* YPVideoFiltersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC7E55B271B21CE0013B3EA /* YPVideoFiltersVC.xib */; };
-		CFC7E5BD271B21CE0013B3EA /* YPCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E55D271B21CE0013B3EA /* YPCropView.swift */; };
-		CFC7E5BE271B21CE0013B3EA /* YPCropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E55E271B21CE0013B3EA /* YPCropVC.swift */; };
-		CFC7E5BF271B21CE0013B3EA /* YPPhotoFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E55F271B21CE0013B3EA /* YPPhotoFiltersVC.swift */; };
-		CFC7E5C0271B21CE0013B3EA /* YPFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E560271B21CE0013B3EA /* YPFiltersView.swift */; };
-		CFC7E5C1271B21CE0013B3EA /* YPFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E561271B21CE0013B3EA /* YPFilterCollectionViewCell.swift */; };
-		CFC7E5C2271B21CE0013B3EA /* YPFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E562271B21CE0013B3EA /* YPFilter.swift */; };
-		CFC7E5C3271B21CE0013B3EA /* YPPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E563271B21CE0013B3EA /* YPPickerVC.swift */; };
-		CFC7E5C4271B21CE0013B3EA /* YPImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E565271B21CE0013B3EA /* YPImageSize.swift */; };
-		CFC7E5C5271B21CE0013B3EA /* YPImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E566271B21CE0013B3EA /* YPImagePickerConfiguration.swift */; };
-		CFC7E5C6271B21CE0013B3EA /* YPWordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E567271B21CE0013B3EA /* YPWordings.swift */; };
-		CFC7E5C7271B21CE0013B3EA /* YPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E568271B21CE0013B3EA /* YPColors.swift */; };
-		CFC7E5C8271B21CE0013B3EA /* YPPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E569271B21CE0013B3EA /* YPPickerScreen.swift */; };
-		CFC7E5C9271B21CE0013B3EA /* YPIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E56A271B21CE0013B3EA /* YPIcons.swift */; };
-		CFC7E5CA271B21CE0013B3EA /* YPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E56B271B21CE0013B3EA /* YPImagePicker.swift */; };
-		CFC7E5CB271B21CE0013B3EA /* YPLibrarySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E56D271B21CE0013B3EA /* YPLibrarySelection.swift */; };
-		CFC7E5CC271B21CE0013B3EA /* YPMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E56E271B21CE0013B3EA /* YPMediaItem.swift */; };
-		CFC7E5CD271B21CE0013B3EA /* YPDragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E56F271B21CE0013B3EA /* YPDragDirection.swift */; };
-		CFC7E5CE271B21CE0013B3EA /* YPPermissionDeniedPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E570271B21CE0013B3EA /* YPPermissionDeniedPopup.swift */; };
-		CFC7E5CF271B21CE0013B3EA /* YPTrimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E571271B21CE0013B3EA /* YPTrimError.swift */; };
-		CFC7E5D0271B21CE0013B3EA /* YPSelectionsGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E573271B21CE0013B3EA /* YPSelectionsGalleryVC.swift */; };
-		CFC7E5D1271B21CE0013B3EA /* YPSelectionsGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E574271B21CE0013B3EA /* YPSelectionsGalleryView.swift */; };
-		CFC7E5D2271B21CE0013B3EA /* YPSelectionsGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E575271B21CE0013B3EA /* YPSelectionsGalleryCell.swift */; };
-		CFC7E5D3271B21CE0013B3EA /* YPVideoCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E578271B21CE0013B3EA /* YPVideoCaptureHelper.swift */; };
-		CFC7E5D4271B21CE0013B3EA /* YPVideoCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E579271B21CE0013B3EA /* YPVideoCaptureVC.swift */; };
-		CFC7E5D5271B21CE0013B3EA /* YPLibraryVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E57B271B21CE0013B3EA /* YPLibraryVC+CollectionView.swift */; };
-		CFC7E5D6271B21CE0013B3EA /* YPAlbumsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E57C271B21CE0013B3EA /* YPAlbumsManager.swift */; };
-		CFC7E5D7271B21CE0013B3EA /* YPLibraryVC+PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E57D271B21CE0013B3EA /* YPLibraryVC+PanGesture.swift */; };
-		CFC7E5D8271B21CE0013B3EA /* YPLibraryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E57E271B21CE0013B3EA /* YPLibraryViewDelegate.swift */; };
-		CFC7E5D9271B21CE0013B3EA /* YPGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E57F271B21CE0013B3EA /* YPGridView.swift */; };
-		CFC7E5DA271B21CE0013B3EA /* YPAssetZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E580271B21CE0013B3EA /* YPAssetZoomableView.swift */; };
-		CFC7E5DB271B21CE0013B3EA /* YPAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E581271B21CE0013B3EA /* YPAlbumView.swift */; };
-		CFC7E5DC271B21CE0013B3EA /* YPAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E582271B21CE0013B3EA /* YPAlbumVC.swift */; };
-		CFC7E5DD271B21CE0013B3EA /* YPAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E583271B21CE0013B3EA /* YPAlbumCell.swift */; };
-		CFC7E5DE271B21CE0013B3EA /* YPLibrary+LibraryChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E584271B21CE0013B3EA /* YPLibrary+LibraryChange.swift */; };
-		CFC7E5DF271B21CE0013B3EA /* YPMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E586271B21CE0013B3EA /* YPMenuItem.swift */; };
-		CFC7E5E0271B21CE0013B3EA /* YPBottomPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E587271B21CE0013B3EA /* YPBottomPager.swift */; };
-		CFC7E5E1271B21CE0013B3EA /* YPPagerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E588271B21CE0013B3EA /* YPPagerMenu.swift */; };
-		CFC7E5E2271B21CE0013B3EA /* YPBottomPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E589271B21CE0013B3EA /* YPBottomPagerView.swift */; };
-		CFC7E5E3271B21CE0013B3EA /* YPLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E58A271B21CE0013B3EA /* YPLibraryVC.swift */; };
-		CFC7E5E4271B21CE0013B3EA /* LibraryMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E58B271B21CE0013B3EA /* LibraryMediaManager.swift */; };
-		CFC7E5E5271B21CE0013B3EA /* YPAssetViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E58C271B21CE0013B3EA /* YPAssetViewContainer.swift */; };
-		CFC7E5E6271B21CE0013B3EA /* YPLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E58D271B21CE0013B3EA /* YPLibraryView.swift */; };
-		CFC7E5E7271B21CE0013B3EA /* YPAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E58E271B21CE0013B3EA /* YPAlbum.swift */; };
-		CFC7E5E8271B21CE0013B3EA /* YPLibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E58F271B21CE0013B3EA /* YPLibraryViewCell.swift */; };
-		CFC7E5E9271B21CE0013B3EA /* YPLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC7E590271B21CE0013B3EA /* YPLibraryView.xib */; };
-		CFC7E5EA271B21CE0013B3EA /* YPPhotoCaptureDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E592271B21CE0013B3EA /* YPPhotoCaptureDefaults.swift */; };
-		CFC7E5EB271B21CE0013B3EA /* YPPhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E593271B21CE0013B3EA /* YPPhotoCapture.swift */; };
-		CFC7E5EC271B21CE0013B3EA /* YPCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E594271B21CE0013B3EA /* YPCameraView.swift */; };
-		CFC7E5ED271B21CE0013B3EA /* PostiOS10PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E595271B21CE0013B3EA /* PostiOS10PhotoCapture.swift */; };
-		CFC7E5EE271B21CE0013B3EA /* PreiOS10PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E596271B21CE0013B3EA /* PreiOS10PhotoCapture.swift */; };
-		CFC7E5EF271B21CE0013B3EA /* YPCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E597271B21CE0013B3EA /* YPCameraVC.swift */; };
-		CFC7E5F0271B21CE0013B3EA /* YPVideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E599271B21CE0013B3EA /* YPVideoProcessor.swift */; };
-		CFC7E5F1271B21CE0013B3EA /* YPPermissionCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E59A271B21CE0013B3EA /* YPPermissionCheckable.swift */; };
-		CFC7E5F2271B21CE0013B3EA /* AVCaptureDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E59C271B21CE0013B3EA /* AVCaptureDevice+Extensions.swift */; };
-		CFC7E5F3271B21CE0013B3EA /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E59D271B21CE0013B3EA /* UIButton+Extensions.swift */; };
-		CFC7E5F4271B21CE0013B3EA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E59E271B21CE0013B3EA /* String+Extensions.swift */; };
-		CFC7E5F5271B21CE0013B3EA /* AVMutableComposition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E59F271B21CE0013B3EA /* AVMutableComposition+Extensions.swift */; };
-		CFC7E5F6271B21CE0013B3EA /* AVAsset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A0271B21CE0013B3EA /* AVAsset+Extensions.swift */; };
-		CFC7E5F7271B21CE0013B3EA /* AVPlayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A1271B21CE0013B3EA /* AVPlayer+Extensions.swift */; };
-		CFC7E5F8271B21CE0013B3EA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A2271B21CE0013B3EA /* UIColor+Extensions.swift */; };
-		CFC7E5F9271B21CE0013B3EA /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A3271B21CE0013B3EA /* UIImage+Extensions.swift */; };
-		CFC7E5FA271B21CE0013B3EA /* AVAssetTrack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A4271B21CE0013B3EA /* AVAssetTrack+Extensions.swift */; };
-		CFC7E5FB271B21CE0013B3EA /* PHCachingImageManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A5271B21CE0013B3EA /* PHCachingImageManager+Extensions.swift */; };
-		CFC7E5FC271B21CE0013B3EA /* CIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A6271B21CE0013B3EA /* CIImage+Extensions.swift */; };
-		CFC7E5FD271B21CE0013B3EA /* NSFileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A7271B21CE0013B3EA /* NSFileManager+Extensions.swift */; };
-		CFC7E5FE271B21CE0013B3EA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A8271B21CE0013B3EA /* URL+Extensions.swift */; };
-		CFC7E5FF271B21CE0013B3EA /* AVFoundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5A9271B21CE0013B3EA /* AVFoundation+Extensions.swift */; };
-		CFC7E600271B21CE0013B3EA /* PHFetchResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5AA271B21CE0013B3EA /* PHFetchResult+Extensions.swift */; };
-		CFC7E601271B21CE0013B3EA /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5AB271B21CE0013B3EA /* CGRect+Extensions.swift */; };
-		CFC7E602271B21CE0013B3EA /* AVFileType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5AC271B21CE0013B3EA /* AVFileType+Extensions.swift */; };
-		CFC7E603271B21CF0013B3EA /* AVCaptureSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5AD271B21CE0013B3EA /* AVCaptureSession+Extensions.swift */; };
-		CFC7E604271B21CF0013B3EA /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5AE271B21CE0013B3EA /* CGFloat+Extensions.swift */; };
-		CFC7E605271B21CF0013B3EA /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5AF271B21CE0013B3EA /* UICollectionView+Extensions.swift */; };
-		CFC7E606271B21CF0013B3EA /* IndexSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5B0271B21CE0013B3EA /* IndexSet+Extensions.swift */; };
-		CFC7E607271B21CF0013B3EA /* YPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5B1271B21CE0013B3EA /* YPHelper.swift */; };
-		CFC7E608271B21CF0013B3EA /* YPLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5B2271B21CE0013B3EA /* YPLoadingView.swift */; };
-		CFC7E609271B21CF0013B3EA /* YPPhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5B3271B21CE0013B3EA /* YPPhotoSaver.swift */; };
-		CFC7E60A271B21CF0013B3EA /* YPAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5B4271B21CE0013B3EA /* YPAlerts.swift */; };
-		CFC7E60B271B21CF0013B3EA /* YPLoaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7E5B5271B21CE0013B3EA /* YPLoaders.swift */; };
-		CFC7E60C271B21CF0013B3EA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CFC7E5B6271B21CE0013B3EA /* README.md */; };
+		CF1A580F271BF9F0004730E3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CF1A5787271BF9EF004730E3 /* LICENSE */; };
+		CF1A5810271BF9F0004730E3 /* YPVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A578B271BF9EF004730E3 /* YPVideoView.swift */; };
+		CF1A5811271BF9F0004730E3 /* YPVideoFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A578C271BF9EF004730E3 /* YPVideoFiltersVC.swift */; };
+		CF1A5812271BF9F0004730E3 /* YPVideoFiltersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A578D271BF9EF004730E3 /* YPVideoFiltersVC.xib */; };
+		CF1A5813271BF9F0004730E3 /* YPCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A578F271BF9EF004730E3 /* YPCropView.swift */; };
+		CF1A5814271BF9F0004730E3 /* YPCropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5790271BF9EF004730E3 /* YPCropVC.swift */; };
+		CF1A5815271BF9F0004730E3 /* YPPhotoFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5792271BF9EF004730E3 /* YPPhotoFiltersVC.swift */; };
+		CF1A5816271BF9F0004730E3 /* YPFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5793271BF9EF004730E3 /* YPFiltersView.swift */; };
+		CF1A5817271BF9F0004730E3 /* YPFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5794271BF9EF004730E3 /* YPFilterCollectionViewCell.swift */; };
+		CF1A5818271BF9F0004730E3 /* YPFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5795271BF9EF004730E3 /* YPFilter.swift */; };
+		CF1A5819271BF9F0004730E3 /* YPPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5796271BF9EF004730E3 /* YPPickerVC.swift */; };
+		CF1A581A271BF9F0004730E3 /* YPFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5798271BF9EF004730E3 /* YPFonts.swift */; };
+		CF1A581B271BF9F0004730E3 /* YPImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5799271BF9EF004730E3 /* YPImageSize.swift */; };
+		CF1A581C271BF9F0004730E3 /* YPImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A579A271BF9EF004730E3 /* YPImagePickerConfiguration.swift */; };
+		CF1A581D271BF9F0004730E3 /* YPWordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A579B271BF9EF004730E3 /* YPWordings.swift */; };
+		CF1A581E271BF9F0004730E3 /* YPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A579C271BF9EF004730E3 /* YPColors.swift */; };
+		CF1A581F271BF9F0004730E3 /* YPPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A579D271BF9EF004730E3 /* YPPickerScreen.swift */; };
+		CF1A5820271BF9F0004730E3 /* YPIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A579E271BF9EF004730E3 /* YPIcons.swift */; };
+		CF1A5821271BF9F0004730E3 /* YPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A579F271BF9EF004730E3 /* YPImagePicker.swift */; };
+		CF1A5822271BF9F0004730E3 /* YPImagePickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF1A57A1271BF9EF004730E3 /* YPImagePickerLocalizable.strings */; };
+		CF1A5823271BF9F0004730E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1A57AD271BF9EF004730E3 /* Assets.xcassets */; };
+		CF1A5824271BF9F0004730E3 /* YPLibrarySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C0271BF9EF004730E3 /* YPLibrarySelection.swift */; };
+		CF1A5825271BF9F0004730E3 /* YPMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C1271BF9EF004730E3 /* YPMediaItem.swift */; };
+		CF1A5826271BF9F0004730E3 /* YPFlashMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C2271BF9EF004730E3 /* YPFlashMode.swift */; };
+		CF1A5827271BF9F0004730E3 /* YPLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C3271BF9EF004730E3 /* YPLog.swift */; };
+		CF1A5828271BF9F0004730E3 /* YPDragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C4271BF9EF004730E3 /* YPDragDirection.swift */; };
+		CF1A5829271BF9F0004730E3 /* YPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C5271BF9EF004730E3 /* YPError.swift */; };
+		CF1A582A271BF9F0004730E3 /* YPTrimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C6271BF9EF004730E3 /* YPTrimError.swift */; };
+		CF1A582B271BF9F0004730E3 /* YPSelectionsGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C8271BF9EF004730E3 /* YPSelectionsGalleryVC.swift */; };
+		CF1A582C271BF9F0004730E3 /* YPSelectionsGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57C9271BF9EF004730E3 /* YPSelectionsGalleryView.swift */; };
+		CF1A582D271BF9F0004730E3 /* YPSelectionsGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57CA271BF9EF004730E3 /* YPSelectionsGalleryCell.swift */; };
+		CF1A582E271BF9F0004730E3 /* YPVideoCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57CD271BF9EF004730E3 /* YPVideoCaptureHelper.swift */; };
+		CF1A582F271BF9F0004730E3 /* YPVideoCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57CE271BF9EF004730E3 /* YPVideoCaptureVC.swift */; };
+		CF1A5830271BF9F0004730E3 /* YPLibraryVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D0271BF9EF004730E3 /* YPLibraryVC+CollectionView.swift */; };
+		CF1A5831271BF9F0004730E3 /* YPLibraryVC+PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D1271BF9EF004730E3 /* YPLibraryVC+PanGesture.swift */; };
+		CF1A5832271BF9F0004730E3 /* YPLibraryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D2271BF9EF004730E3 /* YPLibraryViewDelegate.swift */; };
+		CF1A5833271BF9F0004730E3 /* YPGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D3271BF9EF004730E3 /* YPGridView.swift */; };
+		CF1A5834271BF9F0004730E3 /* YPAssetZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D4271BF9EF004730E3 /* YPAssetZoomableView.swift */; };
+		CF1A5835271BF9F0004730E3 /* YPLibrary+LibraryChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D5271BF9EF004730E3 /* YPLibrary+LibraryChange.swift */; };
+		CF1A5836271BF9F0004730E3 /* YPMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D7271BF9EF004730E3 /* YPMenuItem.swift */; };
+		CF1A5837271BF9F0004730E3 /* YPBottomPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D8271BF9EF004730E3 /* YPBottomPager.swift */; };
+		CF1A5838271BF9F0004730E3 /* YPPagerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57D9271BF9EF004730E3 /* YPPagerMenu.swift */; };
+		CF1A5839271BF9F0004730E3 /* YPBottomPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57DA271BF9EF004730E3 /* YPBottomPagerView.swift */; };
+		CF1A583A271BF9F0004730E3 /* YPLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57DB271BF9EF004730E3 /* YPLibraryVC.swift */; };
+		CF1A583B271BF9F0004730E3 /* LibraryMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57DC271BF9EF004730E3 /* LibraryMediaManager.swift */; };
+		CF1A583C271BF9F0004730E3 /* YPAssetViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57DD271BF9EF004730E3 /* YPAssetViewContainer.swift */; };
+		CF1A583D271BF9F0004730E3 /* YPLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57DE271BF9EF004730E3 /* YPLibraryView.swift */; };
+		CF1A583E271BF9F0004730E3 /* YPAlbumsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E0271BF9EF004730E3 /* YPAlbumsManager.swift */; };
+		CF1A583F271BF9F0004730E3 /* YPAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E1271BF9EF004730E3 /* YPAlbumView.swift */; };
+		CF1A5840271BF9F0004730E3 /* YPAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E2271BF9EF004730E3 /* YPAlbumVC.swift */; };
+		CF1A5841271BF9F0004730E3 /* YPAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E3271BF9EF004730E3 /* YPAlbumCell.swift */; };
+		CF1A5842271BF9F0004730E3 /* YPAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E4271BF9EF004730E3 /* YPAlbum.swift */; };
+		CF1A5843271BF9F0004730E3 /* YPLibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E5271BF9EF004730E3 /* YPLibraryViewCell.swift */; };
+		CF1A5844271BF9F0004730E3 /* YPLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A57E6271BF9EF004730E3 /* YPLibraryView.xib */; };
+		CF1A5845271BF9F0004730E3 /* YPCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E8271BF9EF004730E3 /* YPCameraView.swift */; };
+		CF1A5846271BF9F0004730E3 /* YPPhotoCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57E9271BF9EF004730E3 /* YPPhotoCaptureHelper.swift */; };
+		CF1A5847271BF9F0004730E3 /* YPCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57EA271BF9EF004730E3 /* YPCameraVC.swift */; };
+		CF1A5848271BF9F0004730E3 /* YPVideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57EC271BF9EF004730E3 /* YPVideoProcessor.swift */; };
+		CF1A5849271BF9F0004730E3 /* YPDeviceOrientationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57ED271BF9EF004730E3 /* YPDeviceOrientationHelper.swift */; };
+		CF1A584A271BF9F0004730E3 /* YPPermissionCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57EF271BF9EF004730E3 /* YPPermissionCheckable.swift */; };
+		CF1A584B271BF9F0004730E3 /* YPPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F0271BF9EF004730E3 /* YPPermissionManager.swift */; };
+		CF1A584C271BF9F0004730E3 /* YPPermissionDeniedPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F1271BF9EF004730E3 /* YPPermissionDeniedPopup.swift */; };
+		CF1A584D271BF9F0004730E3 /* AVCaptureDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F3271BF9EF004730E3 /* AVCaptureDevice+Extensions.swift */; };
+		CF1A584E271BF9F0004730E3 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F4271BF9EF004730E3 /* UIButton+Extensions.swift */; };
+		CF1A584F271BF9F0004730E3 /* AVMutableComposition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F5271BF9EF004730E3 /* AVMutableComposition+Extensions.swift */; };
+		CF1A5850271BF9F0004730E3 /* AVAsset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F6271BF9EF004730E3 /* AVAsset+Extensions.swift */; };
+		CF1A5851271BF9F0004730E3 /* AVPlayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F7271BF9EF004730E3 /* AVPlayer+Extensions.swift */; };
+		CF1A5852271BF9F0004730E3 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F8271BF9EF004730E3 /* UIColor+Extensions.swift */; };
+		CF1A5853271BF9F0004730E3 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57F9271BF9EF004730E3 /* UIImage+Extensions.swift */; };
+		CF1A5854271BF9F0004730E3 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57FA271BF9EF004730E3 /* UINavigationBar+Extensions.swift */; };
+		CF1A5855271BF9F0004730E3 /* PHCachingImageManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57FB271BF9EF004730E3 /* PHCachingImageManager+Extensions.swift */; };
+		CF1A5856271BF9F0004730E3 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57FC271BF9EF004730E3 /* UIBarButtonItem+Extensions.swift */; };
+		CF1A5857271BF9F0004730E3 /* CIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57FD271BF9EF004730E3 /* CIImage+Extensions.swift */; };
+		CF1A5858271BF9F0004730E3 /* NSFileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57FE271BF9EF004730E3 /* NSFileManager+Extensions.swift */; };
+		CF1A5859271BF9F0004730E3 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A57FF271BF9EF004730E3 /* URL+Extensions.swift */; };
+		CF1A585A271BF9F0004730E3 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5800271BF9EF004730E3 /* Bundle+Extensions.swift */; };
+		CF1A585B271BF9F0004730E3 /* AVFoundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5801271BF9EF004730E3 /* AVFoundation+Extensions.swift */; };
+		CF1A585C271BF9F0004730E3 /* PHFetchResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5802271BF9EF004730E3 /* PHFetchResult+Extensions.swift */; };
+		CF1A585D271BF9F0004730E3 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5803271BF9EF004730E3 /* CGRect+Extensions.swift */; };
+		CF1A585E271BF9F0004730E3 /* AVFileType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5804271BF9EF004730E3 /* AVFileType+Extensions.swift */; };
+		CF1A585F271BF9F0004730E3 /* AVCaptureSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5805271BF9EF004730E3 /* AVCaptureSession+Extensions.swift */; };
+		CF1A5860271BF9F0004730E3 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5806271BF9EF004730E3 /* CGFloat+Extensions.swift */; };
+		CF1A5861271BF9F0004730E3 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5807271BF9EF004730E3 /* UICollectionView+Extensions.swift */; };
+		CF1A5862271BF9F0004730E3 /* IndexSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5808271BF9EF004730E3 /* IndexSet+Extensions.swift */; };
+		CF1A5863271BF9F0004730E3 /* YPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A5809271BF9EF004730E3 /* YPHelper.swift */; };
+		CF1A5864271BF9F0004730E3 /* YPLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A580A271BF9EF004730E3 /* YPLoadingView.swift */; };
+		CF1A5865271BF9F0004730E3 /* YPPhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A580B271BF9EF004730E3 /* YPPhotoSaver.swift */; };
+		CF1A5866271BF9F0004730E3 /* YPAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A580C271BF9EF004730E3 /* YPAlerts.swift */; };
+		CF1A5867271BF9F0004730E3 /* YPLoaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A580D271BF9EF004730E3 /* YPLoaders.swift */; };
+		CF1A5868271BF9F0004730E3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF1A580E271BF9EF004730E3 /* README.md */; };
+		CF1A5872271BFF6B004730E3 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5871271BFF6B004730E3 /* Stevia */; };
+		CF1A5875271BFF7B004730E3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5874271BFF7B004730E3 /* SDWebImage */; };
+		CF1A5878271BFF88004730E3 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5877271BFF88004730E3 /* JGProgressHUD */; };
+		CF1A587B271C1A1C004730E3 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A587A271C1A1C004730E3 /* InputTextView.swift */; };
 		CFE0C1D62716A11400D3C097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1D52716A11400D3C097 /* AppDelegate.swift */; };
 		CFE0C1D82716A11400D3C097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1D72716A11400D3C097 /* SceneDelegate.swift */; };
 		CFE0C1DA2716A11400D3C097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1D92716A11400D3C097 /* ViewController.swift */; };
@@ -110,7 +117,6 @@
 		CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1FA2716A52D00D3C097 /* ProfileController.swift */; };
 		CFE0C2062716ADEB00D3C097 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2052716ADEB00D3C097 /* FeedCell.swift */; };
 		CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2072716B7EC00D3C097 /* Extensions.swift */; };
-		CFE0C20B2716B85300D3C097 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CFE0C20A2716B85300D3C097 /* JGProgressHUD */; };
 		CFE0C20F2716CEC000D3C097 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C20E2716CEC000D3C097 /* LoginController.swift */; };
 		CFE0C2112716CF3100D3C097 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2102716CF3100D3C097 /* CustomTextField.swift */; };
 		CFE0C2132716D20200D3C097 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2122716D20200D3C097 /* RegistrationController.swift */; };
@@ -120,120 +126,138 @@
 		CFE0C21C2717D15000D3C097 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C21B2717D15000D3C097 /* AuthService.swift */; };
 		CFE0C2212717ED3500D3C097 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C21F2717ED3500D3C097 /* ProfileCell.swift */; };
 		CFE0C2222717ED3500D3C097 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2202717ED3500D3C097 /* ProfileHeader.swift */; };
-		CFE0C2252717ED8C00D3C097 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CFE0C2242717ED8C00D3C097 /* SDWebImage */; };
 		CFE0C2272717FB2900D3C097 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2262717FB2900D3C097 /* ProfileViewModel.swift */; };
 		CFE0C2292718032800D3C097 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C2282718032800D3C097 /* UserService.swift */; };
 		CFE0C22B2718038600D3C097 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C22A2718038600D3C097 /* Constants.swift */; };
 		CFE0C22D271803D100D3C097 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C22C271803D100D3C097 /* User.swift */; };
 		CFE0C22F2719534F00D3C097 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C22E2719534F00D3C097 /* UserCell.swift */; };
 		CFE0C23127197CA600D3C097 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C23027197CA600D3C097 /* UserCellViewModel.swift */; };
+		D8C78013ACE41065C79B6E91 /* Pods_InstagramAppWithFireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472755635B21D6F40C001C32 /* Pods_InstagramAppWithFireBase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		700EAE11FAB0A0FA528F8B8F /* Pods-InstagramAppWithFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAppWithFireBase.release.xcconfig"; path = "Target Support Files/Pods-InstagramAppWithFireBase/Pods-InstagramAppWithFireBase.release.xcconfig"; sourceTree = "<group>"; };
-		8A02CC320DCBD6DE8E3B771C /* Pods_InstagramAppWithFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramAppWithFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF41E9BC271A97F60049AA0B /* InstagramAppWithFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramAppWithFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFC7E542271B21CE0013B3EA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		CFC7E545271B21CE0013B3EA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E546271B21CE0013B3EA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E547271B21CE0013B3EA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
-		CFC7E548271B21CE0013B3EA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E549271B21CE0013B3EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E54A271B21CE0013B3EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E54B271B21CE0013B3EA /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E54C271B21CE0013B3EA /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E54D271B21CE0013B3EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CFC7E54E271B21CE0013B3EA /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E54F271B21CE0013B3EA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
-		CFC7E550271B21CE0013B3EA /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E551271B21CE0013B3EA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
-		CFC7E552271B21CE0013B3EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E553271B21CE0013B3EA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E554271B21CE0013B3EA /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E555271B21CE0013B3EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
-		CFC7E559271B21CE0013B3EA /* YPVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoView.swift; sourceTree = "<group>"; };
-		CFC7E55A271B21CE0013B3EA /* YPVideoFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoFiltersVC.swift; sourceTree = "<group>"; };
-		CFC7E55B271B21CE0013B3EA /* YPVideoFiltersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPVideoFiltersVC.xib; sourceTree = "<group>"; };
-		CFC7E55D271B21CE0013B3EA /* YPCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropView.swift; sourceTree = "<group>"; };
-		CFC7E55E271B21CE0013B3EA /* YPCropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropVC.swift; sourceTree = "<group>"; };
-		CFC7E55F271B21CE0013B3EA /* YPPhotoFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoFiltersVC.swift; sourceTree = "<group>"; };
-		CFC7E560271B21CE0013B3EA /* YPFiltersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFiltersView.swift; sourceTree = "<group>"; };
-		CFC7E561271B21CE0013B3EA /* YPFilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilterCollectionViewCell.swift; sourceTree = "<group>"; };
-		CFC7E562271B21CE0013B3EA /* YPFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilter.swift; sourceTree = "<group>"; };
-		CFC7E563271B21CE0013B3EA /* YPPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerVC.swift; sourceTree = "<group>"; };
-		CFC7E565271B21CE0013B3EA /* YPImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImageSize.swift; sourceTree = "<group>"; };
-		CFC7E566271B21CE0013B3EA /* YPImagePickerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePickerConfiguration.swift; sourceTree = "<group>"; };
-		CFC7E567271B21CE0013B3EA /* YPWordings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPWordings.swift; sourceTree = "<group>"; };
-		CFC7E568271B21CE0013B3EA /* YPColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPColors.swift; sourceTree = "<group>"; };
-		CFC7E569271B21CE0013B3EA /* YPPickerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerScreen.swift; sourceTree = "<group>"; };
-		CFC7E56A271B21CE0013B3EA /* YPIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPIcons.swift; sourceTree = "<group>"; };
-		CFC7E56B271B21CE0013B3EA /* YPImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePicker.swift; sourceTree = "<group>"; };
-		CFC7E56D271B21CE0013B3EA /* YPLibrarySelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibrarySelection.swift; sourceTree = "<group>"; };
-		CFC7E56E271B21CE0013B3EA /* YPMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMediaItem.swift; sourceTree = "<group>"; };
-		CFC7E56F271B21CE0013B3EA /* YPDragDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDragDirection.swift; sourceTree = "<group>"; };
-		CFC7E570271B21CE0013B3EA /* YPPermissionDeniedPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionDeniedPopup.swift; sourceTree = "<group>"; };
-		CFC7E571271B21CE0013B3EA /* YPTrimError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPTrimError.swift; sourceTree = "<group>"; };
-		CFC7E573271B21CE0013B3EA /* YPSelectionsGalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryVC.swift; sourceTree = "<group>"; };
-		CFC7E574271B21CE0013B3EA /* YPSelectionsGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryView.swift; sourceTree = "<group>"; };
-		CFC7E575271B21CE0013B3EA /* YPSelectionsGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryCell.swift; sourceTree = "<group>"; };
-		CFC7E578271B21CE0013B3EA /* YPVideoCaptureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoCaptureHelper.swift; sourceTree = "<group>"; };
-		CFC7E579271B21CE0013B3EA /* YPVideoCaptureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoCaptureVC.swift; sourceTree = "<group>"; };
-		CFC7E57B271B21CE0013B3EA /* YPLibraryVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+CollectionView.swift"; sourceTree = "<group>"; };
-		CFC7E57C271B21CE0013B3EA /* YPAlbumsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumsManager.swift; sourceTree = "<group>"; };
-		CFC7E57D271B21CE0013B3EA /* YPLibraryVC+PanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+PanGesture.swift"; sourceTree = "<group>"; };
-		CFC7E57E271B21CE0013B3EA /* YPLibraryViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewDelegate.swift; sourceTree = "<group>"; };
-		CFC7E57F271B21CE0013B3EA /* YPGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPGridView.swift; sourceTree = "<group>"; };
-		CFC7E580271B21CE0013B3EA /* YPAssetZoomableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAssetZoomableView.swift; sourceTree = "<group>"; };
-		CFC7E581271B21CE0013B3EA /* YPAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumView.swift; sourceTree = "<group>"; };
-		CFC7E582271B21CE0013B3EA /* YPAlbumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumVC.swift; sourceTree = "<group>"; };
-		CFC7E583271B21CE0013B3EA /* YPAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumCell.swift; sourceTree = "<group>"; };
-		CFC7E584271B21CE0013B3EA /* YPLibrary+LibraryChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibrary+LibraryChange.swift"; sourceTree = "<group>"; };
-		CFC7E586271B21CE0013B3EA /* YPMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMenuItem.swift; sourceTree = "<group>"; };
-		CFC7E587271B21CE0013B3EA /* YPBottomPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPager.swift; sourceTree = "<group>"; };
-		CFC7E588271B21CE0013B3EA /* YPPagerMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPagerMenu.swift; sourceTree = "<group>"; };
-		CFC7E589271B21CE0013B3EA /* YPBottomPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPagerView.swift; sourceTree = "<group>"; };
-		CFC7E58A271B21CE0013B3EA /* YPLibraryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryVC.swift; sourceTree = "<group>"; };
-		CFC7E58B271B21CE0013B3EA /* LibraryMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryMediaManager.swift; sourceTree = "<group>"; };
-		CFC7E58C271B21CE0013B3EA /* YPAssetViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAssetViewContainer.swift; sourceTree = "<group>"; };
-		CFC7E58D271B21CE0013B3EA /* YPLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryView.swift; sourceTree = "<group>"; };
-		CFC7E58E271B21CE0013B3EA /* YPAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbum.swift; sourceTree = "<group>"; };
-		CFC7E58F271B21CE0013B3EA /* YPLibraryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewCell.swift; sourceTree = "<group>"; };
-		CFC7E590271B21CE0013B3EA /* YPLibraryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPLibraryView.xib; sourceTree = "<group>"; };
-		CFC7E592271B21CE0013B3EA /* YPPhotoCaptureDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCaptureDefaults.swift; sourceTree = "<group>"; };
-		CFC7E593271B21CE0013B3EA /* YPPhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCapture.swift; sourceTree = "<group>"; };
-		CFC7E594271B21CE0013B3EA /* YPCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraView.swift; sourceTree = "<group>"; };
-		CFC7E595271B21CE0013B3EA /* PostiOS10PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostiOS10PhotoCapture.swift; sourceTree = "<group>"; };
-		CFC7E596271B21CE0013B3EA /* PreiOS10PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreiOS10PhotoCapture.swift; sourceTree = "<group>"; };
-		CFC7E597271B21CE0013B3EA /* YPCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraVC.swift; sourceTree = "<group>"; };
-		CFC7E599271B21CE0013B3EA /* YPVideoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoProcessor.swift; sourceTree = "<group>"; };
-		CFC7E59A271B21CE0013B3EA /* YPPermissionCheckable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionCheckable.swift; sourceTree = "<group>"; };
-		CFC7E59C271B21CE0013B3EA /* AVCaptureDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E59D271B21CE0013B3EA /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E59E271B21CE0013B3EA /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E59F271B21CE0013B3EA /* AVMutableComposition+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVMutableComposition+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A0271B21CE0013B3EA /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAsset+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A1271B21CE0013B3EA /* AVPlayer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A2271B21CE0013B3EA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A3271B21CE0013B3EA /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A4271B21CE0013B3EA /* AVAssetTrack+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAssetTrack+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A5271B21CE0013B3EA /* PHCachingImageManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHCachingImageManager+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A6271B21CE0013B3EA /* CIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A7271B21CE0013B3EA /* NSFileManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A8271B21CE0013B3EA /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5A9271B21CE0013B3EA /* AVFoundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5AA271B21CE0013B3EA /* PHFetchResult+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHFetchResult+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5AB271B21CE0013B3EA /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5AC271B21CE0013B3EA /* AVFileType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFileType+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5AD271B21CE0013B3EA /* AVCaptureSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5AE271B21CE0013B3EA /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5AF271B21CE0013B3EA /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5B0271B21CE0013B3EA /* IndexSet+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexSet+Extensions.swift"; sourceTree = "<group>"; };
-		CFC7E5B1271B21CE0013B3EA /* YPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPHelper.swift; sourceTree = "<group>"; };
-		CFC7E5B2271B21CE0013B3EA /* YPLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLoadingView.swift; sourceTree = "<group>"; };
-		CFC7E5B3271B21CE0013B3EA /* YPPhotoSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoSaver.swift; sourceTree = "<group>"; };
-		CFC7E5B4271B21CE0013B3EA /* YPAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlerts.swift; sourceTree = "<group>"; };
-		CFC7E5B5271B21CE0013B3EA /* YPLoaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLoaders.swift; sourceTree = "<group>"; };
-		CFC7E5B6271B21CE0013B3EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		472755635B21D6F40C001C32 /* Pods_InstagramAppWithFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramAppWithFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90FDC340E97C5F171AE5210D /* Pods-InstagramAppWithFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAppWithFireBase.debug.xcconfig"; path = "Target Support Files/Pods-InstagramAppWithFireBase/Pods-InstagramAppWithFireBase.debug.xcconfig"; sourceTree = "<group>"; };
+		CF1A5699271BF3FC004730E3 /* InstagramAppWithFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramAppWithFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1A5787271BF9EF004730E3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CF1A578B271BF9EF004730E3 /* YPVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoView.swift; sourceTree = "<group>"; };
+		CF1A578C271BF9EF004730E3 /* YPVideoFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoFiltersVC.swift; sourceTree = "<group>"; };
+		CF1A578D271BF9EF004730E3 /* YPVideoFiltersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPVideoFiltersVC.xib; sourceTree = "<group>"; };
+		CF1A578F271BF9EF004730E3 /* YPCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropView.swift; sourceTree = "<group>"; };
+		CF1A5790271BF9EF004730E3 /* YPCropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropVC.swift; sourceTree = "<group>"; };
+		CF1A5792271BF9EF004730E3 /* YPPhotoFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoFiltersVC.swift; sourceTree = "<group>"; };
+		CF1A5793271BF9EF004730E3 /* YPFiltersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFiltersView.swift; sourceTree = "<group>"; };
+		CF1A5794271BF9EF004730E3 /* YPFilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		CF1A5795271BF9EF004730E3 /* YPFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilter.swift; sourceTree = "<group>"; };
+		CF1A5796271BF9EF004730E3 /* YPPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerVC.swift; sourceTree = "<group>"; };
+		CF1A5798271BF9EF004730E3 /* YPFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFonts.swift; sourceTree = "<group>"; };
+		CF1A5799271BF9EF004730E3 /* YPImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImageSize.swift; sourceTree = "<group>"; };
+		CF1A579A271BF9EF004730E3 /* YPImagePickerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePickerConfiguration.swift; sourceTree = "<group>"; };
+		CF1A579B271BF9EF004730E3 /* YPWordings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPWordings.swift; sourceTree = "<group>"; };
+		CF1A579C271BF9EF004730E3 /* YPColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPColors.swift; sourceTree = "<group>"; };
+		CF1A579D271BF9EF004730E3 /* YPPickerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerScreen.swift; sourceTree = "<group>"; };
+		CF1A579E271BF9EF004730E3 /* YPIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPIcons.swift; sourceTree = "<group>"; };
+		CF1A579F271BF9EF004730E3 /* YPImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePicker.swift; sourceTree = "<group>"; };
+		CF1A57A2271BF9EF004730E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57A3271BF9EF004730E3 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57A4271BF9EF004730E3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		CF1A57A5271BF9EF004730E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57A6271BF9EF004730E3 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57A7271BF9EF004730E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57A8271BF9EF004730E3 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57A9271BF9EF004730E3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57AA271BF9EF004730E3 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57AB271BF9EF004730E3 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57AC271BF9EF004730E3 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57AD271BF9EF004730E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF1A57AE271BF9EF004730E3 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57AF271BF9EF004730E3 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B0271BF9EF004730E3 /* km */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = km; path = km.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B1271BF9EF004730E3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B2271BF9EF004730E3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		CF1A57B3271BF9EF004730E3 /* km-KH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "km-KH"; path = "km-KH.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		CF1A57B4271BF9EF004730E3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B5271BF9EF004730E3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B6271BF9EF004730E3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		CF1A57B7271BF9EF004730E3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B8271BF9EF004730E3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57B9271BF9EF004730E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57BA271BF9EF004730E3 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57BB271BF9EF004730E3 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57BC271BF9EF004730E3 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57BD271BF9EF004730E3 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		CF1A57BE271BF9EF004730E3 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		CF1A57C0271BF9EF004730E3 /* YPLibrarySelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibrarySelection.swift; sourceTree = "<group>"; };
+		CF1A57C1271BF9EF004730E3 /* YPMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMediaItem.swift; sourceTree = "<group>"; };
+		CF1A57C2271BF9EF004730E3 /* YPFlashMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFlashMode.swift; sourceTree = "<group>"; };
+		CF1A57C3271BF9EF004730E3 /* YPLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLog.swift; sourceTree = "<group>"; };
+		CF1A57C4271BF9EF004730E3 /* YPDragDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDragDirection.swift; sourceTree = "<group>"; };
+		CF1A57C5271BF9EF004730E3 /* YPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPError.swift; sourceTree = "<group>"; };
+		CF1A57C6271BF9EF004730E3 /* YPTrimError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPTrimError.swift; sourceTree = "<group>"; };
+		CF1A57C8271BF9EF004730E3 /* YPSelectionsGalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryVC.swift; sourceTree = "<group>"; };
+		CF1A57C9271BF9EF004730E3 /* YPSelectionsGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryView.swift; sourceTree = "<group>"; };
+		CF1A57CA271BF9EF004730E3 /* YPSelectionsGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryCell.swift; sourceTree = "<group>"; };
+		CF1A57CD271BF9EF004730E3 /* YPVideoCaptureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoCaptureHelper.swift; sourceTree = "<group>"; };
+		CF1A57CE271BF9EF004730E3 /* YPVideoCaptureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoCaptureVC.swift; sourceTree = "<group>"; };
+		CF1A57D0271BF9EF004730E3 /* YPLibraryVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+CollectionView.swift"; sourceTree = "<group>"; };
+		CF1A57D1271BF9EF004730E3 /* YPLibraryVC+PanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+PanGesture.swift"; sourceTree = "<group>"; };
+		CF1A57D2271BF9EF004730E3 /* YPLibraryViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewDelegate.swift; sourceTree = "<group>"; };
+		CF1A57D3271BF9EF004730E3 /* YPGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPGridView.swift; sourceTree = "<group>"; };
+		CF1A57D4271BF9EF004730E3 /* YPAssetZoomableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAssetZoomableView.swift; sourceTree = "<group>"; };
+		CF1A57D5271BF9EF004730E3 /* YPLibrary+LibraryChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibrary+LibraryChange.swift"; sourceTree = "<group>"; };
+		CF1A57D7271BF9EF004730E3 /* YPMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMenuItem.swift; sourceTree = "<group>"; };
+		CF1A57D8271BF9EF004730E3 /* YPBottomPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPager.swift; sourceTree = "<group>"; };
+		CF1A57D9271BF9EF004730E3 /* YPPagerMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPagerMenu.swift; sourceTree = "<group>"; };
+		CF1A57DA271BF9EF004730E3 /* YPBottomPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPagerView.swift; sourceTree = "<group>"; };
+		CF1A57DB271BF9EF004730E3 /* YPLibraryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryVC.swift; sourceTree = "<group>"; };
+		CF1A57DC271BF9EF004730E3 /* LibraryMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryMediaManager.swift; sourceTree = "<group>"; };
+		CF1A57DD271BF9EF004730E3 /* YPAssetViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAssetViewContainer.swift; sourceTree = "<group>"; };
+		CF1A57DE271BF9EF004730E3 /* YPLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryView.swift; sourceTree = "<group>"; };
+		CF1A57E0271BF9EF004730E3 /* YPAlbumsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumsManager.swift; sourceTree = "<group>"; };
+		CF1A57E1271BF9EF004730E3 /* YPAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumView.swift; sourceTree = "<group>"; };
+		CF1A57E2271BF9EF004730E3 /* YPAlbumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumVC.swift; sourceTree = "<group>"; };
+		CF1A57E3271BF9EF004730E3 /* YPAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumCell.swift; sourceTree = "<group>"; };
+		CF1A57E4271BF9EF004730E3 /* YPAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbum.swift; sourceTree = "<group>"; };
+		CF1A57E5271BF9EF004730E3 /* YPLibraryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewCell.swift; sourceTree = "<group>"; };
+		CF1A57E6271BF9EF004730E3 /* YPLibraryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPLibraryView.xib; sourceTree = "<group>"; };
+		CF1A57E8271BF9EF004730E3 /* YPCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraView.swift; sourceTree = "<group>"; };
+		CF1A57E9271BF9EF004730E3 /* YPPhotoCaptureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCaptureHelper.swift; sourceTree = "<group>"; };
+		CF1A57EA271BF9EF004730E3 /* YPCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraVC.swift; sourceTree = "<group>"; };
+		CF1A57EC271BF9EF004730E3 /* YPVideoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoProcessor.swift; sourceTree = "<group>"; };
+		CF1A57ED271BF9EF004730E3 /* YPDeviceOrientationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDeviceOrientationHelper.swift; sourceTree = "<group>"; };
+		CF1A57EF271BF9EF004730E3 /* YPPermissionCheckable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionCheckable.swift; sourceTree = "<group>"; };
+		CF1A57F0271BF9EF004730E3 /* YPPermissionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionManager.swift; sourceTree = "<group>"; };
+		CF1A57F1271BF9EF004730E3 /* YPPermissionDeniedPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionDeniedPopup.swift; sourceTree = "<group>"; };
+		CF1A57F3271BF9EF004730E3 /* AVCaptureDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57F4271BF9EF004730E3 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57F5271BF9EF004730E3 /* AVMutableComposition+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVMutableComposition+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57F6271BF9EF004730E3 /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAsset+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57F7271BF9EF004730E3 /* AVPlayer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57F8271BF9EF004730E3 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57F9271BF9EF004730E3 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57FA271BF9EF004730E3 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57FB271BF9EF004730E3 /* PHCachingImageManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHCachingImageManager+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57FC271BF9EF004730E3 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57FD271BF9EF004730E3 /* CIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57FE271BF9EF004730E3 /* NSFileManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A57FF271BF9EF004730E3 /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5800271BF9EF004730E3 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5801271BF9EF004730E3 /* AVFoundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5802271BF9EF004730E3 /* PHFetchResult+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHFetchResult+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5803271BF9EF004730E3 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5804271BF9EF004730E3 /* AVFileType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFileType+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5805271BF9EF004730E3 /* AVCaptureSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5806271BF9EF004730E3 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5807271BF9EF004730E3 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5808271BF9EF004730E3 /* IndexSet+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexSet+Extensions.swift"; sourceTree = "<group>"; };
+		CF1A5809271BF9EF004730E3 /* YPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPHelper.swift; sourceTree = "<group>"; };
+		CF1A580A271BF9EF004730E3 /* YPLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLoadingView.swift; sourceTree = "<group>"; };
+		CF1A580B271BF9EF004730E3 /* YPPhotoSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoSaver.swift; sourceTree = "<group>"; };
+		CF1A580C271BF9EF004730E3 /* YPAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlerts.swift; sourceTree = "<group>"; };
+		CF1A580D271BF9EF004730E3 /* YPLoaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLoaders.swift; sourceTree = "<group>"; };
+		CF1A580E271BF9EF004730E3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CF1A5869271BFE0B004730E3 /* Stevia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stevia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1A587A271C1A1C004730E3 /* InputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		CFE0C1D52716A11400D3C097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE0C1D72716A11400D3C097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFE0C1D92716A11400D3C097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -266,7 +290,7 @@
 		CFE0C22C271803D100D3C097 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFE0C22E2719534F00D3C097 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		CFE0C23027197CA600D3C097 /* UserCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
-		F0C03329ED2B088EF2E5E149 /* Pods-InstagramAppWithFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAppWithFireBase.debug.xcconfig"; path = "Target Support Files/Pods-InstagramAppWithFireBase/Pods-InstagramAppWithFireBase.debug.xcconfig"; sourceTree = "<group>"; };
+		E17B30CA73DB4754D70F2735 /* Pods-InstagramAppWithFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAppWithFireBase.release.xcconfig"; path = "Target Support Files/Pods-InstagramAppWithFireBase/Pods-InstagramAppWithFireBase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,241 +298,271 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFE0C20B2716B85300D3C097 /* JGProgressHUD in Frameworks */,
-				CFE0C2252717ED8C00D3C097 /* SDWebImage in Frameworks */,
-				1AE12C1D2B48DD5F8FE57F41 /* Pods_InstagramAppWithFireBase.framework in Frameworks */,
+				CF1A5878271BFF88004730E3 /* JGProgressHUD in Frameworks */,
+				CF1A5875271BFF7B004730E3 /* SDWebImage in Frameworks */,
+				CF1A5872271BFF6B004730E3 /* Stevia in Frameworks */,
+				D8C78013ACE41065C79B6E91 /* Pods_InstagramAppWithFireBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33F7D6DE45D3E849884A5C79 /* Frameworks */ = {
+		1650611A2FBBE69838170EFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A02CC320DCBD6DE8E3B771C /* Pods_InstagramAppWithFireBase.framework */,
+				CF1A5869271BFE0B004730E3 /* Stevia.framework */,
+				472755635B21D6F40C001C32 /* Pods_InstagramAppWithFireBase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CFAD7AD0F88190F96CF63CAD /* Pods */ = {
+		A9C1F50A890937B24A3F93FD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F0C03329ED2B088EF2E5E149 /* Pods-InstagramAppWithFireBase.debug.xcconfig */,
-				700EAE11FAB0A0FA528F8B8F /* Pods-InstagramAppWithFireBase.release.xcconfig */,
+				90FDC340E97C5F171AE5210D /* Pods-InstagramAppWithFireBase.debug.xcconfig */,
+				E17B30CA73DB4754D70F2735 /* Pods-InstagramAppWithFireBase.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CFC7E541271B21CE0013B3EA /* YPImagePicker */ = {
+		CF1A5786271BF9EF004730E3 /* YPImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E542271B21CE0013B3EA /* LICENSE */,
-				CFC7E543271B21CE0013B3EA /* Resources */,
-				CFC7E556271B21CE0013B3EA /* Source */,
-				CFC7E5B6271B21CE0013B3EA /* README.md */,
+				CF1A5787271BF9EF004730E3 /* LICENSE */,
+				CF1A5788271BF9EF004730E3 /* Source */,
+				CF1A580E271BF9EF004730E3 /* README.md */,
 			);
 			path = YPImagePicker;
 			sourceTree = "<group>";
 		};
-		CFC7E543271B21CE0013B3EA /* Resources */ = {
+		CF1A5788271BF9EF004730E3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E544271B21CE0013B3EA /* YPImagePickerLocalizable.strings */,
-				CFC7E54D271B21CE0013B3EA /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CFC7E556271B21CE0013B3EA /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E557271B21CE0013B3EA /* Filters */,
-				CFC7E563271B21CE0013B3EA /* YPPickerVC.swift */,
-				CFC7E564271B21CE0013B3EA /* Configuration */,
-				CFC7E56B271B21CE0013B3EA /* YPImagePicker.swift */,
-				CFC7E56C271B21CE0013B3EA /* Models */,
-				CFC7E572271B21CE0013B3EA /* SelectionsGallery */,
-				CFC7E576271B21CE0013B3EA /* Pages */,
-				CFC7E598271B21CE0013B3EA /* Helpers */,
+				CF1A5789271BF9EF004730E3 /* Filters */,
+				CF1A5796271BF9EF004730E3 /* YPPickerVC.swift */,
+				CF1A5797271BF9EF004730E3 /* Configuration */,
+				CF1A579F271BF9EF004730E3 /* YPImagePicker.swift */,
+				CF1A57A0271BF9EF004730E3 /* Resources */,
+				CF1A57BF271BF9EF004730E3 /* Models */,
+				CF1A57C7271BF9EF004730E3 /* SelectionsGallery */,
+				CF1A57CB271BF9EF004730E3 /* Pages */,
+				CF1A57EB271BF9EF004730E3 /* Helpers */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		CFC7E557271B21CE0013B3EA /* Filters */ = {
+		CF1A5789271BF9EF004730E3 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E558271B21CE0013B3EA /* Video */,
-				CFC7E55C271B21CE0013B3EA /* Crop */,
-				CFC7E55F271B21CE0013B3EA /* YPPhotoFiltersVC.swift */,
-				CFC7E560271B21CE0013B3EA /* YPFiltersView.swift */,
-				CFC7E561271B21CE0013B3EA /* YPFilterCollectionViewCell.swift */,
-				CFC7E562271B21CE0013B3EA /* YPFilter.swift */,
+				CF1A578A271BF9EF004730E3 /* Video */,
+				CF1A578E271BF9EF004730E3 /* Crop */,
+				CF1A5791271BF9EF004730E3 /* Photo */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
 		};
-		CFC7E558271B21CE0013B3EA /* Video */ = {
+		CF1A578A271BF9EF004730E3 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E559271B21CE0013B3EA /* YPVideoView.swift */,
-				CFC7E55A271B21CE0013B3EA /* YPVideoFiltersVC.swift */,
-				CFC7E55B271B21CE0013B3EA /* YPVideoFiltersVC.xib */,
+				CF1A578B271BF9EF004730E3 /* YPVideoView.swift */,
+				CF1A578C271BF9EF004730E3 /* YPVideoFiltersVC.swift */,
+				CF1A578D271BF9EF004730E3 /* YPVideoFiltersVC.xib */,
 			);
 			path = Video;
 			sourceTree = "<group>";
 		};
-		CFC7E55C271B21CE0013B3EA /* Crop */ = {
+		CF1A578E271BF9EF004730E3 /* Crop */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E55D271B21CE0013B3EA /* YPCropView.swift */,
-				CFC7E55E271B21CE0013B3EA /* YPCropVC.swift */,
+				CF1A578F271BF9EF004730E3 /* YPCropView.swift */,
+				CF1A5790271BF9EF004730E3 /* YPCropVC.swift */,
 			);
 			path = Crop;
 			sourceTree = "<group>";
 		};
-		CFC7E564271B21CE0013B3EA /* Configuration */ = {
+		CF1A5791271BF9EF004730E3 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E565271B21CE0013B3EA /* YPImageSize.swift */,
-				CFC7E566271B21CE0013B3EA /* YPImagePickerConfiguration.swift */,
-				CFC7E567271B21CE0013B3EA /* YPWordings.swift */,
-				CFC7E568271B21CE0013B3EA /* YPColors.swift */,
-				CFC7E569271B21CE0013B3EA /* YPPickerScreen.swift */,
-				CFC7E56A271B21CE0013B3EA /* YPIcons.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		CFC7E56C271B21CE0013B3EA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E56D271B21CE0013B3EA /* YPLibrarySelection.swift */,
-				CFC7E56E271B21CE0013B3EA /* YPMediaItem.swift */,
-				CFC7E56F271B21CE0013B3EA /* YPDragDirection.swift */,
-				CFC7E570271B21CE0013B3EA /* YPPermissionDeniedPopup.swift */,
-				CFC7E571271B21CE0013B3EA /* YPTrimError.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CFC7E572271B21CE0013B3EA /* SelectionsGallery */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E573271B21CE0013B3EA /* YPSelectionsGalleryVC.swift */,
-				CFC7E574271B21CE0013B3EA /* YPSelectionsGalleryView.swift */,
-				CFC7E575271B21CE0013B3EA /* YPSelectionsGalleryCell.swift */,
-			);
-			path = SelectionsGallery;
-			sourceTree = "<group>";
-		};
-		CFC7E576271B21CE0013B3EA /* Pages */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E577271B21CE0013B3EA /* Video */,
-				CFC7E57A271B21CE0013B3EA /* Gallery */,
-				CFC7E591271B21CE0013B3EA /* Photo */,
-			);
-			path = Pages;
-			sourceTree = "<group>";
-		};
-		CFC7E577271B21CE0013B3EA /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E578271B21CE0013B3EA /* YPVideoCaptureHelper.swift */,
-				CFC7E579271B21CE0013B3EA /* YPVideoCaptureVC.swift */,
-			);
-			path = Video;
-			sourceTree = "<group>";
-		};
-		CFC7E57A271B21CE0013B3EA /* Gallery */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E57B271B21CE0013B3EA /* YPLibraryVC+CollectionView.swift */,
-				CFC7E57C271B21CE0013B3EA /* YPAlbumsManager.swift */,
-				CFC7E57D271B21CE0013B3EA /* YPLibraryVC+PanGesture.swift */,
-				CFC7E57E271B21CE0013B3EA /* YPLibraryViewDelegate.swift */,
-				CFC7E57F271B21CE0013B3EA /* YPGridView.swift */,
-				CFC7E580271B21CE0013B3EA /* YPAssetZoomableView.swift */,
-				CFC7E581271B21CE0013B3EA /* YPAlbumView.swift */,
-				CFC7E582271B21CE0013B3EA /* YPAlbumVC.swift */,
-				CFC7E583271B21CE0013B3EA /* YPAlbumCell.swift */,
-				CFC7E584271B21CE0013B3EA /* YPLibrary+LibraryChange.swift */,
-				CFC7E585271B21CE0013B3EA /* BottomPager */,
-				CFC7E58A271B21CE0013B3EA /* YPLibraryVC.swift */,
-				CFC7E58B271B21CE0013B3EA /* LibraryMediaManager.swift */,
-				CFC7E58C271B21CE0013B3EA /* YPAssetViewContainer.swift */,
-				CFC7E58D271B21CE0013B3EA /* YPLibraryView.swift */,
-				CFC7E58E271B21CE0013B3EA /* YPAlbum.swift */,
-				CFC7E58F271B21CE0013B3EA /* YPLibraryViewCell.swift */,
-				CFC7E590271B21CE0013B3EA /* YPLibraryView.xib */,
-			);
-			path = Gallery;
-			sourceTree = "<group>";
-		};
-		CFC7E585271B21CE0013B3EA /* BottomPager */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E586271B21CE0013B3EA /* YPMenuItem.swift */,
-				CFC7E587271B21CE0013B3EA /* YPBottomPager.swift */,
-				CFC7E588271B21CE0013B3EA /* YPPagerMenu.swift */,
-				CFC7E589271B21CE0013B3EA /* YPBottomPagerView.swift */,
-			);
-			path = BottomPager;
-			sourceTree = "<group>";
-		};
-		CFC7E591271B21CE0013B3EA /* Photo */ = {
-			isa = PBXGroup;
-			children = (
-				CFC7E592271B21CE0013B3EA /* YPPhotoCaptureDefaults.swift */,
-				CFC7E593271B21CE0013B3EA /* YPPhotoCapture.swift */,
-				CFC7E594271B21CE0013B3EA /* YPCameraView.swift */,
-				CFC7E595271B21CE0013B3EA /* PostiOS10PhotoCapture.swift */,
-				CFC7E596271B21CE0013B3EA /* PreiOS10PhotoCapture.swift */,
-				CFC7E597271B21CE0013B3EA /* YPCameraVC.swift */,
+				CF1A5792271BF9EF004730E3 /* YPPhotoFiltersVC.swift */,
+				CF1A5793271BF9EF004730E3 /* YPFiltersView.swift */,
+				CF1A5794271BF9EF004730E3 /* YPFilterCollectionViewCell.swift */,
+				CF1A5795271BF9EF004730E3 /* YPFilter.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
 		};
-		CFC7E598271B21CE0013B3EA /* Helpers */ = {
+		CF1A5797271BF9EF004730E3 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E599271B21CE0013B3EA /* YPVideoProcessor.swift */,
-				CFC7E59A271B21CE0013B3EA /* YPPermissionCheckable.swift */,
-				CFC7E59B271B21CE0013B3EA /* Extensions */,
-				CFC7E5B1271B21CE0013B3EA /* YPHelper.swift */,
-				CFC7E5B2271B21CE0013B3EA /* YPLoadingView.swift */,
-				CFC7E5B3271B21CE0013B3EA /* YPPhotoSaver.swift */,
-				CFC7E5B4271B21CE0013B3EA /* YPAlerts.swift */,
-				CFC7E5B5271B21CE0013B3EA /* YPLoaders.swift */,
+				CF1A5798271BF9EF004730E3 /* YPFonts.swift */,
+				CF1A5799271BF9EF004730E3 /* YPImageSize.swift */,
+				CF1A579A271BF9EF004730E3 /* YPImagePickerConfiguration.swift */,
+				CF1A579B271BF9EF004730E3 /* YPWordings.swift */,
+				CF1A579C271BF9EF004730E3 /* YPColors.swift */,
+				CF1A579D271BF9EF004730E3 /* YPPickerScreen.swift */,
+				CF1A579E271BF9EF004730E3 /* YPIcons.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CF1A57A0271BF9EF004730E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57A1271BF9EF004730E3 /* YPImagePickerLocalizable.strings */,
+				CF1A57AD271BF9EF004730E3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF1A57BF271BF9EF004730E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57C0271BF9EF004730E3 /* YPLibrarySelection.swift */,
+				CF1A57C1271BF9EF004730E3 /* YPMediaItem.swift */,
+				CF1A57C2271BF9EF004730E3 /* YPFlashMode.swift */,
+				CF1A57C3271BF9EF004730E3 /* YPLog.swift */,
+				CF1A57C4271BF9EF004730E3 /* YPDragDirection.swift */,
+				CF1A57C5271BF9EF004730E3 /* YPError.swift */,
+				CF1A57C6271BF9EF004730E3 /* YPTrimError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF1A57C7271BF9EF004730E3 /* SelectionsGallery */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57C8271BF9EF004730E3 /* YPSelectionsGalleryVC.swift */,
+				CF1A57C9271BF9EF004730E3 /* YPSelectionsGalleryView.swift */,
+				CF1A57CA271BF9EF004730E3 /* YPSelectionsGalleryCell.swift */,
+			);
+			path = SelectionsGallery;
+			sourceTree = "<group>";
+		};
+		CF1A57CB271BF9EF004730E3 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57CC271BF9EF004730E3 /* Video */,
+				CF1A57CF271BF9EF004730E3 /* Gallery */,
+				CF1A57E7271BF9EF004730E3 /* Photo */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		CF1A57CC271BF9EF004730E3 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57CD271BF9EF004730E3 /* YPVideoCaptureHelper.swift */,
+				CF1A57CE271BF9EF004730E3 /* YPVideoCaptureVC.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		CF1A57CF271BF9EF004730E3 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57D0271BF9EF004730E3 /* YPLibraryVC+CollectionView.swift */,
+				CF1A57D1271BF9EF004730E3 /* YPLibraryVC+PanGesture.swift */,
+				CF1A57D2271BF9EF004730E3 /* YPLibraryViewDelegate.swift */,
+				CF1A57D3271BF9EF004730E3 /* YPGridView.swift */,
+				CF1A57D4271BF9EF004730E3 /* YPAssetZoomableView.swift */,
+				CF1A57D5271BF9EF004730E3 /* YPLibrary+LibraryChange.swift */,
+				CF1A57D6271BF9EF004730E3 /* BottomPager */,
+				CF1A57DB271BF9EF004730E3 /* YPLibraryVC.swift */,
+				CF1A57DC271BF9EF004730E3 /* LibraryMediaManager.swift */,
+				CF1A57DD271BF9EF004730E3 /* YPAssetViewContainer.swift */,
+				CF1A57DE271BF9EF004730E3 /* YPLibraryView.swift */,
+				CF1A57DF271BF9EF004730E3 /* Album */,
+				CF1A57E5271BF9EF004730E3 /* YPLibraryViewCell.swift */,
+				CF1A57E6271BF9EF004730E3 /* YPLibraryView.xib */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		CF1A57D6271BF9EF004730E3 /* BottomPager */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57D7271BF9EF004730E3 /* YPMenuItem.swift */,
+				CF1A57D8271BF9EF004730E3 /* YPBottomPager.swift */,
+				CF1A57D9271BF9EF004730E3 /* YPPagerMenu.swift */,
+				CF1A57DA271BF9EF004730E3 /* YPBottomPagerView.swift */,
+			);
+			path = BottomPager;
+			sourceTree = "<group>";
+		};
+		CF1A57DF271BF9EF004730E3 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57E0271BF9EF004730E3 /* YPAlbumsManager.swift */,
+				CF1A57E1271BF9EF004730E3 /* YPAlbumView.swift */,
+				CF1A57E2271BF9EF004730E3 /* YPAlbumVC.swift */,
+				CF1A57E3271BF9EF004730E3 /* YPAlbumCell.swift */,
+				CF1A57E4271BF9EF004730E3 /* YPAlbum.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		CF1A57E7271BF9EF004730E3 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57E8271BF9EF004730E3 /* YPCameraView.swift */,
+				CF1A57E9271BF9EF004730E3 /* YPPhotoCaptureHelper.swift */,
+				CF1A57EA271BF9EF004730E3 /* YPCameraVC.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		CF1A57EB271BF9EF004730E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57EC271BF9EF004730E3 /* YPVideoProcessor.swift */,
+				CF1A57ED271BF9EF004730E3 /* YPDeviceOrientationHelper.swift */,
+				CF1A57EE271BF9EF004730E3 /* Permissions */,
+				CF1A57F2271BF9EF004730E3 /* Extensions */,
+				CF1A5809271BF9EF004730E3 /* YPHelper.swift */,
+				CF1A580A271BF9EF004730E3 /* YPLoadingView.swift */,
+				CF1A580B271BF9EF004730E3 /* YPPhotoSaver.swift */,
+				CF1A580C271BF9EF004730E3 /* YPAlerts.swift */,
+				CF1A580D271BF9EF004730E3 /* YPLoaders.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CFC7E59B271B21CE0013B3EA /* Extensions */ = {
+		CF1A57EE271BF9EF004730E3 /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E59C271B21CE0013B3EA /* AVCaptureDevice+Extensions.swift */,
-				CFC7E59D271B21CE0013B3EA /* UIButton+Extensions.swift */,
-				CFC7E59E271B21CE0013B3EA /* String+Extensions.swift */,
-				CFC7E59F271B21CE0013B3EA /* AVMutableComposition+Extensions.swift */,
-				CFC7E5A0271B21CE0013B3EA /* AVAsset+Extensions.swift */,
-				CFC7E5A1271B21CE0013B3EA /* AVPlayer+Extensions.swift */,
-				CFC7E5A2271B21CE0013B3EA /* UIColor+Extensions.swift */,
-				CFC7E5A3271B21CE0013B3EA /* UIImage+Extensions.swift */,
-				CFC7E5A4271B21CE0013B3EA /* AVAssetTrack+Extensions.swift */,
-				CFC7E5A5271B21CE0013B3EA /* PHCachingImageManager+Extensions.swift */,
-				CFC7E5A6271B21CE0013B3EA /* CIImage+Extensions.swift */,
-				CFC7E5A7271B21CE0013B3EA /* NSFileManager+Extensions.swift */,
-				CFC7E5A8271B21CE0013B3EA /* URL+Extensions.swift */,
-				CFC7E5A9271B21CE0013B3EA /* AVFoundation+Extensions.swift */,
-				CFC7E5AA271B21CE0013B3EA /* PHFetchResult+Extensions.swift */,
-				CFC7E5AB271B21CE0013B3EA /* CGRect+Extensions.swift */,
-				CFC7E5AC271B21CE0013B3EA /* AVFileType+Extensions.swift */,
-				CFC7E5AD271B21CE0013B3EA /* AVCaptureSession+Extensions.swift */,
-				CFC7E5AE271B21CE0013B3EA /* CGFloat+Extensions.swift */,
-				CFC7E5AF271B21CE0013B3EA /* UICollectionView+Extensions.swift */,
-				CFC7E5B0271B21CE0013B3EA /* IndexSet+Extensions.swift */,
+				CF1A57EF271BF9EF004730E3 /* YPPermissionCheckable.swift */,
+				CF1A57F0271BF9EF004730E3 /* YPPermissionManager.swift */,
+				CF1A57F1271BF9EF004730E3 /* YPPermissionDeniedPopup.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
+		CF1A57F2271BF9EF004730E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A57F3271BF9EF004730E3 /* AVCaptureDevice+Extensions.swift */,
+				CF1A57F4271BF9EF004730E3 /* UIButton+Extensions.swift */,
+				CF1A57F5271BF9EF004730E3 /* AVMutableComposition+Extensions.swift */,
+				CF1A57F6271BF9EF004730E3 /* AVAsset+Extensions.swift */,
+				CF1A57F7271BF9EF004730E3 /* AVPlayer+Extensions.swift */,
+				CF1A57F8271BF9EF004730E3 /* UIColor+Extensions.swift */,
+				CF1A57F9271BF9EF004730E3 /* UIImage+Extensions.swift */,
+				CF1A57FA271BF9EF004730E3 /* UINavigationBar+Extensions.swift */,
+				CF1A57FB271BF9EF004730E3 /* PHCachingImageManager+Extensions.swift */,
+				CF1A57FC271BF9EF004730E3 /* UIBarButtonItem+Extensions.swift */,
+				CF1A57FD271BF9EF004730E3 /* CIImage+Extensions.swift */,
+				CF1A57FE271BF9EF004730E3 /* NSFileManager+Extensions.swift */,
+				CF1A57FF271BF9EF004730E3 /* URL+Extensions.swift */,
+				CF1A5800271BF9EF004730E3 /* Bundle+Extensions.swift */,
+				CF1A5801271BF9EF004730E3 /* AVFoundation+Extensions.swift */,
+				CF1A5802271BF9EF004730E3 /* PHFetchResult+Extensions.swift */,
+				CF1A5803271BF9EF004730E3 /* CGRect+Extensions.swift */,
+				CF1A5804271BF9EF004730E3 /* AVFileType+Extensions.swift */,
+				CF1A5805271BF9EF004730E3 /* AVCaptureSession+Extensions.swift */,
+				CF1A5806271BF9EF004730E3 /* CGFloat+Extensions.swift */,
+				CF1A5807271BF9EF004730E3 /* UICollectionView+Extensions.swift */,
+				CF1A5808271BF9EF004730E3 /* IndexSet+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -516,17 +570,17 @@
 		CFE0C1C92716A11400D3C097 = {
 			isa = PBXGroup;
 			children = (
+				CF1A5786271BF9EF004730E3 /* YPImagePicker */,
 				CFE0C1D42716A11400D3C097 /* InstagramAppWithFireBase */,
-				CFAD7AD0F88190F96CF63CAD /* Pods */,
-				33F7D6DE45D3E849884A5C79 /* Frameworks */,
-				CF41E9BC271A97F60049AA0B /* InstagramAppWithFireBase.app */,
+				A9C1F50A890937B24A3F93FD /* Pods */,
+				1650611A2FBBE69838170EFB /* Frameworks */,
+				CF1A5699271BF3FC004730E3 /* InstagramAppWithFireBase.app */,
 			);
 			sourceTree = "<group>";
 		};
 		CFE0C1D42716A11400D3C097 /* InstagramAppWithFireBase */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7E541271B21CE0013B3EA /* YPImagePicker */,
 				CFE0C1EE2716A28F00D3C097 /* Views */,
 				CFE0C1ED2716A28C00D3C097 /* Models */,
 				CFE0C1EC2716A28900D3C097 /* Controller  */,
@@ -558,6 +612,7 @@
 		CFE0C1EA2716A20A00D3C097 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CF1A587A271C1A1C004730E3 /* InputTextView.swift */,
 				CFE0C22A2718038600D3C097 /* Constants.swift */,
 				CFE0C2072716B7EC00D3C097 /* Extensions.swift */,
 			);
@@ -646,11 +701,12 @@
 			);
 			name = InstagramAppWithFireBase;
 			packageProductDependencies = (
-				CFE0C20A2716B85300D3C097 /* JGProgressHUD */,
-				CFE0C2242717ED8C00D3C097 /* SDWebImage */,
+				CF1A5871271BFF6B004730E3 /* Stevia */,
+				CF1A5874271BFF7B004730E3 /* SDWebImage */,
+				CF1A5877271BFF88004730E3 /* JGProgressHUD */,
 			);
 			productName = InstagramAppWithFireBase;
-			productReference = CF41E9BC271A97F60049AA0B /* InstagramAppWithFireBase.app */;
+			productReference = CF1A5699271BF3FC004730E3 /* InstagramAppWithFireBase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -705,8 +761,9 @@
 			);
 			mainGroup = CFE0C1C92716A11400D3C097;
 			packageReferences = (
-				CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
-				CFE0C2232717ED8C00D3C097 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				CF1A5870271BFF6B004730E3 /* XCRemoteSwiftPackageReference "Stevia" */,
+				CF1A5873271BFF7B004730E3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				CF1A5876271BFF88004730E3 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = CFE0C1C92716A11400D3C097;
 			projectDirPath = "";
@@ -724,14 +781,14 @@
 			files = (
 				CFE0C1E22716A11600D3C097 /* LaunchScreen.storyboard in Resources */,
 				CFE0C1DF2716A11600D3C097 /* Assets.xcassets in Resources */,
-				CFC7E60C271B21CF0013B3EA /* README.md in Resources */,
+				CF1A5868271BF9F0004730E3 /* README.md in Resources */,
 				CFE0C2172717C87C00D3C097 /* GoogleService-Info.plist in Resources */,
+				CF1A5812271BF9F0004730E3 /* YPVideoFiltersVC.xib in Resources */,
 				CFE0C1DD2716A11400D3C097 /* Main.storyboard in Resources */,
-				CFC7E5B9271B21CE0013B3EA /* Assets.xcassets in Resources */,
-				CFC7E5B8271B21CE0013B3EA /* YPImagePickerLocalizable.strings in Resources */,
-				CFC7E5B7271B21CE0013B3EA /* LICENSE in Resources */,
-				CFC7E5E9271B21CE0013B3EA /* YPLibraryView.xib in Resources */,
-				CFC7E5BC271B21CE0013B3EA /* YPVideoFiltersVC.xib in Resources */,
+				CF1A5822271BF9F0004730E3 /* YPImagePickerLocalizable.strings in Resources */,
+				CF1A5823271BF9F0004730E3 /* Assets.xcassets in Resources */,
+				CF1A5844271BF9F0004730E3 /* YPLibraryView.xib in Resources */,
+				CF1A580F271BF9F0004730E3 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,138 +841,155 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFC7E5F7271B21CE0013B3EA /* AVPlayer+Extensions.swift in Sources */,
+				CF1A5841271BF9F0004730E3 /* YPAlbumCell.swift in Sources */,
+				CF1A5848271BF9F0004730E3 /* YPVideoProcessor.swift in Sources */,
+				CF1A5821271BF9F0004730E3 /* YPImagePicker.swift in Sources */,
 				CFE0C1FC2716A52D00D3C097 /* NotificationController.swift in Sources */,
-				CFC7E5F0271B21CE0013B3EA /* YPVideoProcessor.swift in Sources */,
+				CF1A5845271BF9F0004730E3 /* YPCameraView.swift in Sources */,
+				CF1A581D271BF9F0004730E3 /* YPWordings.swift in Sources */,
+				CF1A5863271BF9F0004730E3 /* YPHelper.swift in Sources */,
 				CFE0C2002716A52D00D3C097 /* CommentController.swift in Sources */,
-				CFC7E5EE271B21CE0013B3EA /* PreiOS10PhotoCapture.swift in Sources */,
-				CFC7E5EB271B21CE0013B3EA /* YPPhotoCapture.swift in Sources */,
-				CFC7E604271B21CF0013B3EA /* CGFloat+Extensions.swift in Sources */,
 				CFE0C1FD2716A52D00D3C097 /* ImageSelectorController.swift in Sources */,
-				CFC7E5FE271B21CE0013B3EA /* URL+Extensions.swift in Sources */,
+				CF1A584A271BF9F0004730E3 /* YPPermissionCheckable.swift in Sources */,
+				CF1A5829271BF9F0004730E3 /* YPError.swift in Sources */,
+				CF1A5853271BF9F0004730E3 /* UIImage+Extensions.swift in Sources */,
+				CF1A5839271BF9F0004730E3 /* YPBottomPagerView.swift in Sources */,
+				CF1A5835271BF9F0004730E3 /* YPLibrary+LibraryChange.swift in Sources */,
+				CF1A587B271C1A1C004730E3 /* InputTextView.swift in Sources */,
+				CF1A585A271BF9F0004730E3 /* Bundle+Extensions.swift in Sources */,
+				CF1A5860271BF9F0004730E3 /* CGFloat+Extensions.swift in Sources */,
 				CFE0C22D271803D100D3C097 /* User.swift in Sources */,
-				CFC7E5C7271B21CE0013B3EA /* YPColors.swift in Sources */,
-				CFC7E5D3271B21CE0013B3EA /* YPVideoCaptureHelper.swift in Sources */,
-				CFC7E5E2271B21CE0013B3EA /* YPBottomPagerView.swift in Sources */,
-				CFC7E5F1271B21CE0013B3EA /* YPPermissionCheckable.swift in Sources */,
-				CFC7E5C2271B21CE0013B3EA /* YPFilter.swift in Sources */,
+				CF1A582A271BF9F0004730E3 /* YPTrimError.swift in Sources */,
+				CF1A5818271BF9F0004730E3 /* YPFilter.swift in Sources */,
 				CFE0C1DA2716A11400D3C097 /* ViewController.swift in Sources */,
 				CFE0C1D62716A11400D3C097 /* AppDelegate.swift in Sources */,
+				CF1A5866271BF9F0004730E3 /* YPAlerts.swift in Sources */,
+				CF1A5842271BF9F0004730E3 /* YPAlbum.swift in Sources */,
+				CF1A583A271BF9F0004730E3 /* YPLibraryVC.swift in Sources */,
+				CF1A584D271BF9F0004730E3 /* AVCaptureDevice+Extensions.swift in Sources */,
+				CF1A584C271BF9F0004730E3 /* YPPermissionDeniedPopup.swift in Sources */,
+				CF1A5836271BF9F0004730E3 /* YPMenuItem.swift in Sources */,
+				CF1A581B271BF9F0004730E3 /* YPImageSize.swift in Sources */,
+				CF1A5824271BF9F0004730E3 /* YPLibrarySelection.swift in Sources */,
 				CFE0C21A2717D0D600D3C097 /* ImageUploader.swift in Sources */,
-				CFC7E5D8271B21CE0013B3EA /* YPLibraryViewDelegate.swift in Sources */,
-				CFC7E5E8271B21CE0013B3EA /* YPLibraryViewCell.swift in Sources */,
-				CFC7E5FF271B21CE0013B3EA /* AVFoundation+Extensions.swift in Sources */,
-				CFC7E5DE271B21CE0013B3EA /* YPLibrary+LibraryChange.swift in Sources */,
-				CFC7E5F8271B21CE0013B3EA /* UIColor+Extensions.swift in Sources */,
+				CF1A5828271BF9F0004730E3 /* YPDragDirection.swift in Sources */,
+				CF1A585F271BF9F0004730E3 /* AVCaptureSession+Extensions.swift in Sources */,
+				CF1A585E271BF9F0004730E3 /* AVFileType+Extensions.swift in Sources */,
+				CF1A5825271BF9F0004730E3 /* YPMediaItem.swift in Sources */,
 				CFE0C21C2717D15000D3C097 /* AuthService.swift in Sources */,
 				CFE0C2292718032800D3C097 /* UserService.swift in Sources */,
-				CFC7E5DB271B21CE0013B3EA /* YPAlbumView.swift in Sources */,
+				CF1A5840271BF9F0004730E3 /* YPAlbumVC.swift in Sources */,
 				CFE0C2062716ADEB00D3C097 /* FeedCell.swift in Sources */,
+				CF1A5857271BF9F0004730E3 /* CIImage+Extensions.swift in Sources */,
 				CFE0C2132716D20200D3C097 /* RegistrationController.swift in Sources */,
-				CFC7E5D0271B21CE0013B3EA /* YPSelectionsGalleryVC.swift in Sources */,
-				CFC7E5F2271B21CE0013B3EA /* AVCaptureDevice+Extensions.swift in Sources */,
-				CFC7E5BA271B21CE0013B3EA /* YPVideoView.swift in Sources */,
-				CFC7E5D6271B21CE0013B3EA /* YPAlbumsManager.swift in Sources */,
+				CF1A5827271BF9F0004730E3 /* YPLog.swift in Sources */,
+				CF1A583F271BF9F0004730E3 /* YPAlbumView.swift in Sources */,
+				CF1A5810271BF9F0004730E3 /* YPVideoView.swift in Sources */,
+				CF1A5862271BF9F0004730E3 /* IndexSet+Extensions.swift in Sources */,
+				CF1A5826271BF9F0004730E3 /* YPFlashMode.swift in Sources */,
+				CF1A5864271BF9F0004730E3 /* YPLoadingView.swift in Sources */,
+				CF1A5830271BF9F0004730E3 /* YPLibraryVC+CollectionView.swift in Sources */,
+				CF1A5854271BF9F0004730E3 /* UINavigationBar+Extensions.swift in Sources */,
 				CFE0C2212717ED3500D3C097 /* ProfileCell.swift in Sources */,
-				CFC7E5E6271B21CE0013B3EA /* YPLibraryView.swift in Sources */,
-				CFC7E5EA271B21CE0013B3EA /* YPPhotoCaptureDefaults.swift in Sources */,
-				CFC7E5DD271B21CE0013B3EA /* YPAlbumCell.swift in Sources */,
-				CFC7E5FA271B21CE0013B3EA /* AVAssetTrack+Extensions.swift in Sources */,
+				CF1A581F271BF9F0004730E3 /* YPPickerScreen.swift in Sources */,
+				CF1A5832271BF9F0004730E3 /* YPLibraryViewDelegate.swift in Sources */,
 				CFE0C1FB2716A52D00D3C097 /* UploadPostController.swift in Sources */,
-				CFC7E5D2271B21CE0013B3EA /* YPSelectionsGalleryCell.swift in Sources */,
-				CFC7E5E7271B21CE0013B3EA /* YPAlbum.swift in Sources */,
-				CFC7E608271B21CF0013B3EA /* YPLoadingView.swift in Sources */,
+				CF1A5851271BF9F0004730E3 /* AVPlayer+Extensions.swift in Sources */,
 				CFE0C1F12716A3A000D3C097 /* MainTabController.swift in Sources */,
-				CFC7E5E1271B21CE0013B3EA /* YPPagerMenu.swift in Sources */,
-				CFC7E5C4271B21CE0013B3EA /* YPImageSize.swift in Sources */,
+				CF1A584F271BF9F0004730E3 /* AVMutableComposition+Extensions.swift in Sources */,
 				CFE0C23127197CA600D3C097 /* UserCellViewModel.swift in Sources */,
-				CFC7E5CB271B21CE0013B3EA /* YPLibrarySelection.swift in Sources */,
-				CFC7E5D9271B21CE0013B3EA /* YPGridView.swift in Sources */,
-				CFC7E5E0271B21CE0013B3EA /* YPBottomPager.swift in Sources */,
+				CF1A5858271BF9F0004730E3 /* NSFileManager+Extensions.swift in Sources */,
+				CF1A5849271BF9F0004730E3 /* YPDeviceOrientationHelper.swift in Sources */,
 				CFE0C22F2719534F00D3C097 /* UserCell.swift in Sources */,
-				CFC7E5EC271B21CE0013B3EA /* YPCameraView.swift in Sources */,
+				CF1A5843271BF9F0004730E3 /* YPLibraryViewCell.swift in Sources */,
 				CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */,
+				CF1A5867271BF9F0004730E3 /* YPLoaders.swift in Sources */,
+				CF1A5820271BF9F0004730E3 /* YPIcons.swift in Sources */,
+				CF1A585D271BF9F0004730E3 /* CGRect+Extensions.swift in Sources */,
 				CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */,
-				CFC7E5BD271B21CE0013B3EA /* YPCropView.swift in Sources */,
-				CFC7E5FC271B21CE0013B3EA /* CIImage+Extensions.swift in Sources */,
-				CFC7E5DA271B21CE0013B3EA /* YPAssetZoomableView.swift in Sources */,
-				CFC7E5BB271B21CE0013B3EA /* YPVideoFiltersVC.swift in Sources */,
-				CFC7E5CC271B21CE0013B3EA /* YPMediaItem.swift in Sources */,
-				CFC7E607271B21CF0013B3EA /* YPHelper.swift in Sources */,
-				CFC7E5C6271B21CE0013B3EA /* YPWordings.swift in Sources */,
+				CF1A5813271BF9F0004730E3 /* YPCropView.swift in Sources */,
+				CF1A581A271BF9F0004730E3 /* YPFonts.swift in Sources */,
+				CF1A5811271BF9F0004730E3 /* YPVideoFiltersVC.swift in Sources */,
 				CFE0C2222717ED3500D3C097 /* ProfileHeader.swift in Sources */,
-				CFC7E5D1271B21CE0013B3EA /* YPSelectionsGalleryView.swift in Sources */,
-				CFC7E5D5271B21CE0013B3EA /* YPLibraryVC+CollectionView.swift in Sources */,
-				CFC7E5C3271B21CE0013B3EA /* YPPickerVC.swift in Sources */,
-				CFC7E603271B21CF0013B3EA /* AVCaptureSession+Extensions.swift in Sources */,
-				CFC7E5BF271B21CE0013B3EA /* YPPhotoFiltersVC.swift in Sources */,
-				CFC7E5ED271B21CE0013B3EA /* PostiOS10PhotoCapture.swift in Sources */,
-				CFC7E602271B21CE0013B3EA /* AVFileType+Extensions.swift in Sources */,
-				CFC7E5DC271B21CE0013B3EA /* YPAlbumVC.swift in Sources */,
+				CF1A581E271BF9F0004730E3 /* YPColors.swift in Sources */,
+				CF1A582C271BF9F0004730E3 /* YPSelectionsGalleryView.swift in Sources */,
+				CF1A5819271BF9F0004730E3 /* YPPickerVC.swift in Sources */,
+				CF1A5815271BF9F0004730E3 /* YPPhotoFiltersVC.swift in Sources */,
 				CFE0C1D82716A11400D3C097 /* SceneDelegate.swift in Sources */,
-				CFC7E5EF271B21CE0013B3EA /* YPCameraVC.swift in Sources */,
-				CFC7E5C9271B21CE0013B3EA /* YPIcons.swift in Sources */,
-				CFC7E60B271B21CF0013B3EA /* YPLoaders.swift in Sources */,
-				CFC7E5FB271B21CE0013B3EA /* PHCachingImageManager+Extensions.swift in Sources */,
-				CFC7E5F3271B21CE0013B3EA /* UIButton+Extensions.swift in Sources */,
-				CFC7E5C1271B21CE0013B3EA /* YPFilterCollectionViewCell.swift in Sources */,
-				CFC7E601271B21CE0013B3EA /* CGRect+Extensions.swift in Sources */,
-				CFC7E5CA271B21CE0013B3EA /* YPImagePicker.swift in Sources */,
-				CFC7E5C0271B21CE0013B3EA /* YPFiltersView.swift in Sources */,
-				CFC7E5F4271B21CE0013B3EA /* String+Extensions.swift in Sources */,
-				CFC7E5F6271B21CE0013B3EA /* AVAsset+Extensions.swift in Sources */,
-				CFC7E60A271B21CF0013B3EA /* YPAlerts.swift in Sources */,
+				CF1A585C271BF9F0004730E3 /* PHFetchResult+Extensions.swift in Sources */,
+				CF1A581C271BF9F0004730E3 /* YPImagePickerConfiguration.swift in Sources */,
+				CF1A5852271BF9F0004730E3 /* UIColor+Extensions.swift in Sources */,
+				CF1A5865271BF9F0004730E3 /* YPPhotoSaver.swift in Sources */,
+				CF1A5846271BF9F0004730E3 /* YPPhotoCaptureHelper.swift in Sources */,
+				CF1A5847271BF9F0004730E3 /* YPCameraVC.swift in Sources */,
+				CF1A5859271BF9F0004730E3 /* URL+Extensions.swift in Sources */,
+				CF1A5817271BF9F0004730E3 /* YPFilterCollectionViewCell.swift in Sources */,
+				CF1A5816271BF9F0004730E3 /* YPFiltersView.swift in Sources */,
+				CF1A5861271BF9F0004730E3 /* UICollectionView+Extensions.swift in Sources */,
 				CFE0C1FF2716A52D00D3C097 /* SearchController.swift in Sources */,
-				CFC7E5C5271B21CE0013B3EA /* YPImagePickerConfiguration.swift in Sources */,
-				CFC7E5C8271B21CE0013B3EA /* YPPickerScreen.swift in Sources */,
-				CFC7E5E4271B21CE0013B3EA /* LibraryMediaManager.swift in Sources */,
-				CFC7E5BE271B21CE0013B3EA /* YPCropVC.swift in Sources */,
-				CFC7E5E3271B21CE0013B3EA /* YPLibraryVC.swift in Sources */,
-				CFC7E605271B21CF0013B3EA /* UICollectionView+Extensions.swift in Sources */,
-				CFC7E5CE271B21CE0013B3EA /* YPPermissionDeniedPopup.swift in Sources */,
-				CFC7E5F9271B21CE0013B3EA /* UIImage+Extensions.swift in Sources */,
+				CF1A5814271BF9F0004730E3 /* YPCropVC.swift in Sources */,
 				CFE0C1FE2716A52D00D3C097 /* FeedController.swift in Sources */,
-				CFC7E606271B21CF0013B3EA /* IndexSet+Extensions.swift in Sources */,
-				CFC7E5D7271B21CE0013B3EA /* YPLibraryVC+PanGesture.swift in Sources */,
-				CFC7E5FD271B21CE0013B3EA /* NSFileManager+Extensions.swift in Sources */,
-				CFC7E5D4271B21CE0013B3EA /* YPVideoCaptureVC.swift in Sources */,
-				CFC7E600271B21CE0013B3EA /* PHFetchResult+Extensions.swift in Sources */,
-				CFC7E5DF271B21CE0013B3EA /* YPMenuItem.swift in Sources */,
+				CF1A5834271BF9F0004730E3 /* YPAssetZoomableView.swift in Sources */,
+				CF1A5833271BF9F0004730E3 /* YPGridView.swift in Sources */,
 				CFE0C2272717FB2900D3C097 /* ProfileViewModel.swift in Sources */,
+				CF1A583B271BF9F0004730E3 /* LibraryMediaManager.swift in Sources */,
+				CF1A5831271BF9F0004730E3 /* YPLibraryVC+PanGesture.swift in Sources */,
+				CF1A584B271BF9F0004730E3 /* YPPermissionManager.swift in Sources */,
+				CF1A582E271BF9F0004730E3 /* YPVideoCaptureHelper.swift in Sources */,
 				CFE0C20F2716CEC000D3C097 /* LoginController.swift in Sources */,
-				CFC7E5CF271B21CE0013B3EA /* YPTrimError.swift in Sources */,
-				CFC7E5CD271B21CE0013B3EA /* YPDragDirection.swift in Sources */,
-				CFC7E5F5271B21CE0013B3EA /* AVMutableComposition+Extensions.swift in Sources */,
 				CFE0C2152716DB0F00D3C097 /* AuthenricationViewModel.swift in Sources */,
+				CF1A582D271BF9F0004730E3 /* YPSelectionsGalleryCell.swift in Sources */,
+				CF1A5850271BF9F0004730E3 /* AVAsset+Extensions.swift in Sources */,
+				CF1A5856271BF9F0004730E3 /* UIBarButtonItem+Extensions.swift in Sources */,
+				CF1A583E271BF9F0004730E3 /* YPAlbumsManager.swift in Sources */,
+				CF1A5837271BF9F0004730E3 /* YPBottomPager.swift in Sources */,
+				CF1A583C271BF9F0004730E3 /* YPAssetViewContainer.swift in Sources */,
+				CF1A5838271BF9F0004730E3 /* YPPagerMenu.swift in Sources */,
+				CF1A582B271BF9F0004730E3 /* YPSelectionsGalleryVC.swift in Sources */,
 				CFE0C2112716CF3100D3C097 /* CustomTextField.swift in Sources */,
-				CFC7E609271B21CF0013B3EA /* YPPhotoSaver.swift in Sources */,
-				CFC7E5E5271B21CE0013B3EA /* YPAssetViewContainer.swift in Sources */,
+				CF1A583D271BF9F0004730E3 /* YPLibraryView.swift in Sources */,
+				CF1A584E271BF9F0004730E3 /* UIButton+Extensions.swift in Sources */,
+				CF1A585B271BF9F0004730E3 /* AVFoundation+Extensions.swift in Sources */,
+				CF1A582F271BF9F0004730E3 /* YPVideoCaptureVC.swift in Sources */,
 				CFE0C22B2718038600D3C097 /* Constants.swift in Sources */,
+				CF1A5855271BF9F0004730E3 /* PHCachingImageManager+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CFC7E544271B21CE0013B3EA /* YPImagePickerLocalizable.strings */ = {
+		CF1A57A1271BF9EF004730E3 /* YPImagePickerLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CFC7E545271B21CE0013B3EA /* de */,
-				CFC7E546271B21CE0013B3EA /* ar */,
-				CFC7E547271B21CE0013B3EA /* zh-Hans */,
-				CFC7E548271B21CE0013B3EA /* ja */,
-				CFC7E549271B21CE0013B3EA /* en */,
-				CFC7E54A271B21CE0013B3EA /* es */,
-				CFC7E54B271B21CE0013B3EA /* it */,
-				CFC7E54C271B21CE0013B3EA /* bg */,
-				CFC7E54E271B21CE0013B3EA /* ko */,
-				CFC7E54F271B21CE0013B3EA /* zh-Hant */,
-				CFC7E550271B21CE0013B3EA /* tr */,
-				CFC7E551271B21CE0013B3EA /* pt-BR */,
-				CFC7E552271B21CE0013B3EA /* ru */,
-				CFC7E553271B21CE0013B3EA /* fr */,
-				CFC7E554271B21CE0013B3EA /* id */,
-				CFC7E555271B21CE0013B3EA /* nl */,
+				CF1A57A2271BF9EF004730E3 /* de */,
+				CF1A57A3271BF9EF004730E3 /* ar */,
+				CF1A57A4271BF9EF004730E3 /* zh-Hans */,
+				CF1A57A5271BF9EF004730E3 /* ja */,
+				CF1A57A6271BF9EF004730E3 /* fa */,
+				CF1A57A7271BF9EF004730E3 /* en */,
+				CF1A57A8271BF9EF004730E3 /* nb */,
+				CF1A57A9271BF9EF004730E3 /* es */,
+				CF1A57AA271BF9EF004730E3 /* da */,
+				CF1A57AB271BF9EF004730E3 /* it */,
+				CF1A57AC271BF9EF004730E3 /* bg */,
+				CF1A57AE271BF9EF004730E3 /* sv */,
+				CF1A57AF271BF9EF004730E3 /* cs */,
+				CF1A57B0271BF9EF004730E3 /* km */,
+				CF1A57B1271BF9EF004730E3 /* ko */,
+				CF1A57B2271BF9EF004730E3 /* zh-Hant */,
+				CF1A57B3271BF9EF004730E3 /* km-KH */,
+				CF1A57B4271BF9EF004730E3 /* tr */,
+				CF1A57B5271BF9EF004730E3 /* pl */,
+				CF1A57B6271BF9EF004730E3 /* pt-BR */,
+				CF1A57B7271BF9EF004730E3 /* vi */,
+				CF1A57B8271BF9EF004730E3 /* ru */,
+				CF1A57B9271BF9EF004730E3 /* fr */,
+				CF1A57BA271BF9EF004730E3 /* id */,
+				CF1A57BB271BF9EF004730E3 /* nl */,
+				CF1A57BC271BF9EF004730E3 /* th */,
+				CF1A57BD271BF9EF004730E3 /* pt-PT */,
+				CF1A57BE271BF9EF004730E3 /* ro */,
 			);
 			name = YPImagePickerLocalizable.strings;
 			sourceTree = "<group>";
@@ -1057,7 +1131,7 @@
 		};
 		CFE0C1E72716A11600D3C097 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0C03329ED2B088EF2E5E149 /* Pods-InstagramAppWithFireBase.debug.xcconfig */;
+			baseConfigurationReference = 90FDC340E97C5F171AE5210D /* Pods-InstagramAppWithFireBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1066,9 +1140,12 @@
 				DEVELOPMENT_TEAM = XS2R7967QT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstagramAppWithFireBase/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow us to accuess your photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow us to accuess your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1087,7 +1164,7 @@
 		};
 		CFE0C1E82716A11600D3C097 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 700EAE11FAB0A0FA528F8B8F /* Pods-InstagramAppWithFireBase.release.xcconfig */;
+			baseConfigurationReference = E17B30CA73DB4754D70F2735 /* Pods-InstagramAppWithFireBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1096,9 +1173,12 @@
 				DEVELOPMENT_TEAM = XS2R7967QT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstagramAppWithFireBase/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow us to accuess your photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow us to accuess your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1139,17 +1219,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+		CF1A5870271BFF6B004730E3 /* XCRemoteSwiftPackageReference "Stevia" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			repositoryURL = "https://github.com/freshOS/Stevia";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		CFE0C2232717ED8C00D3C097 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		CF1A5873271BFF7B004730E3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CF1A5876271BFF88004730E3 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -1158,15 +1246,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CFE0C20A2716B85300D3C097 /* JGProgressHUD */ = {
+		CF1A5871271BFF6B004730E3 /* Stevia */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFE0C2092716B85300D3C097 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
-			productName = JGProgressHUD;
+			package = CF1A5870271BFF6B004730E3 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
 		};
-		CFE0C2242717ED8C00D3C097 /* SDWebImage */ = {
+		CF1A5874271BFF7B004730E3 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFE0C2232717ED8C00D3C097 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = CF1A5873271BFF7B004730E3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		CF1A5877271BFF88004730E3 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1A5876271BFF88004730E3 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

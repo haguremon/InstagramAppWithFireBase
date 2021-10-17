@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-import YPImagePicker
 
 
 class MainTabController: UITabBarController{
@@ -114,23 +113,29 @@ class MainTabController: UITabBarController{
         nav.navigationBar.tintColor = .black
         return nav
     }
-    
-//    func didFinishPickingMedia(_ picker: YPImagePicker){
-//        picker.didFinishPicking { (items, _) in
-//            picker.dismiss(animated: false){
-//                guard let selectedImage = items.singlePhoto?.image else { return }
-//                let controller = UploadPostController()
-//                controller.selectedImage = selectedImage
-//                //                controller.delegate = self
-//                //                controller.currentUser = self.user
-//                let nav = UINavigationController(rootViewController: controller)
-//                nav.modalPresentationStyle = .fullScreen
-//                self.present(nav, animated: false, completion: nil)
-//            }
-//        }
-//
+    //写真が選択された時の処理
+    func didFinishPickingMedia(_ picker: YPImagePicker) {
+        picker.didFinishPicking { (items, _) in
+           print("tap")
+            picker.dismiss(animated: false) {
+                guard let selectedImage = items.singlePhoto?.image else { return }
+                print("デバッグ:\(selectedImage)")
+                //遷移動作
+                let controller = UploadPostController()
+                controller.selectedImage = selectedImage
+//                controller.delegate = self
+                //controller.currentUser = self.user
+                //UploadPostControllerはUINavigationを含むのでrootViewControllerにして入れた
+                let nav = UINavigationController(rootViewController: controller)
+                
+                nav.modalPresentationStyle = .fullScreen
+                
+                self.present(nav, animated: false, completion: nil)
+            }
+        }
+
         
-   // }
+    }
     
     
 }
@@ -162,17 +167,16 @@ extension MainTabController: UITabBarControllerDelegate {
             config.shouldSaveNewPicturesToAlbum = false
             config.startOnScreen = .library
             config.screens = [.library]
-            config.library.onlySquare = true
             config.hidesStatusBar = false
             config.hidesBottomBar = false
             config.library.maxNumberOfItems = 1
 
             let picker = YPImagePicker(configuration: config)
-            
-            picker.modalPresentationStyle = .fullScreen
-            present(picker, animated: true, completion: nil)
 
-            //didFinishPickingMedia(picker)
+            picker.modalPresentationStyle = .fullScreen
+            present(picker, animated: false, completion: nil)
+
+            didFinishPickingMedia(picker)
         }
         return true
     }
