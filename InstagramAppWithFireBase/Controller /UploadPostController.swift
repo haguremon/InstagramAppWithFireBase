@@ -78,7 +78,9 @@ class UploadPostController: UIViewController {
 //
 //    // MARK: - Helpers
     func checkMaxLength(_ textView: UITextView){
-        if(textView.text.count) > 100{
+       //のカウントを超える場合は
+        if (textView.text.count) > 100 {
+            //UITextViewに入力できないくなる
             textView.deleteBackward()
         }
     }
@@ -110,7 +112,7 @@ class UploadPostController: UIViewController {
 
 
 // MARK: - UITextFieldDelegate
-//
+//textViewの文字のカウントを認知することができる
 extension UploadPostController: UITextViewDelegate{
     func textViewDidChange(_ textView: UITextView) {
         checkMaxLength(textView)
