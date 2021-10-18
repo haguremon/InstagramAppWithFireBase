@@ -99,10 +99,10 @@ class MainTabController: UITabBarController{
         
         viewControllers = [feed, search, imageSelector, notification, profile]
         
-        tabBar.tintColor = .black
+        tabBar.tintColor = .systemGroupedBackground
     }
     
-    func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController{
+    func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
         //NavigationControllerの設定
         let nav = UINavigationController(rootViewController: rootViewController)
         //tabBarItem.image
@@ -116,15 +116,19 @@ class MainTabController: UITabBarController{
     //写真が選択された時の処理
     func didFinishPickingMedia(_ picker: YPImagePicker) {
         picker.didFinishPicking { (items, _) in
-           print("tap")
+          
             picker.dismiss(animated: false) {
                 guard let selectedImage = items.singlePhoto?.image else { return }
-                print("デバッグ:\(selectedImage)")
+
                 //遷移動作
                 let controller = UploadPostController()
+                //ここで遷移渡しをしてuserの情報やselectedImageをUploadPostControllerにあげる
                 controller.selectedImage = selectedImage
-//                controller.delegate = self
-                //controller.currentUser = self.user
+                print("didFinishPickingMedia ここで1")
+                //ここですでにcontrollerDidFinishUploadingPost()を保持
+                controller.delegate = self
+               //投稿してユーザーの情報を　渡す
+                controller.currentUser = self.user
                 //UploadPostControllerはUINavigationを含むのでrootViewControllerにして入れた
                 let nav = UINavigationController(rootViewController: controller)
                 
@@ -163,14 +167,15 @@ extension MainTabController: UITabBarControllerDelegate {
         if index == 2 {
             
             var config = YPImagePickerConfiguration()
+            config.bottomMenuItemSelectedTextColour = .systemGroupedBackground
             config.library.mediaType = .photo
             config.shouldSaveNewPicturesToAlbum = false
             config.startOnScreen = .library
             config.screens = [.library]
-            config.hidesStatusBar = false
+            config.albumName = "アルバム"
+            config.hidesStatusBar = true
             config.hidesBottomBar = false
             config.library.maxNumberOfItems = 1
-
             let picker = YPImagePicker(configuration: config)
 
             picker.modalPresentationStyle = .fullScreen
@@ -183,16 +188,17 @@ extension MainTabController: UITabBarControllerDelegate {
 }
 //
 //// MARK: - UploadPostControllerDelegate
-//extension MainTabController: UploadPostControllerDelegate{
-//    func controllerDidFinishUploadingPost(_ controller: UploadPostController){
-//        selectedIndex = 0
-//        controller.dismiss(animated: true, completion: nil)
-//
+extension MainTabController: UploadPostControllerDelegate{
+    func controllerDidFinishUploadingPost(_ controller: UploadPostController) {
+        print("UploadPostControllerDelegate")
+        selectedIndex = 0
+        controller.dismiss(animated: true, completion: nil)
+
 //        guard let feedNav = viewControllers?.first as? UINavigationController else { return }
 //        guard let feed = feedNav.viewControllers.first as? FeedController else { return }
 //        feed.habdleRefresh()
-//    }
-//
-//}
+    }
+
+}
 //
 //

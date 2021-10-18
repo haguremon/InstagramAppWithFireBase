@@ -12,19 +12,20 @@ private let reuseIdentifier = "Cell"
 class FeedController: UICollectionViewController {
 //
 //    // MARK: - Lifecycle
-//    private var posts = [Post](){
-//        didSet{ self.collectionView.reloadData() }
-//    }
+    private var posts = [Post](){
+        didSet{ self.collectionView.reloadData() }
+    }
 //
-//    var post: Post?{
-//        didSet{
-//            collectionView.reloadData()
-//        }
-//    }
+    var post: Post?{
+        didSet {
+            collectionView.reloadData()
+        }
+    }
   
     override func viewDidLoad() {
        super.viewDidLoad()
         configureUI()
+        fetchPosts()
 //        fetchPosts()
 //
 //        if post != nil {
@@ -34,12 +35,15 @@ class FeedController: UICollectionViewController {
    }
 //
 //    // MARK: - Action
-//    @objc func habdleRefresh(){
-//        posts.removeAll()
-//        fetchPosts()
-//
-//    }
-//
+    @objc func habdleRefresh(){
+        //ここで下に引っ張った時の処理
+        //posts.removeAll()をすべて消して
+        posts.removeAll()
+        //ここでもう一回postsに入れる
+        fetchPosts()
+
+    }
+
     @objc func habdleLogout(){
         do{
             try Auth.auth().signOut()
@@ -52,15 +56,16 @@ class FeedController: UICollectionViewController {
             print("DEBUG: Failed to sign out")
         }
     }
-//
 //    // MARK: - API
-//    func fetchPosts(){
-//        guard post == nil else { return }
-////        PostService.fetchPosts { (posts) in
-////            self.posts = posts
-////            self.collectionView.refreshControl?.endRefreshing()
-////            self.checkIfUserLikedPosts()
-////        }
+    func fetchPosts(){
+        guard post == nil else { return }
+        PostService.fetchPosts { (posts) in
+            self.posts = posts
+            self.collectionView.reloadData()
+            self.collectionView.refreshControl?.endRefreshing()
+            // self.checkIfUserLikedPosts()
+        }
+    }
 //        PostService.fetchFeedPosts{ posts in
 //            self.posts = posts
 //            self.collectionView.refreshControl?.endRefreshing()
@@ -86,7 +91,7 @@ class FeedController: UICollectionViewController {
 //    }
 //
 //    // MARK: - Helpers
-    func configureUI(){
+    func configureUI() {
         collectionView.backgroundColor = .white
 
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -96,32 +101,36 @@ class FeedController: UICollectionViewController {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
 //        }
 
-
+        navigationItem.titleView?.tintColor = .systemGroupedBackground
+        
         navigationItem.title = "Feed"
-
-//        let refresher = UIRefreshControl()
-//        refresher.addTarget(self, action: #selector(habdleRefresh), for: .valueChanged)
-//        collectionView.refreshControl = refresher
+///collectionを下に引っ張る時にくるくるした時の処理をする
+        let refresher = UIRefreshControl()
+       refresher.addTarget(self, action: #selector(habdleRefresh), for: .valueChanged)
+        refresher.tintColor = UIColor.black
+      collectionView.refreshControl = refresher
     }
 
 }
+    
+
 
 // MARK: - UICollectionViewDataSource
-extension FeedController{
+extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  5 //post == nil ? posts.count : 1
+        return  post == nil ? posts.count : 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
        // cell.backgroundColor = .purple
 //        cell.delegate = self
-//        if let post = post {
-//            cell.viewModel = PostViewModel(post: post)
-//        }else {
-//            cell.viewModel = PostViewModel(post: posts[indexPath.row])
-//        }
-        
+        if let post = post {
+            cell.viewModel = PostViewModel(post: post)
+        }else {
+            cell.viewModel = PostViewModel(post: posts[indexPath.row])
+        }
+
         return cell
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 
+//ここで委任する
 protocol UploadPostControllerDelegate: AnyObject {
     func controllerDidFinishUploadingPost(_ controller: UploadPostController)
 }
@@ -14,11 +15,11 @@ protocol UploadPostControllerDelegate: AnyObject {
 class UploadPostController: UIViewController {
 //
 //    // MARK: - Properties
-//    weak var delegate: UploadPostControllerDelegate?
+    weak var delegate: UploadPostControllerDelegate?
     var currentUser: User?
 //
 //
-    var selectedImage: UIImage?{
+    var selectedImage: UIImage? {
         didSet{ photoImageView.image = selectedImage }
     }
 //
@@ -60,20 +61,26 @@ class UploadPostController: UIViewController {
     }
 //
     @objc func didTapDone() {
-        print("デバッグ値が保存されたよ")
-//        guard let image = selectedImage else { return }
-//        guard let caption = captionTextView.text else { return }
-//        guard let user = currentUser else { return }
-//        showLoader(true)
+   
+        guard let image = selectedImage else { return }
+        guard let caption = captionTextView.text else { return }
+        guard let user = currentUser else { return }
+        //ここでインジケーターが発動する
+        showLoader(true)
 //
-//        PostService.uploadPost(caption: caption, image: image, user: user) { (error) in
-//            self.showLoader(false)
-//            if let error = error {
-//                print("DEBUG: Failed to upload post \(error.localizedDescription)")
-//                return
-//            }
-//            self.delegate?.controllerDidFinishUploadingPost(self)
-//        }
+        PostService.uploadPost(caption: caption, image: image, user: user) { (error) in
+            //uploadできたらインジケーターが終わる
+            self.showLoader(false)
+            if let error = error {
+                print("DEBUG: Failed to upload post \(error.localizedDescription)")
+                return
+            }
+            //ポストが成功した時の処理 tabバーもホームに移動したいのでプロトコルを使って委任する
+//            self.dismiss(animated: true, completion: nil)
+//            self.tabBarController?.selectedIndex = 0
+            print("didTapDone()")//delegateに値が入ってるのでcontrollerDidFinishUploadingPost()を使うことができる
+            self.delegate?.controllerDidFinishUploadingPost(self)
+        }
     }
 //
 //    // MARK: - Helpers

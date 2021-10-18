@@ -32,6 +32,7 @@ class ProfileHeader: UICollectionViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .systemGroupedBackground
         label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
@@ -52,12 +53,14 @@ class ProfileHeader: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.textColor = .systemGroupedBackground
         return label
     }()
     
     private lazy var followersLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .systemGroupedBackground
         label.textAlignment = .center
         
         return label
@@ -66,6 +69,7 @@ class ProfileHeader: UICollectionViewCell {
     private lazy var followingLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .systemGroupedBackground
         label.textAlignment = .center
         return label
     }()

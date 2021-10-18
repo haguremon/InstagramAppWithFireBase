@@ -101,6 +101,9 @@
 		CF1A5875271BFF7B004730E3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5874271BFF7B004730E3 /* SDWebImage */; };
 		CF1A5878271BFF88004730E3 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5877271BFF88004730E3 /* JGProgressHUD */; };
 		CF1A587B271C1A1C004730E3 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A587A271C1A1C004730E3 /* InputTextView.swift */; };
+		CFA851EE271D4E310012F027 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851ED271D4E310012F027 /* PostService.swift */; };
+		CFA851F0271D4E520012F027 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851EF271D4E520012F027 /* Post.swift */; };
+		CFA851F2271D6D660012F027 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851F1271D6D660012F027 /* PostViewModel.swift */; };
 		CFE0C1D62716A11400D3C097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1D52716A11400D3C097 /* AppDelegate.swift */; };
 		CFE0C1D82716A11400D3C097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1D72716A11400D3C097 /* SceneDelegate.swift */; };
 		CFE0C1DA2716A11400D3C097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C1D92716A11400D3C097 /* ViewController.swift */; };
@@ -258,6 +261,9 @@
 		CF1A580E271BF9EF004730E3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CF1A5869271BFE0B004730E3 /* Stevia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stevia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1A587A271C1A1C004730E3 /* InputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		CFA851ED271D4E310012F027 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		CFA851EF271D4E520012F027 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CFA851F1271D6D660012F027 /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		CFE0C1D52716A11400D3C097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE0C1D72716A11400D3C097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFE0C1D92716A11400D3C097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -602,6 +608,7 @@
 		CFE0C1E92716A1EE00D3C097 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CFA851F1271D6D660012F027 /* PostViewModel.swift */,
 				CFE0C23027197CA600D3C097 /* UserCellViewModel.swift */,
 				CFE0C2142716DB0F00D3C097 /* AuthenricationViewModel.swift */,
 				CFE0C2262717FB2900D3C097 /* ProfileViewModel.swift */,
@@ -638,6 +645,7 @@
 		CFE0C1ED2716A28C00D3C097 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CFA851EF271D4E520012F027 /* Post.swift */,
 				CFE0C22C271803D100D3C097 /* User.swift */,
 			);
 			path = Models;
@@ -656,6 +664,7 @@
 		CFE0C1EF2716A2D600D3C097 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CFA851ED271D4E310012F027 /* PostService.swift */,
 				CFE0C2282718032800D3C097 /* UserService.swift */,
 				CFE0C2192717D0D600D3C097 /* ImageUploader.swift */,
 				CFE0C21B2717D15000D3C097 /* AuthService.swift */,
@@ -851,6 +860,7 @@
 				CFE0C2002716A52D00D3C097 /* CommentController.swift in Sources */,
 				CFE0C1FD2716A52D00D3C097 /* ImageSelectorController.swift in Sources */,
 				CF1A584A271BF9F0004730E3 /* YPPermissionCheckable.swift in Sources */,
+				CFA851EE271D4E310012F027 /* PostService.swift in Sources */,
 				CF1A5829271BF9F0004730E3 /* YPError.swift in Sources */,
 				CF1A5853271BF9F0004730E3 /* UIImage+Extensions.swift in Sources */,
 				CF1A5839271BF9F0004730E3 /* YPBottomPagerView.swift in Sources */,
@@ -905,6 +915,7 @@
 				CFE0C2082716B7EC00D3C097 /* Extensions.swift in Sources */,
 				CF1A5867271BF9F0004730E3 /* YPLoaders.swift in Sources */,
 				CF1A5820271BF9F0004730E3 /* YPIcons.swift in Sources */,
+				CFA851F2271D6D660012F027 /* PostViewModel.swift in Sources */,
 				CF1A585D271BF9F0004730E3 /* CGRect+Extensions.swift in Sources */,
 				CFE0C2012716A52D00D3C097 /* ProfileController.swift in Sources */,
 				CF1A5813271BF9F0004730E3 /* YPCropView.swift in Sources */,
@@ -951,6 +962,7 @@
 				CF1A584E271BF9F0004730E3 /* UIButton+Extensions.swift in Sources */,
 				CF1A585B271BF9F0004730E3 /* AVFoundation+Extensions.swift in Sources */,
 				CF1A582F271BF9F0004730E3 /* YPVideoCaptureVC.swift in Sources */,
+				CFA851F0271D4E520012F027 /* Post.swift in Sources */,
 				CFE0C22B2718038600D3C097 /* Constants.swift in Sources */,
 				CF1A5855271BF9F0004730E3 /* PHCachingImageManager+Extensions.swift in Sources */,
 			);
