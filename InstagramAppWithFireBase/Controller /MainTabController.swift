@@ -43,7 +43,7 @@ class MainTabController: UITabBarController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGroupedBackground
            checkIfUserIsLoggedIn()
         fetchUserStatsTest()
         //        fetchUser()
@@ -99,7 +99,7 @@ class MainTabController: UITabBarController{
         
         viewControllers = [feed, search, imageSelector, notification, profile]
         
-        tabBar.tintColor = .systemGroupedBackground
+        tabBar.tintColor = .secondarySystemBackground
     }
     
     func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
@@ -167,12 +167,15 @@ extension MainTabController: UITabBarControllerDelegate {
         if index == 2 {
             
             var config = YPImagePickerConfiguration()
-            config.bottomMenuItemSelectedTextColour = .systemGroupedBackground
+            //config.bottomMenuItemSelectedTextColour = .secondaryLabel
             config.library.mediaType = .photo
             config.shouldSaveNewPicturesToAlbum = false
             config.startOnScreen = .library
             config.screens = [.library]
+            //config.bottomMenuItemUnSelectedTextColour = .secondaryLabel
+            
             config.albumName = "アルバム"
+            config.preferredStatusBarStyle = .default
             config.hidesStatusBar = true
             config.hidesBottomBar = false
             config.library.maxNumberOfItems = 1

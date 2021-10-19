@@ -64,7 +64,7 @@ class SearchController: UITableViewController {
    func configureUI(){
        
         navigationItem.title = "Explore"
-        view.backgroundColor = .white
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -84,6 +84,7 @@ class SearchController: UITableViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         //searchController.searchBar.delegate = self
+        navigationController?.navigationBar.backgroundColor = .systemGroupedBackground
         navigationItem.searchController = searchController
         definesPresentationContext = false
     }
@@ -100,7 +101,7 @@ extension SearchController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! UserCell
-        cell.backgroundColor = .white
+        cell.backgroundColor = .systemGroupedBackground
         // サーチモード?    true:false
         let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
         cell.viewModel = UserCellViewModel(user: user)

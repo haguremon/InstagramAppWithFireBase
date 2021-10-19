@@ -35,6 +35,7 @@ class UploadPostController: UIViewController {
         let tv = InputTextView()
         tv.placeholderText = "Enter caption...."
         tv.font = UIFont.systemFont(ofSize: 16)
+        tv.textColor = .secondaryLabel
         tv.delegate = self
         tv.placeholderShouldCenter = false
         return tv
@@ -42,7 +43,7 @@ class UploadPostController: UIViewController {
 
     private let characterCountLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .lightGray
+        label.textColor = .secondaryLabel
         label.font = UIFont.systemFont(ofSize: 14)
         label.text = "0/100"
         return label
@@ -94,8 +95,9 @@ class UploadPostController: UIViewController {
 //
     func configureUI(){
        
-        view.backgroundColor = .white
-        
+        view.backgroundColor = .systemGroupedBackground
+        captionTextView.layer.borderWidth = 1
+        captionTextView.layer.borderColor = UIColor.secondaryLabel.cgColor
         navigationItem.title = "Upload Post"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .done, target: self, action: #selector(didTapDone))
@@ -107,11 +109,10 @@ class UploadPostController: UIViewController {
         photoImageView.layer.cornerRadius = 10
 
         view.addSubview(captionTextView)
-        captionTextView.anchor(top: photoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 1, paddingLeft: 12, paddingRight: 12, height: 64)
+        captionTextView.anchor(top: photoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 3, paddingLeft: 12, paddingRight: 12, height: 64)
 
         view.addSubview(characterCountLabel)
-        characterCountLabel.anchor(bottom: captionTextView.bottomAnchor, right: view.rightAnchor,paddingBottom: -8, paddingRight: 12)
-
+        characterCountLabel.anchor(bottom: captionTextView.bottomAnchor, right: view.rightAnchor,paddingBottom: 0, paddingRight: 14)
 
 
     }

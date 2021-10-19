@@ -34,7 +34,7 @@ class UserCell: UITableViewCell{
     private let usernameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         label.text = "venom"
         return label
     }()

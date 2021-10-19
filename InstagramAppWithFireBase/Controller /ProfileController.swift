@@ -42,7 +42,6 @@ class ProfileController: UICollectionViewController {
         configureCollectionView()
         fetchUserStats()
 //        fetchPosts()
-        view.backgroundColor = .blue
     }
 //
 //    // MARK: - API
@@ -77,7 +76,7 @@ class ProfileController: UICollectionViewController {
 //    // MARK: - Helpers
     func configureCollectionView(){
         navigationItem.title = user.username
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemGroupedBackground
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: cellIdentifer)
         collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: haderIdentifier)
     }
@@ -94,13 +93,14 @@ extension ProfileController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifer, for: indexPath) as! ProfileCell
         //cell.viewModel = PostViewModel(post: posts[indexPath.row])
        // cell.backgroundColor = .blue
+       // cell.backgroundColor = .systemGroupedBackground
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: haderIdentifier, for: indexPath) as! ProfileHeader
-    
+       // header.backgroundColor = .systemGroupedBackground
         header.delegate = self
 //        if let user = self.user {
             //ProfileHeaderでのviewModelプロパティが初期化せれた時にuserの情報を持っている関数がdidsetされる全てheader

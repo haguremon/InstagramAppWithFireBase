@@ -26,7 +26,7 @@ class NotificationController: UITableViewController {
         super.viewDidLoad()
 //            configureTableView()
 //            fetchNotifications()
-        view.backgroundColor = .purple
+        view.backgroundColor = .systemGroupedBackground
 
     }
 //

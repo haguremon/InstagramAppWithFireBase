@@ -32,7 +32,7 @@ class ProfileHeader: UICollectionViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
@@ -53,14 +53,14 @@ class ProfileHeader: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         return label
     }()
     
     private lazy var followersLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .systemGroupedBackground
+        label.textColor = .secondaryLabel
         label.textAlignment = .center
         
         return label
@@ -69,7 +69,7 @@ class ProfileHeader: UICollectionViewCell {
     private lazy var followingLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         label.textAlignment = .center
         return label
     }()
@@ -83,7 +83,6 @@ class ProfileHeader: UICollectionViewCell {
     let listButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "list"), for: .normal)
-        button.tintColor = UIColor(white: 0, alpha: 0.2)
         return button
 
     }()
@@ -91,7 +90,7 @@ class ProfileHeader: UICollectionViewCell {
     let bookmarkButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "ribbon"), for: .normal)
-        button.tintColor = UIColor(white: 0, alpha: 0.2)
+       
         return button
     }()
     
@@ -99,7 +98,7 @@ class ProfileHeader: UICollectionViewCell {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = .systemGroupedBackground
         addSubview(profileImageView)
         profileImageView.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 12)
         profileImageView.setDimensions(height: 80, width: 80)
@@ -118,10 +117,10 @@ class ProfileHeader: UICollectionViewCell {
         stack.anchor(left: profileImageView.rightAnchor, right: rightAnchor, paddingLeft: 12, paddingRight: 12, height: 50)
         
         let topDivider = UIView()
-        topDivider.backgroundColor = .lightGray
+        topDivider.backgroundColor = .systemGroupedBackground
         
         let bottomDivider = UIView()
-        bottomDivider.backgroundColor = .lightGray
+        bottomDivider.backgroundColor = .systemGroupedBackground
         
         let buttonStack = UIStackView(arrangedSubviews: [gridButton, listButton, bookmarkButton])
         buttonStack.distribution = .fillEqually
@@ -168,12 +167,5 @@ class ProfileHeader: UICollectionViewCell {
    
    }
  
-
-    func attributedStatText(value: Int, label: String) -> NSAttributedString{
-        let attributedText = NSMutableAttributedString(string: "\(value)\n", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
-        attributedText.append(NSAttributedString(string: label, attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.lightGray]))
-        return attributedText
-    }
-    
     
 }

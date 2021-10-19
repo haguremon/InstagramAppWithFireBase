@@ -43,7 +43,7 @@ class  FeedCell: UICollectionViewCell {
         button.setTitle("venom", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         button.addTarget(self, action: #selector(showUserProfile), for: .touchUpInside)
-        button.tintColor = .black
+        button.tintColor = .label
         return button
     }()
     
@@ -57,18 +57,24 @@ class  FeedCell: UICollectionViewCell {
         return iv
     }()
     
-    lazy var likeButton: UIButton = {
+     lazy var likeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
-        button.tintColor = .systemGroupedBackground
+       
+//        button.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
+
+            button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
+//
+       // button.backgroundColor = .systemGroupedBackground
+        button.tintColor = .label
         button.addTarget(self, action: #selector(didTabLike), for: .touchUpInside)
         return button
     }()
+  
     //
     private lazy var commentButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "comment"), for: .normal)
-        button.tintColor = .systemGroupedBackground
+        button.tintColor = .label
         button.addTarget(self, action: #selector(didTabComments), for: .touchUpInside)
         return button
     }()
@@ -76,20 +82,20 @@ class  FeedCell: UICollectionViewCell {
     private lazy var shareButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "send2"), for: .normal)
-        button.tintColor = .systemGroupedBackground
+        button.tintColor = .label
         return button
     }()
     //
     private let likesLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     //
     private let captionLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -98,7 +104,7 @@ class  FeedCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "2 days ago"
         label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .systemGroupedBackground
+        label.textColor = .label
         return label
     }()
     //
@@ -147,6 +153,7 @@ class  FeedCell: UICollectionViewCell {
     }
     //
     @objc func didTabLike(){
+       
         print("did tap like")
         //        guard let viewModel = viewModel else { return }
         //        delegate?.cell(self, didLike: viewModel.post)
@@ -167,7 +174,7 @@ class  FeedCell: UICollectionViewCell {
             profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
             usernameButton.setTitle(viewModel.username, for: .normal)
             likesLabel.text = viewModel.likesLabelText
-            likeButton.tintColor = viewModel.likeButtonTintColor
+            //likeButton.tintColor = viewModel.likeButtonTintColor
             likeButton.setImage(viewModel.likeButtonImage, for: .normal)
             postTimeLabel.text = viewModel.timestampString
         }

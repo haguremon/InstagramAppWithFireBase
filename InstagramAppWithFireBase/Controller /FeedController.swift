@@ -26,6 +26,7 @@ class FeedController: UICollectionViewController {
        super.viewDidLoad()
         configureUI()
         fetchPosts()
+        view.backgroundColor = .systemGroupedBackground
 //        fetchPosts()
 //
 //        if post != nil {
@@ -92,22 +93,23 @@ class FeedController: UICollectionViewController {
 //
 //    // MARK: - Helpers
     func configureUI() {
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemGroupedBackground
 
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
 //        if post == nil {
         //leftBarにログアウトボタンを作成
-            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
+        navigationController?.navigationBar.backgroundColor = .systemGroupedBackground
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
 //        }
-
-        navigationItem.titleView?.tintColor = .systemGroupedBackground
+        navigationItem.leftBarButtonItem?.tintColor = .secondaryLabel
+        navigationItem.titleView?.tintColor = .secondarySystemBackground
         
         navigationItem.title = "Feed"
 ///collectionを下に引っ張る時にくるくるした時の処理をする
         let refresher = UIRefreshControl()
        refresher.addTarget(self, action: #selector(habdleRefresh), for: .valueChanged)
-        refresher.tintColor = UIColor.black
+        refresher.tintColor = .secondaryLabel
       collectionView.refreshControl = refresher
     }
 
@@ -130,7 +132,8 @@ extension FeedController {
         }else {
             cell.viewModel = PostViewModel(post: posts[indexPath.row])
         }
-
+        cell.backgroundColor = .systemGroupedBackground
+        
         return cell
     }
 }
