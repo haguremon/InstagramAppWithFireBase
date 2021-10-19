@@ -165,25 +165,18 @@ extension MainTabController: UITabBarControllerDelegate {
         let index = viewControllers?.firstIndex( of: viewController)
        
         if index == 2 {
-            
             var config = YPImagePickerConfiguration()
-            //config.bottomMenuItemSelectedTextColour = .secondaryLabel
             config.library.mediaType = .photo
             config.shouldSaveNewPicturesToAlbum = false
             config.startOnScreen = .library
-            config.screens = [.library]
-            //config.bottomMenuItemUnSelectedTextColour = .secondaryLabel
-            
-            config.albumName = "アルバム"
-            config.preferredStatusBarStyle = .default
+            config.startOnScreen = .photo
+            config.screens = [.photo,.library]
             config.hidesStatusBar = true
             config.hidesBottomBar = false
-            config.library.maxNumberOfItems = 1
             let picker = YPImagePicker(configuration: config)
 
             picker.modalPresentationStyle = .fullScreen
             present(picker, animated: false, completion: nil)
-
             didFinishPickingMedia(picker)
         }
         return true

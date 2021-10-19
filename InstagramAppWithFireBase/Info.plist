@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Privacy - Camera Usage Description </key>
-	<string>Please allow us to accuess your photos</string>
+    <key>NSCameraUsageDescription</key>
+        <string>許可せんとcamera使えまへんで </string>
+        <key>NSPhotoLibraryAddUsageDescription</key>
+        <string>許可せんと保存できませんで </string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Photos
 //この画面でimageピッカーが発動するここで選択したら Upload画面に移動する
 class ImageSelectorController: UIViewController {
  
