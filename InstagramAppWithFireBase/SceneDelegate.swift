@@ -19,23 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = MainTabController()
         //        window?.rootViewController = UINavigationController(rootViewController: LoginController())
         window?.makeKeyAndVisible()
-//        if #available(iOS 13.0, *) {
-//           let appearance = UINavigationBarAppearance()
-//           // appearance.configureWithDefaultBackground()
-//
-////           appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.secondaryLabel]
-//            appearance.backgroundColor = .clear
-//            appearance.shadowColor = .secondarySystemBackground
-//
-//            appearance.titleTextAttributes = [.foregroundColor: UIColor.secondaryLabel]
-//            // Large Title 用 NavigationBar の色設定
-//           // UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//            // 通常の NavigationBar の色設定
-//            UINavigationBar.appearance().standardAppearance = appearance
-//        } else {
-//            // iOS 13 未満はこれまで通り
-//            UINavigationBar.appearance().barTintColor = .secondarySystemBackground
-//        }
+        if #available(iOS 13.0, *) {
+           let appearance = UINavigationBarAppearance()
+           // appearance.configureWithDefaultBackground()
+
+//           appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.secondaryLabel]
+            appearance.backgroundColor = .systemBackground
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
+            // Large Title 用 NavigationBar の色設定
+           // UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            // 通常の NavigationBar の色設定
+            UINavigationBar.appearance().standardAppearance = appearance
+        } else {
+            // iOS 13 未満はこれまで通り
+            UINavigationBar.appearance().barTintColor = .secondarySystemBackground
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

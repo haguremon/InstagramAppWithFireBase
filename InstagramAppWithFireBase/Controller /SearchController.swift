@@ -68,7 +68,7 @@ class SearchController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
-       tableView.rowHeight = 64
+        tableView.rowHeight = 64
 //        view.addSubview(tableView)
         tableView.fillSuperview()
 //        tableView.isHidden = true
@@ -83,8 +83,11 @@ class SearchController: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.tintColor = .label
+        searchController.searchBar.backgroundColor = .systemBackground
+        searchController.searchBar.layer.borderColor = UIColor.systemGray.cgColor
         //searchController.searchBar.delegate = self
-        navigationController?.navigationBar.backgroundColor = .systemGroupedBackground
+        navigationController?.navigationBar.backgroundColor = .systemBackground
         navigationItem.searchController = searchController
         definesPresentationContext = false
     }

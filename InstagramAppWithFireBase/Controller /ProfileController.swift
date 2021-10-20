@@ -41,6 +41,7 @@ class ProfileController: UICollectionViewController {
         checkIfUserIsFolloed()
         configureCollectionView()
         fetchUserStats()
+        navigationController?.navigationBar.tintColor = .label
 //        fetchPosts()
     }
 //
