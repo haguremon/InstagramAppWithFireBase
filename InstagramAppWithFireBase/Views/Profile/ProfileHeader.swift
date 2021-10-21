@@ -60,7 +60,7 @@ class ProfileHeader: UICollectionViewCell {
     private lazy var followersLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .secondaryLabel
+        label.textColor = .label
         label.textAlignment = .center
         
         return label

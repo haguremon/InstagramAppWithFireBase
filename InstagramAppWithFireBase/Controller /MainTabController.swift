@@ -98,8 +98,8 @@ class MainTabController: UITabBarController{
         let profile = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: profileController)
         
         viewControllers = [feed, search, imageSelector, notification, profile]
-        
-        tabBar.tintColor = .secondarySystemBackground
+        tabBar.backgroundColor = .systemBackground
+        tabBar.tintColor = .label
     }
     
     func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
@@ -110,7 +110,8 @@ class MainTabController: UITabBarController{
         //
         //tabBarItemがタッチされた時のイメージ
         nav.tabBarItem.selectedImage = selectedImage
-        nav.navigationBar.tintColor = .black
+        
+        nav.navigationBar.tintColor = .label
         return nav
     }
     //写真が選択された時の処理
@@ -189,10 +190,10 @@ extension MainTabController: UploadPostControllerDelegate{
         print("UploadPostControllerDelegate")
         selectedIndex = 0
         controller.dismiss(animated: true, completion: nil)
-
-//        guard let feedNav = viewControllers?.first as? UINavigationController else { return }
-//        guard let feed = feedNav.viewControllers.first as? FeedController else { return }
-//        feed.habdleRefresh()
+        //FeedControllerに行くときにクルクルが表示するようにする
+        guard let feedNav = viewControllers?.first as? UINavigationController else { return }
+        guard let feed = feedNav.viewControllers.first as? FeedController else { return }
+        feed.habdleRefresh()
     }
 
 }

@@ -35,7 +35,7 @@ class UploadPostController: UIViewController {
         let tv = InputTextView()
         tv.placeholderText = "Enter caption...."
         tv.font = UIFont.systemFont(ofSize: 16)
-        tv.textColor = .secondaryLabel
+        tv.textColor = .label
         tv.delegate = self
         tv.placeholderShouldCenter = false
         return tv
@@ -80,6 +80,7 @@ class UploadPostController: UIViewController {
 //            self.dismiss(animated: true, completion: nil)
 //            self.tabBarController?.selectedIndex = 0
             print("didTapDone()")//delegateに値が入ってるのでcontrollerDidFinishUploadingPost()を使うことができる
+            //rightBarButtonItemが押された時にcontrollerDidFinishUploadingPostが発動する
             self.delegate?.controllerDidFinishUploadingPost(self)
         }
     }

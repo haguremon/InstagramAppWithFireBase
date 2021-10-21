@@ -11,10 +11,10 @@ import SDWebImage
 class ProfileCell: UICollectionViewCell{
     
     // MARK: - Properties
-    
-//    var viewModel: PostViewModel? {
-//        didSet { configure() }
-//    }
+    //ProfilVC初期化された時にconfigure()を発動する
+    var viewModel: PostViewModel? {
+        didSet { configure() }
+    }
     
     private let postImageView: UIImageView = {
         let iv = UIImageView()
@@ -41,9 +41,9 @@ class ProfileCell: UICollectionViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
-//    func configure(){
-//        guard let viewModel = viewModel else { return }
-//
-//        postImageView.sd_setImage(with: viewModel.imageUrl)
-//    }
+    func configure(){
+        guard let viewModel = viewModel else { return }
+
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+    }
 }

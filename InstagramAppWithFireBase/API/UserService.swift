@@ -27,11 +27,11 @@ struct UserService {
             let user = User(dictonary: dictonary)
             completion(user)
         }
-
+        
     }
-//COLLECTION_USERSの情報を全て取ってくる　コールバックで[User]を返す
+    //COLLECTION_USERSの情報を全て取ってくる　コールバックで[User]を返す
     static func fetchUsers(completion: @escaping ([User]) -> Void) {
-      // QuerySnapshotで配列の型を取得
+        // QuerySnapshotで配列の型を取得
         COLLECTION_USERS.getDocuments { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             
@@ -66,24 +66,26 @@ struct UserService {
             completion(isFollowed)
         }
     }
-        
+    
     static func fetchUserStats(uid: String, completion: @escaping (UserStats) -> Void) {
+        //followersの数を取得
         COLLETION_FOLLOWERS.document(uid).collection("user-followers").getDocuments { (snapshot, _) in
             //let snapshot: QuerySnapshot? <- 配列
             //followersのDocumentが何個あるか判断する
             let followers = snapshot?.documents.count ?? 0
             //フォローしてるDocument（ユーザーの数を判断する
+            //フォローしてるユーザーを取得する
             COLLETION_FOLLOWING.document(uid).collection("user-following").getDocuments { (snapshot, _) in
-                let following = snapshot?.documents.count ?? 0
-                completion(UserStats(followers: followers, following: following))
                 
-//                COLLETION_POSTS.whereField("ownerUid", isEqualTo:  uid).getDocuments { (snapshot, _) in
-//                    let posts = snapshot?.documents.count ?? 0
-//                    completion(UserStats(followers: followers, following: following, posts: posts))
-
+                let following = snapshot?.documents.count ?? 0
+              //ポストの数を取得
+                COLLETION_POSTS.whereField("ownerUid", isEqualTo:  uid).getDocuments { (snapshot, _) in
+                    let posts = snapshot?.documents.count ?? 0
+                    completion(UserStats(followers: followers, following: following, posts: posts))
+                    
                 }
             }
         }
     }
     
-
+}

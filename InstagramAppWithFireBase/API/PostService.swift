@@ -44,17 +44,21 @@ struct  PostService {
     }
 
     
-    static func fetchPosts(forUser uid: String, completion: @escaping([Post]) -> Void){
+    static func fetchPosts(forUser uid: String, completion: @escaping([Post]) -> Void) {
+        //フィルーどのownerUidと引数が同じ時に
         let query = COLLETION_POSTS.whereField("ownerUid", isEqualTo: uid)
+        //そのユーザーの情報を取得することができる
         query.getDocuments { (snapshot, error) in
             guard let documents = snapshot?.documents else { return }
             var posts = documents.map({Post(postId: $0.documentID, dictonary: $0.data())})
-            
+            //並び替え？
             posts.sort { (post1, post2) -> Bool in
                 return post1.timestamp.seconds > post2.timestamp.seconds
             }
             
-            completion(posts)        }
+            completion(posts)
+            
+        }
     }
     
     static func likePost(post: Post, completion: @escaping(FirestoreCompletion)){

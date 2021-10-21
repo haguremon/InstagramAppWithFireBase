@@ -12,10 +12,10 @@ private let reuseIdentifier = "Cell"
 class FeedController: UICollectionViewController {
 //
 //    // MARK: - Lifecycle
-    private var posts = [Post](){
-        didSet{ self.collectionView.reloadData() }
+    private var posts = [Post]() {
+        didSet{ collectionView.reloadData() }
     }
-//
+//プロフィールviewで選択されたものが渡る
     var post: Post?{
         didSet {
             collectionView.reloadData()
@@ -58,8 +58,11 @@ class FeedController: UICollectionViewController {
         }
     }
 //    // MARK: - API
+    //一度削除してからもう一度ポストを行う
     func fetchPosts(){
+        
         guard post == nil else { return }
+        //postがnilの時fetchPostsをする
         PostService.fetchPosts { (posts) in
             self.posts = posts
             self.collectionView.reloadData()
@@ -96,21 +99,23 @@ class FeedController: UICollectionViewController {
         collectionView.backgroundColor = .systemGroupedBackground
 
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//
+        if post == nil {
 
-//        if post == nil {
+        //post == nilだった場合は
         //leftBarにログアウトボタンを作成
         navigationController?.navigationBar.backgroundColor = .systemGroupedBackground
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
-//        }
+        }
         navigationItem.leftBarButtonItem?.tintColor = .secondaryLabel
         navigationItem.titleView?.tintColor = .secondarySystemBackground
         
         navigationItem.title = "Feed"
 ///collectionを下に引っ張る時にくるくるした時の処理をする
         let refresher = UIRefreshControl()
-       refresher.addTarget(self, action: #selector(habdleRefresh), for: .valueChanged)
-        refresher.tintColor = .secondaryLabel
-      collectionView.refreshControl = refresher
+         refresher.addTarget(self, action: #selector(habdleRefresh), for: .valueChanged)
+         refresher.tintColor = .secondaryLabel
+         collectionView.refreshControl = refresher
     }
 
 }
