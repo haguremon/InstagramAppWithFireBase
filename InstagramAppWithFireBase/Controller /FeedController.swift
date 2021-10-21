@@ -131,7 +131,9 @@ extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
        // cell.backgroundColor = .purple
-//        cell.delegate = self
+        print("cellで設定\(cell.delegate)")
+        //cell.delegateをFeedControllerに任せる
+        cell.delegate = self
         if let post = post {
             cell.viewModel = PostViewModel(post: post)
         }else {
@@ -154,19 +156,22 @@ extension FeedController: UICollectionViewDelegateFlowLayout{
     }
 }
 //
-//// MARK: - FeedCellDelegat
-//extension FeedController: FeedCellDelegat{
+//// MARK: - FeedCellDelegat //FeedControllerに処理を任せる
+extension FeedController: FeedCellDelegat {
 //    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String) {
 //        UserService.fetchUser(whithUid: uid) { (user) in
 //            let controller = ProfileController(user: user)
 //            self.navigationController?.pushViewController(controller, animated: true)
 //        }
 //    }
-//    
-//    func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post) {
-//        let controller = CommentController(post: post)
-//        navigationController?.pushViewController(controller, animated: true)
-//    }
+    
+    func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post) {
+       // let controller = CommentController(post: post)
+        print("遷移の処理は任せて\(post.caption)")
+        let controller = CommentController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(controller, animated: true)
+}
+}
 //    
 //    func cell(_ cell: FeedCell, didLike post: Post) {
 //       

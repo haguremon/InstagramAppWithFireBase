@@ -7,11 +7,13 @@
 
 import UIKit
 
-//protocol FeedCellDelegat: class {
-//    func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
+
+protocol FeedCellDelegat: AnyObject {
+    //コメントviewに行くにはFeedControllerのFeedCellのcommentButtonを押さないといけない
+    func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
 //    func cell(_ cell: FeedCell, didLike post: Post)
 //    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String)
-//}
+}
 
 class  FeedCell: UICollectionViewCell {
     
@@ -20,8 +22,8 @@ class  FeedCell: UICollectionViewCell {
         var viewModel: PostViewModel?{
             didSet{ configure() }
         }
-    
-    //weak var delegate: FeedCellDelegat?
+    //delegateを使って処理を委任する
+    weak var delegate: FeedCellDelegat?
     //プロフィール写真のイメージ
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -159,11 +161,13 @@ class  FeedCell: UICollectionViewCell {
         //        delegate?.cell(self, didLike: viewModel.post)
     }
     //
-    @objc func didTabComments(){
+    @objc func didTabComments() {
         print("did tap comments")
         
-        //        guard let viewModel = viewModel else { return }
-        //        delegate?.cell(self, wantsToShowCommentsFor: viewModel.post)
+                guard let viewModel = viewModel else { return }
+        //delegateの処理をFeedControllerに任せる--cellでは遷移できない
+        //PostViewModelのpostの情報がみたいので引数に渡してる
+                delegate?.cell(self, wantsToShowCommentsFor: viewModel.post)
     }
     
     // MARK: - Helpers

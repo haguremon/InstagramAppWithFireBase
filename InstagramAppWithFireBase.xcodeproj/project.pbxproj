@@ -11,6 +11,8 @@
 		CF1A5875271BFF7B004730E3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5874271BFF7B004730E3 /* SDWebImage */; };
 		CF1A5878271BFF88004730E3 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CF1A5877271BFF88004730E3 /* JGProgressHUD */; };
 		CF1A587B271C1A1C004730E3 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A587A271C1A1C004730E3 /* InputTextView.swift */; };
+		CF37596527212A61001BD41A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37596427212A61001BD41A /* CommentCell.swift */; };
+		CF375967272136C3001BD41A /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF375966272136C3001BD41A /* CommentInputAccesoryView.swift */; };
 		CFA851EE271D4E310012F027 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851ED271D4E310012F027 /* PostService.swift */; };
 		CFA851F0271D4E520012F027 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851EF271D4E520012F027 /* Post.swift */; };
 		CFA851F2271D6D660012F027 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851F1271D6D660012F027 /* PostViewModel.swift */; };
@@ -145,6 +147,8 @@
 		CF1A5699271BF3FC004730E3 /* InstagramAppWithFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramAppWithFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1A5869271BFE0B004730E3 /* Stevia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stevia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1A587A271C1A1C004730E3 /* InputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		CF37596427212A61001BD41A /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		CF375966272136C3001BD41A /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		CFA851ED271D4E310012F027 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		CFA851EF271D4E520012F027 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CFA851F1271D6D660012F027 /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -657,6 +661,8 @@
 		CFE0C1EE2716A28F00D3C097 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF375966272136C3001BD41A /* CommentInputAccesoryView.swift */,
+				CF37596427212A61001BD41A /* CommentCell.swift */,
 				CFE0C22E2719534F00D3C097 /* UserCell.swift */,
 				CFE0C2102716CF3100D3C097 /* CustomTextField.swift */,
 				CFE0C21E2717ED3500D3C097 /* Profile */,
@@ -869,6 +875,7 @@
 				CFE0C1FD2716A52D00D3C097 /* ImageSelectorController.swift in Sources */,
 				CFA8546A271F0EE80012F027 /* YPPickerScreen.swift in Sources */,
 				CFA8548A271F0EE80012F027 /* YPAlbumView.swift in Sources */,
+				CF375967272136C3001BD41A /* CommentInputAccesoryView.swift in Sources */,
 				CFA851EE271D4E310012F027 /* PostService.swift in Sources */,
 				CF1A587B271C1A1C004730E3 /* InputTextView.swift in Sources */,
 				CFA85499271F0EE80012F027 /* UIButton+Extensions.swift in Sources */,
@@ -878,6 +885,7 @@
 				CFE0C22D271803D100D3C097 /* User.swift in Sources */,
 				CFA854AD271F0EE80012F027 /* IndexSet+Extensions.swift in Sources */,
 				CFA85493271F0EE80012F027 /* YPVideoProcessor.swift in Sources */,
+				CF37596527212A61001BD41A /* CommentCell.swift in Sources */,
 				CFA8548D271F0EE80012F027 /* YPAlbum.swift in Sources */,
 				CFA8546C271F0EE80012F027 /* YPImagePicker.swift in Sources */,
 				CFA854A4271F0EE80012F027 /* URL+Extensions.swift in Sources */,
