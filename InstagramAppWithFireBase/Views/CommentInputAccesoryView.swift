@@ -23,14 +23,12 @@ class CommentInputAccesoryView: UIView {
         tv.font = UIFont.systemFont(ofSize: 15)
         tv.isScrollEnabled = false
         tv.backgroundColor = .systemBackground
-        tv.layer.borderWidth = 0.5
-        tv.layer.borderColor = UIColor.systemGray.cgColor
-        tv.layer.cornerRadius = 10
+       
         tv.textColor = .label
         tv.placeholderShouldCenter = true
         return tv
     }()
-    
+ //postボタンが押された時にコレクッションのpostsのPostした人の(uid)ドキュメントにサブコレクションのCommentに値を入れる
     private let postButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Post", for: .normal)
@@ -64,6 +62,13 @@ class CommentInputAccesoryView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        commentTextView.layer.borderWidth = 0.5
+        commentTextView.layer.borderColor = UIColor.systemGray.cgColor
+        commentTextView.layer.cornerRadius = 10
+    
+    }
    //カスタムビューは、そのコンテンツに基づいて、どのようなサイズにしたいかをレイアウトシステムに伝えることができる
     override var intrinsicContentSize: CGSize{
         return .zero
@@ -71,6 +76,7 @@ class CommentInputAccesoryView: UIView {
     
     // MARK: - Actions
     @objc func handlePostTapped(){
+        //委任した所に処理を任せる
         delegate?.inputView(self, wantsToUploadComment: commentTextView.text)
     }
     

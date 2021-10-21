@@ -10,9 +10,9 @@ import UIKit
 class CommentCell: UICollectionViewCell {
     
     // MARK: - Properties
-//    var viewModel: CommentViewModel?{
-//        didSet{ configure() }
-//    }
+    var viewModel: CommentViewModel?{
+        didSet{ configure() }
+    }
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -29,8 +29,8 @@ class CommentCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .systemBackground
         addSubview(profileImageView)
+        self.backgroundColor = .systemBackground
         profileImageView.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 8)
         profileImageView.setDimensions(height: 40, width: 40)
         profileImageView.layer.cornerRadius = 40/2
@@ -39,7 +39,20 @@ class CommentCell: UICollectionViewCell {
         commentLabel.textColor = .label
         addSubview(commentLabel)
         commentLabel.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 8)
+        commentLabel.backgroundColor = .systemBackground
         commentLabel.anchor(right: rightAnchor, paddingRight: 8)
+        //コレクッションでTableviewのようなボーターを引く時
+        self.contentView.layer.cornerRadius = 2.0
+        self.contentView.layer.borderWidth = 1.0
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.layer.masksToBounds = true
+
+        self.layer.shadowColor = UIColor.systemGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 0.3)
+        self.layer.shadowRadius = 2.0
+        self.layer.shadowOpacity = 0.5
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
     
     required init?(coder: NSCoder) {
@@ -47,12 +60,12 @@ class CommentCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
-//    func configure(){
-//        guard let viewModel = viewModel else { return }
-//        
-//        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
-//        
-//        commentLabel.attributedText = viewModel.commentLabelText()
-//    }
-//    
+    func configure(){
+        guard let viewModel = viewModel else { return }
+        
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        
+        commentLabel.attributedText = viewModel.commentLabelText()
+    }
+    
 }

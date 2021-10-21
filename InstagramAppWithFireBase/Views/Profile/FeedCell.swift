@@ -11,8 +11,8 @@ import UIKit
 protocol FeedCellDelegat: AnyObject {
     //コメントviewに行くにはFeedControllerのFeedCellのcommentButtonを押さないといけない
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
-//    func cell(_ cell: FeedCell, didLike post: Post)
-//    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String)
+    func cell(_ cell: FeedCell, didLike post: Post)
+    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String)
 }
 
 class  FeedCell: UICollectionViewCell {
@@ -32,9 +32,9 @@ class  FeedCell: UICollectionViewCell {
         iv.isUserInteractionEnabled = true
         iv.backgroundColor = .lightGray
         iv.image = UIImage(named: "venom-7")
-        //        let tap = UITapGestureRecognizer(target: self, action: #selector(showUserProfile))
-        //        iv.isUserInteractionEnabled = true
-        //        iv.addGestureRecognizer(tap)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showUserProfile))
+        iv.isUserInteractionEnabled = true
+        iv.addGestureRecognizer(tap)
         return iv
     }()
     
@@ -62,7 +62,7 @@ class  FeedCell: UICollectionViewCell {
      lazy var likeButton: UIButton = {
         let button = UIButton(type: .system)
        
-//        button.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
+      button.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
 
             button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
 //
@@ -150,15 +150,15 @@ class  FeedCell: UICollectionViewCell {
     // MARK: - Actions
     @objc func showUserProfile(){
         print("did tap username")
-        //        guard let viewModel = viewModel else { return }
-        //        delegate?.cell(self, wantsToShowProfileFor: viewModel.post.ownerUid)
+                guard let viewModel = viewModel else { return }
+                delegate?.cell(self, wantsToShowProfileFor: viewModel.post.ownerUid)
     }
     //
     @objc func didTabLike(){
        
         print("did tap like")
-        //        guard let viewModel = viewModel else { return }
-        //        delegate?.cell(self, didLike: viewModel.post)
+                guard let viewModel = viewModel else { return }
+                delegate?.cell(self, didLike: viewModel.post)
     }
     //
     @objc func didTabComments() {

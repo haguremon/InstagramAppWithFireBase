@@ -27,7 +27,7 @@ struct  PostService {
                         "ownerUsername": user.username] as [String: Any]
             
             let docRef = COLLETION_POSTS.addDocument(data: data, completion: completion)
-            
+            // DocumentReference.documentID
             self.updateUserFeedAfterPost(postId: docRef.documentID)
         }
     }

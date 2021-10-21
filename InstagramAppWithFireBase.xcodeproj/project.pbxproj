@@ -13,6 +13,9 @@
 		CF1A587B271C1A1C004730E3 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A587A271C1A1C004730E3 /* InputTextView.swift */; };
 		CF37596527212A61001BD41A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37596427212A61001BD41A /* CommentCell.swift */; };
 		CF375967272136C3001BD41A /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF375966272136C3001BD41A /* CommentInputAccesoryView.swift */; };
+		CF37596927215154001BD41A /* CommentServerice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37596827215154001BD41A /* CommentServerice.swift */; };
+		CF37596B2721516B001BD41A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37596A2721516B001BD41A /* Comment.swift */; };
+		CF37596D27217CB0001BD41A /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37596C27217CB0001BD41A /* CommentViewModel.swift */; };
 		CFA851EE271D4E310012F027 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851ED271D4E310012F027 /* PostService.swift */; };
 		CFA851F0271D4E520012F027 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851EF271D4E520012F027 /* Post.swift */; };
 		CFA851F2271D6D660012F027 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA851F1271D6D660012F027 /* PostViewModel.swift */; };
@@ -149,6 +152,9 @@
 		CF1A587A271C1A1C004730E3 /* InputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		CF37596427212A61001BD41A /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		CF375966272136C3001BD41A /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
+		CF37596827215154001BD41A /* CommentServerice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentServerice.swift; sourceTree = "<group>"; };
+		CF37596A2721516B001BD41A /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		CF37596C27217CB0001BD41A /* CommentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		CFA851ED271D4E310012F027 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		CFA851EF271D4E520012F027 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CFA851F1271D6D660012F027 /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -284,7 +290,7 @@
 		CFE0C1F82716A52C00D3C097 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CFE0C1F92716A52D00D3C097 /* CommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		CFE0C1FA2716A52D00D3C097 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
-		CFE0C2052716ADEB00D3C097 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		CFE0C2052716ADEB00D3C097 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = Profile/FeedCell.swift; sourceTree = "<group>"; };
 		CFE0C2072716B7EC00D3C097 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CFE0C20E2716CEC000D3C097 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CFE0C2102716CF3100D3C097 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -615,6 +621,7 @@
 		CFE0C1E92716A1EE00D3C097 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CF37596C27217CB0001BD41A /* CommentViewModel.swift */,
 				CFA851F1271D6D660012F027 /* PostViewModel.swift */,
 				CFE0C23027197CA600D3C097 /* UserCellViewModel.swift */,
 				CFE0C2142716DB0F00D3C097 /* AuthenricationViewModel.swift */,
@@ -652,6 +659,7 @@
 		CFE0C1ED2716A28C00D3C097 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CF37596A2721516B001BD41A /* Comment.swift */,
 				CFA851EF271D4E520012F027 /* Post.swift */,
 				CFE0C22C271803D100D3C097 /* User.swift */,
 			);
@@ -665,6 +673,7 @@
 				CF37596427212A61001BD41A /* CommentCell.swift */,
 				CFE0C22E2719534F00D3C097 /* UserCell.swift */,
 				CFE0C2102716CF3100D3C097 /* CustomTextField.swift */,
+				CFE0C2052716ADEB00D3C097 /* FeedCell.swift */,
 				CFE0C21E2717ED3500D3C097 /* Profile */,
 			);
 			path = Views;
@@ -673,6 +682,7 @@
 		CFE0C1EF2716A2D600D3C097 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CF37596827215154001BD41A /* CommentServerice.swift */,
 				CFA851ED271D4E310012F027 /* PostService.swift */,
 				CFE0C2282718032800D3C097 /* UserService.swift */,
 				CFE0C2192717D0D600D3C097 /* ImageUploader.swift */,
@@ -693,7 +703,6 @@
 		CFE0C21E2717ED3500D3C097 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CFE0C2052716ADEB00D3C097 /* FeedCell.swift */,
 				CFE0C21F2717ED3500D3C097 /* ProfileCell.swift */,
 				CFE0C2202717ED3500D3C097 /* ProfileHeader.swift */,
 			);
@@ -909,10 +918,12 @@
 				CFE0C2132716D20200D3C097 /* RegistrationController.swift in Sources */,
 				CFE0C2212717ED3500D3C097 /* ProfileCell.swift in Sources */,
 				CFE0C1FB2716A52D00D3C097 /* UploadPostController.swift in Sources */,
+				CF37596D27217CB0001BD41A /* CommentViewModel.swift in Sources */,
 				CFA85494271F0EE80012F027 /* YPDeviceOrientationHelper.swift in Sources */,
 				CFA854A3271F0EE80012F027 /* NSFileManager+Extensions.swift in Sources */,
 				CFA85481271F0EE80012F027 /* YPMenuItem.swift in Sources */,
 				CFA85489271F0EE80012F027 /* YPAlbumsManager.swift in Sources */,
+				CF37596927215154001BD41A /* CommentServerice.swift in Sources */,
 				CFA854AB271F0EE80012F027 /* CGFloat+Extensions.swift in Sources */,
 				CFA8547B271F0EE80012F027 /* YPLibraryVC+CollectionView.swift in Sources */,
 				CFA85473271F0EE80012F027 /* YPDragDirection.swift in Sources */,
@@ -933,6 +944,7 @@
 				CFA85495271F0EE80012F027 /* YPPermissionCheckable.swift in Sources */,
 				CFA85468271F0EE80012F027 /* YPWordings.swift in Sources */,
 				CFA854A7271F0EE80012F027 /* PHFetchResult+Extensions.swift in Sources */,
+				CF37596B2721516B001BD41A /* Comment.swift in Sources */,
 				CFA851F2271D6D660012F027 /* PostViewModel.swift in Sources */,
 				CFA85480271F0EE80012F027 /* YPLibrary+LibraryChange.swift in Sources */,
 				CFA854B9271F90E50012F027 /* YPPhotoFiltersVC.swift in Sources */,
@@ -1042,6 +1054,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1103,6 +1116,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

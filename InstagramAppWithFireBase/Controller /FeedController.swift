@@ -69,30 +69,30 @@ class FeedController: UICollectionViewController {
             self.collectionView.refreshControl?.endRefreshing()
             // self.checkIfUserLikedPosts()
         }
+
+        PostService.fetchFeedPosts{ posts in
+            self.posts = posts
+            self.collectionView.refreshControl?.endRefreshing()
+            self.checkIfUserLikedPosts()
+        }
     }
-//        PostService.fetchFeedPosts{ posts in
-//            self.posts = posts
-//            self.collectionView.refreshControl?.endRefreshing()
-//            self.checkIfUserLikedPosts()
-//        }
-//    }
+
+    func checkIfUserLikedPosts(){
+        if let post = post {
+            PostService.checkIfUserLikedPost(post: post) { didLike in
+                self.post?.didLike = didLike
+            }
+        }else {
+            posts.forEach{ post in
+                PostService.checkIfUserLikedPost(post: post) { (didLike) in
+                    if let index = self.posts.firstIndex(where: {$0.postId == post.postId}){
+                        self.posts[index].didLike = didLike
+                    }
+                }
+            }
+        }
 //
-//    func checkIfUserLikedPosts(){
-//        if let post = post {
-//            PostService.checkIfUserLikedPost(post: post) { didLike in
-//                self.post?.didLike = didLike
-//            }
-//        }else {
-//            posts.forEach{ post in
-//                PostService.checkIfUserLikedPost(post: post) { (didLike) in
-//                    if let index = self.posts.firstIndex(where: {$0.postId == post.postId}){
-//                        self.posts[index].didLike = didLike
-//                    }
-//                }
-//            }
-//        }
-//
-//    }
+    }
 //
 //    // MARK: - Helpers
     func configureUI() {
@@ -158,52 +158,58 @@ extension FeedController: UICollectionViewDelegateFlowLayout{
 //
 //// MARK: - FeedCellDelegat //FeedControllerに処理を任せる
 extension FeedController: FeedCellDelegat {
-//    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String) {
-//        UserService.fetchUser(whithUid: uid) { (user) in
-//            let controller = ProfileController(user: user)
-//            self.navigationController?.pushViewController(controller, animated: true)
-//        }
-//    }
-    
+    //Profileボタンがタップされた時の処理
+    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String) {
+        //PostViewModel.post.ownerUidが入ってる
+        UserService.fetchUser(whithUid: uid) { (user) in
+            let controller = ProfileController(user: user)
+            //そこに遷移する
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+   //Commentボタンがタップされた時の処理
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post) {
-       // let controller = CommentController(post: post)
+   //PostViewModel.post
+        let controller = CommentController(post: post)
         print("遷移の処理は任せて\(post.caption)")
-        let controller = CommentController(collectionViewLayout: UICollectionViewFlowLayout())
+        
         navigationController?.pushViewController(controller, animated: true)
 }
-}
-//    
-//    func cell(_ cell: FeedCell, didLike post: Post) {
-//       
-//        guard let tab = tabBarController as? MainTabController else { return }
-//        guard let user = tab.user else { return }
-//        
-//        cell.viewModel?.post.didLike.toggle()
-//        if post.didLike{
-//            PostService.unlikePost(post: post) { error in
-//                if let error = error {
-//                    print("DEBUG: Failed to like post with \(error)")
-//                }
-//                
-//                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
-//                cell.likeButton.tintColor = .black
-//                cell.viewModel?.post.likes = post.likes - 1
-//            }
-//        }else {
-//            PostService.likePost(post: post){ error in
-//                if let error = error {
-//                    print("DEBUG: Failed to like post with \(error)")
-//                }
-//                
-//                cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
-//                cell.likeButton.tintColor = .red
-//                cell.viewModel?.post.likes = post.likes + 1
-//                
-////                NotificationService.uploadNotification(toUid: post.ownerUid, profileImageUrl: post.ownerImageUrl, username: post.ownerUsername, type: .like, post: post)
-//                
+//Likeがタップされた時の処理
+    func cell(_ cell: FeedCell, didLike post: Post) {
+       
+        guard let tab = tabBarController as? MainTabController else { return }
+        guard let user = tab.user else { return }
+        
+        cell.viewModel?.post.didLike.toggle()
+        
+        if post.didLike {
+            PostService.unlikePost(post: post) { error in
+                if let error = error {
+                    print("DEBUG: Failed to like post with \(error)")
+                }
+                
+                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
+                cell.likeButton.tintColor = .black
+                cell.viewModel?.post.likes = post.likes - 1
+            }
+        }else {
+            PostService.likePost(post: post){ error in
+                if let error = error {
+                    print("DEBUG: Failed to like post with \(error)")
+                }
+                
+                cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
+                cell.likeButton.tintColor = .red
+                cell.viewModel?.post.likes = post.likes + 1
+//
+//                NotificationService.uploadNotification(toUid: post.ownerUid, profileImageUrl: post.ownerImageUrl, username: post.ownerUsername, type: .like, post: post)
+//
 //                NotificationService.uploadNotification(toUid: post.ownerUid, fromUser: user, type: .like, post: post)
-//            }
-//        }
-//    }
-//    
-//}
+            }
+        }
+    }
+
+}
+    
+
